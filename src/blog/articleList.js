@@ -1,5 +1,6 @@
 import exampleBlogPost1 from './articles/example-blog-post-1.js'
 import anotherSamplePost from './articles/another-sample-post.js'
+import cardSuits from './../images/card-suits-image.svg'
 
 export const articles = [
   {
@@ -18,7 +19,7 @@ export const articles = [
     startDate: new Date('2021-01-03'),
     publishDate: new Date('2021-06-07'),
     editDate: new Date('2021-06-09'),
-    image: "http://localhost:3000/static/media/card-suits-image.0e314b0e.svg",
+    image: cardSuits,
     tags: ["test", "code", "writing"],
     content: anotherSamplePost
   }
