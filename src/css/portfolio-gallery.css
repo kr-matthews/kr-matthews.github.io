@@ -1,0 +1,17 @@
+.portfolio-gallery {
+  grid-template-columns: repeat(auto-fill, 23em);
+  text-align: center;
+}
+.gallery .image-container {
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  width: 20em;
+  height: 15em;
+}
+.portfolio-gallery .info-container {
+  padding-top: 1em;
+}
+.portfolio-gallery .item h2 {
+  font-size: 130%;
+}

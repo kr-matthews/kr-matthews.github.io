@@ -1,0 +1,59 @@
+/*Desktop View*/
+header {
+  overflow: hidden;
+  background-color: lightGrey;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  border-bottom: 2px solid DarkGray;
+}
+.icon {
+  height: 30px;
+}
+.toggle-option {
+  display: none;
+}
+nav ul {
+  list-style-type: none;
+}
+.option, .home-option {
+  float: left;
+}
+.option a, .home-option a {
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+.home-option a {
+  padding: 6.5px;
+  text-align: left;
+}
+.option a:hover, .icon-container:hover {
+  cursor: pointer;
+  background-color: DarkGray;
+  /* color: White; */
+}
+
+@media screen and (max-width: 600px) {
+  /*Mobile View */
+  .toggle-option {
+    position: absolute;
+    top: 0;
+    right: 0;
+    float: right;
+    display: block;
+    padding: 6.5px;
+  }
+  ul.hidden {
+    display: none;
+  }
+  .option a {
+    padding: 8px;
+  }
+  .option, .home-option {
+    float: none;
+  }
+}

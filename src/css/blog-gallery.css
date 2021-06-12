@@ -1,0 +1,36 @@
+.blog-gallery h2, .specs {
+  text-align: center;
+}
+.blog-gallery .item {
+  display: flex;
+  flex-direction: row;
+  max-width: 50em;
+  height: 15em;
+}
+.blog-gallery .image-container {
+  display: inline-block;
+  height: 12em;
+  min-width: 12em;
+  max-width: 12em;
+  vertical-align: middle;
+  text-align: center;
+  padding-right: 0.5em;
+}
+.blog-gallery .info-container {
+  display: inline-block;
+  height: 12em;
+  max-width: 33em;
+  min-width: 0;
+  max-height: 12em;
+  /* these don't work */
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.blog-gallery .preview {
+}
+
+@media screen and (max-width: 600px) {
+  .blog-gallery .image-container {
+    display: none;
+  }
+}
