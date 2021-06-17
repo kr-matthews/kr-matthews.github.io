@@ -29,7 +29,7 @@ import './css/article.css'
 
 function App() {
   return (
-      <BrowserRouter basename={process.env.PUBLIC_URL}>
+      <BrowserRouter>
         <Header />
 
         <Route exact path="/" component={Home} />
