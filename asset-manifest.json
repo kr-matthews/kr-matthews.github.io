@@ -1,0 +1,33 @@
+{
+  "files": {
+    "main.css": "/static/css/main.19fb9609.chunk.css",
+    "main.js": "/static/js/main.58e5c476.chunk.js",
+    "main.js.map": "/static/js/main.58e5c476.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.e8c65706.js",
+    "runtime-main.js.map": "/static/js/runtime-main.e8c65706.js.map",
+    "static/js/2.078f6d03.chunk.js": "/static/js/2.078f6d03.chunk.js",
+    "static/js/2.078f6d03.chunk.js.map": "/static/js/2.078f6d03.chunk.js.map",
+    "static/js/3.6e29cc5e.chunk.js": "/static/js/3.6e29cc5e.chunk.js",
+    "static/js/3.6e29cc5e.chunk.js.map": "/static/js/3.6e29cc5e.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.19fb9609.chunk.css.map": "/static/css/main.19fb9609.chunk.css.map",
+    "static/js/2.078f6d03.chunk.js.LICENSE.txt": "/static/js/2.078f6d03.chunk.js.LICENSE.txt",
+    "static/media/3-style-corners-image.3051cb6f.png": "/static/media/3-style-corners-image.3051cb6f.png",
+    "static/media/card-suits-image.0e314b0e.svg": "/static/media/card-suits-image.0e314b0e.svg",
+    "static/media/close.0135cc7f.svg": "/static/media/close.0135cc7f.svg",
+    "static/media/corner-twist-image.4b43024b.png": "/static/media/corner-twist-image.4b43024b.png",
+    "static/media/logo.2a15d8d0.svg": "/static/media/logo.2a15d8d0.svg",
+    "static/media/memo-tool-image.28ed7720.png": "/static/media/memo-tool-image.28ed7720.png",
+    "static/media/memo-tools-image.a93f4363.png": "/static/media/memo-tools-image.a93f4363.png",
+    "static/media/menu.f72654b3.svg": "/static/media/menu.f72654b3.svg",
+    "static/media/the-ultimate-puzzle-image.b168db30.png": "/static/media/the-ultimate-puzzle-image.b168db30.png",
+    "static/media/weak-swap-image.798eb6d1.png": "/static/media/weak-swap-image.798eb6d1.png",
+    "static/media/website-logo.2a15d8d0.svg": "/static/media/website-logo.2a15d8d0.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e8c65706.js",
+    "static/js/2.078f6d03.chunk.js",
+    "static/css/main.19fb9609.chunk.css",
+    "static/js/main.58e5c476.chunk.js"
+  ]
+}
