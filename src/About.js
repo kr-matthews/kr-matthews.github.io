@@ -26,7 +26,7 @@ function About(props) {
       <p>
       I know how to solve a Rubik's cube (blindfolded),
       and have <a href="https://www.worldcubeassociation.org/persons/2010MATT02">
-      competed</a> at about 100 competitions across North America,
+      competed</a> in about 100 competitions across North America,
       a few of which I helped organize.
       Most of my early programming <Link to="/projects">projects</Link> were
       cube-based tools, designed to help with learning and/or practising the cube.

@@ -55,8 +55,8 @@ export const projects = [
   },
   {
     id: 201902,
-    link: "hearts-v2",
-    url: "https://github.com/kr-matthews/Hearts-in-java-version-2-",
+    link: "hearts-java-v2",
+    url: "https://github.com/kr-matthews/hearts-java-v2",
     image: hearts,
     title: "Hearts",
     category: "Text-Based Card Game",
