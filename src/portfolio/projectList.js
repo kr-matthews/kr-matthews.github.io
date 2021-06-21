@@ -45,7 +45,7 @@ export const projects = [
   {
     id: 201901,
     link: "ultimate-puzzle-solver",
-    url: "",
+    url: "https://github.com/kr-matthews/the-ultimate-puzzle-solver",
     image: ultimatePuzzle,
     title: "\"The Ultimate Puzzle\" Solver",
     category: "Puzzle Solving Algorithm",
@@ -100,7 +100,7 @@ export const projects = [
   {
     id: 202101,
     link: "personal-website",
-    url: "/",
+    url: "https://github.com/kr-matthews/kr-matthews.github.io",
     image: websiteLogo,
     title: "Personal Website",
     category: "Static Personal Website",
