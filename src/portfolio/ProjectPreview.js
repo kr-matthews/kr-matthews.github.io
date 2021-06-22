@@ -2,9 +2,9 @@
 import {Link} from 'react-router-dom';
 */
 
-function Project({title, link, url, image, category, languages, year, description}) {
+function Project({title, url, image, category, languages, year, description}) {
   return (
-        <a href={ url || "projects/" + link } className="item">
+        <a href={url} className="item">
           <div className="image-container">
             <img src={image} alt={title}/>
           </div>

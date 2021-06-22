@@ -40,22 +40,6 @@ function App() {
         <Route exact path="/about" component={About} />
 
         {
-          projects.map((project) => {
-            const {id, link, url} = project;
-            return <Route
-                    key={id}
-                    exact path={"/projects/" + link}
-                    /* If there is a URL (and it's not this exact site)
-                        then redirect to it. */
-                    render={(props) => (url && url !== "/") ?
-                      <ExternalRedirect {...project} {...props}/> :
-                      <MissingProject {...project} {...props}/>
-                    }
-                    />
-          })
-        }
-
-        {
           articles.map((article) => {
             const {startDate, title, link} = article
             return <Route

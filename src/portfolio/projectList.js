@@ -8,6 +8,7 @@ import hearts from './../images/card-suits-image.svg'
 import weakSwap from './../images/weak-swap-image.png'
 import websiteLogo from './../images/logo.svg'
 
+/* Link currently not used anywehre */
 export const projects = [
   {
     id: 201501,
@@ -40,7 +41,7 @@ export const projects = [
     category: "Puzzle Solving Method | Cubing",
     languages: "",
     year: 2018,
-    description: "An optimization for dealing with cycle breaks in blindfolded solving of Rubik's cubes, applicable when both memorizing and solving edges first. Joint work with Graham Siggins."
+    description: "An optimization for dealing with cycle breaks in blindfolded solving of Rubik's cubes, applicable when both memorizing and solving edges first. Joint work with Graham Siggins. [Link unavailable.]"
   },
   {
     id: 201901,
