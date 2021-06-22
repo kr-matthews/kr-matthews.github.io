@@ -14,8 +14,6 @@ import About from './About.js';
 
 /* Prortfolio & Blog gallery and entries */
 import {projects} from './portfolio/projectList.js'
-import ExternalRedirect from './portfolio/ExternalRedirect.js'
-import MissingProject from './portfolio/MissingProject.js'
 import {articles} from './blog/articleList.js'
 import Article from './blog/Article.js'
 
