@@ -13,7 +13,6 @@ import Books from './Books.js';
 import About from './About.js';
 
 /* Prortfolio & Blog gallery and entries */
-import {projects} from './portfolio/projectList.js'
 import {articles} from './blog/articleList.js'
 import Article from './blog/Article.js'
 
