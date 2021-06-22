@@ -21,14 +21,14 @@ export const projects = [
     description: "Produces or checks memorization sequence for blindfolded solving of a scrambled Rubik's cube, given custom user settings."
   },
   {
-    id: 201601,
+    id: 201502,
     link: "bld-memo-tools",
     url: "https://csclub.uwaterloo.ca/~krmatthe/BLD-Memo-Tools.cgi",
     image: memoToolsImage,
     title: "BLD Memo Tools",
     category: "Web App | Cubing",
     languages: "Racket",
-    year: 2016,
+    year: 2015,
     description: "Major expansion of prior project to include more puzzle sizes, visual display of cube state, new training tool, and much more."
   },
   {
