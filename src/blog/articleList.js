@@ -1,24 +1,24 @@
-import exampleBlogPost1 from './articles/example-blog-post-1.js'
-import anotherSamplePost from './articles/another-sample-post.js'
+import samplePost from './articles/sample-post-1.js'
+import anotherSamplePost from './articles/sample-post-2.js'
 import cardSuits from './../images/card-suits-image.svg'
 
 export const articles = [
   {
-    title: "Example Blog Post 1 sdfghdfg sdfsdfsdfsd",
-    link: "example-blog-post-1",
+    title: "Sample Blog Post",
+    link: "sample-post",
     startDate: new Date('2021-02-01'),
     publishDate: new Date('2021-06-05'),
     editDate: "",
     image: "",
     tags: ["test", "writing", "code"],
-    content: exampleBlogPost1
+    content: samplePost
   },
   {
-    title: "Another sample post: A longer name which wraps around",
+    title: "Another Sample Blog Post: With a Longer Title Which Wraps Around",
     link: "another-sample-post",
     startDate: new Date('2021-01-03'),
     publishDate: new Date('2021-06-07'),
-    editDate: new Date('2021-06-09'),
+    editDate: new Date('2021-06-23'),
     image: cardSuits,
     tags: ["test", "code", "writing"],
     content: anotherSamplePost
