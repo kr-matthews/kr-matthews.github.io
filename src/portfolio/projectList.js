@@ -35,7 +35,7 @@ export const projects = [
   {
     id: 201801,
     link: "weak-swap",
-    url: "",
+    url: "https://github.com/kr-matthews/weak-swap",
     image: weakSwap,
     title: "Weak Swap (Method)",
     category: "Puzzle Solving Method | Cubing",
