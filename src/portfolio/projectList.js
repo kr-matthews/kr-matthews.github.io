@@ -41,7 +41,7 @@ export const projects = [
     category: "Puzzle Solving Method | Cubing",
     languages: "",
     year: 2018,
-    description: "An optimization for dealing with cycle breaks in blindfolded solving of Rubik's cubes, applicable when both memorizing and solving edges first. Joint work with Graham Siggins. [Link unavailable.]"
+    description: "An optimization for dealing with cycle breaks in blindfolded solving of Rubik's cubes, applicable when both memorizing and solving edges first. Joint work with Graham Siggins."
   },
   {
     id: 201901,
