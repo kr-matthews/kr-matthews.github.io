@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom';
 
 function Project({title, url, image, category, languages, year, description}) {
   return (
-        <a href={url} className="item">
+        <a href={url} className="item" target="_blank" rel="noopener noreferrer">
           <div className="image-container">
             <img src={image} alt={title}/>
           </div>
