@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { projects } from './projectList.js'
 import ProjectPreview from './ProjectPreview.js';
 
@@ -6,16 +6,19 @@ function Portfolio(props) {
   /* constants */
   const allTags =
     [...new Set(projects.slice().map((project) => project.tags).flat())].sort();
-  const [areSelected, setAreSelected] = useState(allTags.map((tag) => false));
+  const [areSelected, setAreSelected] = useState({});
+
+  /* initialize */
+  useEffect(() => reset(), [])
 
   /* functions */
   const reset = () => {
-    setAreSelected(allTags.map((tag) => false));
+    const selected = {};
+    allTags.map((tag) => selected[tag] = false);
+    setAreSelected(selected);
   }
-  const toggle = (ind) => {
-    const arr = areSelected.slice();
-    arr[ind] = !arr[ind];
-    setAreSelected(arr);
+  const toggle = (tag) => {
+    setAreSelected({...areSelected, [tag] : !areSelected[tag]});
   }
 
   return (
@@ -25,35 +28,48 @@ function Portfolio(props) {
         Coding projects I've done, as well as some puzzle-solving
         methods and frameworks.
       </p>
-      <p>
+      <div>
         Tags:
         <button
           type="reset"
-          className={"tag-button all-tags" + (areSelected.includes(true) ? "" : " active")}
+          className={"cat-button all-cats" +
+                    (Object.values(areSelected).includes(true) ? "" : " active")}
           onClick={reset}
         >
           All
         </button>
         {allTags.map((tag) => {
-          const ind = allTags.indexOf(tag)
           return (
             <button
               type="button"
-              className={"tag-button" + (areSelected[ind] ? " active" : "")}
-              key={ind}
-              onClick={() => toggle(ind)}
+              className={"cat-button" + (areSelected[tag] ? " active" : "")}
+              key={tag}
+              onClick={() => toggle(tag)}
             >
               {tag}
             </button>
-          )})}
-      </p>
+          )})
+        }
+      </div>
       <section className='gallery portfolio-gallery'>
-        {projects.slice().reverse().filter((project) => {
-          return !areSelected.includes(true) ||
-            project.tags.filter((tag) => areSelected[allTags.indexOf(tag)]).length > 0
-        }).map((project) => {
-            return <ProjectPreview key={project.id} {...project}></ProjectPreview>;
-        })}
+        {projects
+          .slice()
+          .reverse()
+          .filter((project) => {
+            return (
+              !Object.values(areSelected).includes(true) ||
+              project.tags.filter((tag) => areSelected[tag]).length > 0
+            )
+          })
+          .map((project) => {
+            return (
+              <ProjectPreview
+                key={project.id}
+                {...project}>
+              </ProjectPreview>
+            )
+          })
+        }
       </section>
     </div>
   );
