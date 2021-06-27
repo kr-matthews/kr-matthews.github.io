@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 import { ReactComponent as Logo } from './../images/website-logo.svg';
@@ -28,6 +28,7 @@ function Header() {
       <nav>
         <ul className={isOpen ? "nav-options" : "nav-options hidden"}>
 
+{/* /// TODO: update this */}
           <li className="option" onClick={close}>
             <Link to="/projects">
               Projects

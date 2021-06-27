@@ -16,7 +16,7 @@ export const projects = [
     url: "https://csclub.uwaterloo.ca/~krmatthe/BLD-Memo-Tool.cgi",
     image: memoToolImage,
     tags: ["Web App", "Rubik's Cubes"],
-    languages: ["Racket", "TEST", "TEST2"],
+    languages: ["Racket"],
     year: 2015,
     description: "Produces or checks memorization sequence for blindfolded solving of a scrambled Rubik's cube, given custom user settings."
   },
