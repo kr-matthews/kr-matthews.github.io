@@ -1,0 +1,26 @@
+.page .tag-button {
+  border-radius: 1em;
+  background-color: lightGrey;
+  border: none;
+  color: Black;
+  padding: 10px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.page .tag-button.all-tags {
+  margin-left: 10px;
+}
+
+.page .tag-button.active {
+  background-color: DarkGrey;
+}
+
+.page .tag-button.all-tags.active {
+  background-color: Black;
+  color: White;
+}

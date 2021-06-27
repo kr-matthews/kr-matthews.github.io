@@ -8,7 +8,6 @@ import hearts from './../images/card-suits-image.svg'
 import weakSwap from './../images/weak-swap-image.png'
 import websiteLogo from './../images/logo.svg'
 
-/* Link currently not used anywehre */
 export const projects = [
   {
     title: "BLD Memo Tool",
@@ -35,7 +34,7 @@ export const projects = [
     id: 201801,
     url: "https://github.com/kr-matthews/weak-swap",
     image: weakSwap,
-    tags: ["Puzzle Method", "Rubik's Cubes"],
+    tags: ["Method", "Rubik's Cubes"],
     languages: [],
     year: 2018,
     description: "An optimization for dealing with cycle breaks in blindfolded solving of Rubik's cubes, applicable when both memorizing and solving edges first. Joint work with Graham Siggins."
@@ -45,7 +44,7 @@ export const projects = [
     id: 201901,
     url: "https://github.com/kr-matthews/the-ultimate-puzzle-solver",
     image: ultimatePuzzle,
-    tags: ["Puzzle Solver"],
+    tags: ["Puzzle", "Puzzle Solver"],
     languages: ["Racket"],
     year: 2019,
     description: "A simple back-tracking program to find all solutions to a jigsaw-like puzzle. Can allow or disallow flipping pieces over from their natural face-up orientation."
@@ -65,7 +64,7 @@ export const projects = [
     id: 201903,
     url: "https://docs.google.com/spreadsheets/d/1Ml7Jl5Yeb9HeE14xO7j1Nc99sw08oiBjLbi_nYJk9rU/edit?usp=sharing",
     image: bfSystem,
-    tags: ["Puzzle System", "Rubik's Cubes"],
+    tags: ["System", "Rubik's Cubes"],
     languages: [],
     year: 2019,
     description: "My personal system, both memorization and execution, for solving various sizes of Rubik's cubes blindfolded. Also extended for memory sports, including memorization of numbers and decks of cards."
@@ -95,7 +94,7 @@ export const projects = [
     id: 202101,
     url: "https://github.com/kr-matthews/kr-matthews.github.io",
     image: websiteLogo,
-    tags: ["Web App", "Website", "Portfolio", "Blog"],
+    tags: ["Web App", "Website"],
     languages: ["React"],
     year: 2021,
     description: "Custom-built website using React and CSS, including project gallery, blog, and more."
@@ -106,7 +105,7 @@ export const projects = [
     url: "",
     image: "",
     title: "",
-    category: [],
+    tags: [],
     languages: [],
     year: 2021,
     description: ""
