@@ -6,19 +6,19 @@ function Portfolio(props) {
   /* constants */
   const allTags =
     [...new Set(projects.slice().map((project) => project.tags).flat())].sort();
-  const [areSelected, setAreSelected] = useState({});
+  const [selectedTags, setSelectedTags] = useState({});
 
   /* initialize */
-  useEffect(() => reset(), [])
+  useEffect(() => reset(allTags, setSelectedTags), [])
 
   /* functions */
-  const reset = () => {
-    const selected = {};
-    allTags.map((tag) => selected[tag] = false);
-    setAreSelected(selected);
+  const reset = (allCats, setSelectedCats) => {
+    const selectedCats = {};
+    allCats.map((cat) => selectedCats[cat] = false);
+    setSelectedCats(selectedCats);
   }
-  const toggle = (tag) => {
-    setAreSelected({...areSelected, [tag] : !areSelected[tag]});
+  const toggle = (selectedCats, setSelectedCats, cat) => {
+    setSelectedCats({...selectedCats, [cat] : !selectedCats[cat]});
   }
 
   return (
@@ -34,8 +34,8 @@ function Portfolio(props) {
         <button
           type="reset"
           className={"cat-button all-cats" +
-                    (Object.values(areSelected).includes(true) ? "" : " active")}
-          onClick={reset}
+                    (Object.values(selectedTags).includes(true) ? "" : " active")}
+          onClick={() => reset(allTags, setSelectedTags)}
         >
           All
         </button>
@@ -45,9 +45,9 @@ function Portfolio(props) {
           return (
             <button
               type="button"
-              className={"cat-button" + (areSelected[tag] ? " active" : "")}
+              className={"cat-button" + (selectedTags[tag] ? " active" : "")}
               key={tag}
-              onClick={() => toggle(tag)}
+              onClick={() => toggle(selectedTags, setSelectedTags, tag)}
             >
               {tag}
             </button>
@@ -60,8 +60,8 @@ function Portfolio(props) {
           .sort((a, b) => b.id - a.id) /* reverse chron. order */
           .filter((project) => { /* select only those with filtered tag */
             return (
-              !Object.values(areSelected).includes(true) ||
-              project.tags.filter((tag) => areSelected[tag]).length > 0
+              !Object.values(selectedTags).includes(true) ||
+              project.tags.filter((tag) => selectedTags[tag]).length > 0
             )
           })
           .map((project) => { /* display the panel in the gallery */
