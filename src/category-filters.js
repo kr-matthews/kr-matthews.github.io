@@ -1,5 +1,14 @@
 
 
+const filterCat = (cat, selectedCats) => {
+  return (item) => {
+    return (
+      !Object.values(selectedCats).includes(true) ||
+      item.[cat].filter((cat) => selectedCats[cat]).length > 0
+    )
+  }
+}
+
 function CategoryFilterButtons(props) {
 
   /* constants */
@@ -49,4 +58,5 @@ function CategoryFilterButtons(props) {
   )
 }
 
-export default CategoryFilterButtons
+export { filterCat };
+export default CategoryFilterButtons;

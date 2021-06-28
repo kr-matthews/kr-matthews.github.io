@@ -11,7 +11,7 @@ export const articles = [
     publishDate: new Date('2021-06-05'),
     editDate: "",
     image: "",
-    tags: ["test", "writing", "code"],
+    tags: ["test", "writing", "code", "unique"],
     content: samplePost
   },
   {
@@ -21,7 +21,7 @@ export const articles = [
     publishDate: new Date('2021-06-07'),
     editDate: new Date('2021-06-23'),
     image: cardSuits,
-    tags: ["test", "code", "writing"],
+    tags: ["test", "unique2", "writing"],
     content: anotherSamplePost
   }
   /*

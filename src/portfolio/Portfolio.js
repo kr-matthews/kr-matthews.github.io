@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { projects } from './projectList.js'
 import ProjectPreview from './ProjectPreview.js';
-import CategoryFilterButtons from './../category-filter-buttons.js'
+import CategoryFilterButtons, { filterCat } from './../category-filters.js'
 
 function Portfolio(props) {
   /* constants */
@@ -42,20 +42,9 @@ function Portfolio(props) {
 
       <section className='gallery portfolio-gallery'>
         {projects
-          .slice() /* make a copy */
           .sort((a, b) => b.id - a.id) /* reverse chron. order */
-          .filter((project) => { /* select only those with filtered tag */
-            return (
-              !Object.values(selectedTags).includes(true) ||
-              project.tags.filter((tag) => selectedTags[tag]).length > 0
-            )
-          })
-          .filter((project) => { /* select only those with filtered lang */
-            return (
-              !Object.values(selectedLangs).includes(true) ||
-              project.languages.filter((lang) => selectedLangs[lang]).length > 0
-            )
-          })
+          .filter(filterCat('tags', selectedTags))
+          .filter(filterCat('languages', selectedLangs))
           .map((project) => { /* display the panel in the gallery */
             return (
               <ProjectPreview
