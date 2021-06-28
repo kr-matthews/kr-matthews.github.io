@@ -1,31 +1,18 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { projects } from './projectList.js'
 import ProjectPreview from './ProjectPreview.js';
+import CategoryFilterButtons from './../category-filter-buttons.js'
 
 function Portfolio(props) {
   /* constants */
+  /* useStates are not initialized, which is ok because
+    'all' applies if 'true' is not present (and 'true' isn't in empty) */
   const allTags =
     [...new Set(projects.slice().map((proj) => proj.tags).flat())].sort();
   const [selectedTags, setSelectedTags] = useState({});
   const allLangs =
     [...new Set(projects.slice().map((proj) => proj.languages).flat())].sort();
   const [selectedLangs, setSelectedLangs] = useState({});
-
-  /* initialize */
-  useEffect(() => {
-    reset(allTags, setSelectedTags);
-    reset(allLangs, setSelectedLangs);
-  }, [])
-
-  /* functions */
-  const reset = (allCats, setSelectedCats) => {
-    const selectedCats = {};
-    allCats.map((cat) => selectedCats[cat] = false);
-    setSelectedCats(selectedCats);
-  }
-  const toggle = (selectedCats, setSelectedCats, cat) => {
-    setSelectedCats({...selectedCats, [cat] : !selectedCats[cat]});
-  }
 
   return (
     <div className="page">
@@ -35,59 +22,23 @@ function Portfolio(props) {
         methods and frameworks.
       </p>
 
-      <div>
-        Languages:
-        { /* all button, which resets the filters */ }
-        <button
-          type="reset"
-          className={"cat-button all-cats" +
-                    (Object.values(selectedLangs).includes(true) ? "" : " active")}
-          onClick={() => reset(allLangs, setSelectedLangs)}
-        >
-          All
-        </button>
-        {allLangs.map((lang) => {
-          /* a button for each lang, which toggles that lang */
-          /* has className active if it's selected */
-          return (
-            <button
-              type="button"
-              className={"cat-button" + (selectedLangs[lang] ? " active" : "")}
-              key={lang}
-              onClick={() => toggle(selectedLangs, setSelectedLangs, lang)}
-            >
-              {lang}
-            </button>
-          )})
-        }
-      </div>
+      { /* buttons for each Language (plus 'all') */ }
+      <CategoryFilterButtons
+        filterTitle={"Languages"}
+        allCats={allLangs}
+        selectedCats={selectedLangs}
+        setSelectedCats={setSelectedLangs}
+      >
+      </CategoryFilterButtons>
 
-      <div>
-        Tags:
-        { /* all button, which resets the filters */ }
-        <button
-          type="reset"
-          className={"cat-button all-cats" +
-                    (Object.values(selectedTags).includes(true) ? "" : " active")}
-          onClick={() => reset(allTags, setSelectedTags)}
-        >
-          All
-        </button>
-        {allTags.map((tag) => {
-          /* a button for each tag, which toggles that tag */
-          /* has className active if it's selected */
-          return (
-            <button
-              type="button"
-              className={"cat-button" + (selectedTags[tag] ? " active" : "")}
-              key={tag}
-              onClick={() => toggle(selectedTags, setSelectedTags, tag)}
-            >
-              {tag}
-            </button>
-          )})
-        }
-      </div>
+      { /* buttons for each Tag (plus 'all') */ }
+      <CategoryFilterButtons
+        filterTitle={"Tags"}
+        allCats={allTags}
+        selectedCats={selectedTags}
+        setSelectedCats={setSelectedTags}
+      >
+      </CategoryFilterButtons>
 
       <section className='gallery portfolio-gallery'>
         {projects
