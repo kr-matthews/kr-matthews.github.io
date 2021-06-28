@@ -10,9 +10,15 @@ function Blog(props) {
       </p>
 
       <section className='gallery blog-gallery'>
-        {articles.slice().reverse().map((article) => {
-          return <ArticlePreview key={article.link} {...article}></ArticlePreview>;
-        })}
+        {articles
+          .slice()
+          .sort((a, b) => b.publishDate - a.publishDate)
+          .map((article) => {
+            return (
+              <ArticlePreview key={article.link} {...article}></ArticlePreview>
+            )
+          })
+        }
       </section>
     </div>
   );

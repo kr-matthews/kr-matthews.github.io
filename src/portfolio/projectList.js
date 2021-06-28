@@ -8,6 +8,7 @@ import hearts from './../images/card-suits-image.svg'
 import weakSwap from './../images/weak-swap-image.png'
 import websiteLogo from './../images/logo.svg'
 
+/* this will be sorted by id, so can be in any order */
 export const projects = [
   {
     title: "BLD Memo Tool",

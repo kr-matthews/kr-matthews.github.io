@@ -31,17 +31,19 @@ function App() {
         <Header />
 
         <Route exact path="/" component={Home} />
+        {/* should be one of these for each page listed in Header.js */}
         <Route exact path="/projects" component={Portfolio} />
         <Route exact path="/blog" component={Blog} />
         <Route exact path="/notes" component={Notes} />
         <Route exact path="/books" component={Books} />
         <Route exact path="/about" component={About} />
 
+        {/* recognize urls for each blog post */ }
         {
           articles.map((article) => {
-            const {startDate, title, link} = article
+            const {link} = article
             return <Route
-                    key={startDate + title}
+                    key={link}
                     exact path={"/blog/" + link}
                     render={(props) => <Article {...article} {...props}/>}
                     />

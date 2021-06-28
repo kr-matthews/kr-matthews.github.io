@@ -2,6 +2,7 @@ import samplePost from './articles/sample-post-1.js'
 import anotherSamplePost from './articles/sample-post-2.js'
 import cardSuits from './../images/card-suits-image.svg'
 
+/* this will be sorted by publishDate, so can be in any order */
 export const articles = [
   {
     title: "Sample Blog Post",

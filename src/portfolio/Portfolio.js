@@ -30,6 +30,7 @@ function Portfolio(props) {
       </p>
       <div>
         Tags:
+        { /* all button, which resets the filters */ }
         <button
           type="reset"
           className={"cat-button all-cats" +
@@ -39,6 +40,8 @@ function Portfolio(props) {
           All
         </button>
         {allTags.map((tag) => {
+          /* a button for each tag, which toggles that tag */
+          /* has className active if it's selected */
           return (
             <button
               type="button"
@@ -53,15 +56,15 @@ function Portfolio(props) {
       </div>
       <section className='gallery portfolio-gallery'>
         {projects
-          .slice()
-          .reverse()
-          .filter((project) => {
+          .slice() /* make a copy */
+          .sort((a, b) => b.id - a.id) /* reverse chron. order */
+          .filter((project) => { /* select only those with filtered tag */
             return (
               !Object.values(areSelected).includes(true) ||
               project.tags.filter((tag) => areSelected[tag]).length > 0
             )
           })
-          .map((project) => {
+          .map((project) => { /* display the panel in the gallery */
             return (
               <ProjectPreview
                 key={project.id}
