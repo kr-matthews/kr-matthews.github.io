@@ -13,6 +13,7 @@ function Portfolio(props) {
   const allLangs =
     [...new Set(projects.slice().map((proj) => proj.languages).flat())].sort();
   const [selectedLangs, setSelectedLangs] = useState({});
+  const [searchText, setSearchText] = useState('');
 
   return (
     <div className="page">
@@ -21,6 +22,18 @@ function Portfolio(props) {
         Coding projects I've done, as well as some puzzle-solving
         methods and frameworks.
       </p>
+
+      { /* form for searching titles and descriptions */ }
+      <form
+        className="text-search"
+        onSubmit={(e) => e.preventDefault()}>
+        <input
+          type="text"
+          placeholder="Search titles and descriptions"
+          value={searchText}
+          onChange={(e) => setSearchText(e.target.value)}
+        />
+      </form>
 
       { /* buttons for each Language (plus 'all') */ }
       <CategoryFilterButtons
@@ -45,6 +58,12 @@ function Portfolio(props) {
           .sort((a, b) => b.id - a.id) /* reverse chron. order */
           .filter(filterCat('tags', selectedTags))
           .filter(filterCat('languages', selectedLangs))
+          .filter((proj) => {
+            return (
+              proj.title.toLowerCase().includes(searchText.toLowerCase()) ||
+              proj.description.toLowerCase().includes(searchText.toLowerCase())
+            )
+          })
           .map((project) => { /* display the panel in the gallery */
             return (
               <ProjectPreview
