@@ -1,0 +1,45 @@
+.cat-button {
+  border-radius: 1em;
+  background-color: lightGrey;
+  border: none;
+  color: Black;
+  padding: 8px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 3px;
+  cursor: pointer;
+}
+
+.cat-button.all-cats {
+  margin-left: 10px;
+}
+
+.cat-button.active {
+  background-color: DarkGrey;
+}
+
+.cat-button.all-cats.active {
+  background-color: Black;
+  color: White;
+}
+
+form {
+  margin: 0.5em 0;
+}
+
+form input[type=search] {
+  width: 25em;
+  padding: 4px;
+  border-radius: 0.8em;
+  border-width: 2px;
+  border-color: DarkGrey;
+  border-style: solid;
+}
+
+form input[type=search]:focus {
+  outline: none;
+  border-width: 2px;
+  border-color: Black;
+}
