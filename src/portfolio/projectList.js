@@ -55,7 +55,7 @@ export const projects = [
     id: 201902,
     url: "https://github.com/kr-matthews/hearts-java-v2",
     image: hearts,
-    tags: ["Game", "Card Game"],
+    tags: ["Game", "Cards"],
     languages: ["Java"],
     year: 2019,
     description: "The card game Hearts, with all standard rules, for 1 up to 52 human and/or computer players. One computer player programmed. Text-based interface, only setup for 1 human player and any number of computer players."
@@ -105,7 +105,6 @@ export const projects = [
     id: 202199,
     url: "",
     image: "",
-    title: "",
     tags: [],
     languages: [],
     year: 2021,
