@@ -9,7 +9,7 @@ const filterCat = (cat, selectedCats) => {
   }
 }
 
-function CategoryFilterButtons(props) {
+function GalleryFilterButtons(props) {
 
   /* constants */
   const { filterTitle, allCats, selectedCats, setSelectedCats } = props;
@@ -59,4 +59,4 @@ function CategoryFilterButtons(props) {
 }
 
 export { filterCat };
-export default CategoryFilterButtons;
+export default GalleryFilterButtons;

@@ -23,7 +23,7 @@ import './css/gallery.css'
 import './css/portfolio-gallery.css'
 import './css/blog-gallery.css'
 import './css/article.css'
-import './css/filters.css'
+import './css/gallery-filter-and-search.css'
 
 function App() {
   return (

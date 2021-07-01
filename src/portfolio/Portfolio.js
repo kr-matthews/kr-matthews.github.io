@@ -1,11 +1,12 @@
 import { useState } from 'react';
 import { projects } from './projectList.js'
 import ProjectPreview from './ProjectPreview.js';
-import CategoryFilterButtons, { filterCat } from './../category-filters.js'
+import GalleryFilterButtons, { filterCat } from './../gallery-filter.js'
+import GallerySearchForm from './../gallery-search.js'
 
 function Portfolio(props) {
   /* constants */
-  /* useStates are not initialized, which is ok because
+  /* selected useStates are not initialized, which is ok because
     'all' applies if 'true' is not present (and 'true' isn't in empty) */
   const allTags =
     [...new Set(projects.slice().map((proj) => proj.tags).flat())].sort();
@@ -19,38 +20,35 @@ function Portfolio(props) {
     <div className="page">
       <h1>Projects</h1>
       <p>
-        Coding projects I've done, as well as some puzzle-solving
-        methods and frameworks.
+        Notable projects that I've created.
+        Most, but not all, are programming projects.
       </p>
 
       { /* buttons for each Language (plus 'all') */ }
-      <CategoryFilterButtons
+      <GalleryFilterButtons
         filterTitle={"Languages"}
         allCats={allLangs}
         selectedCats={selectedLangs}
         setSelectedCats={setSelectedLangs}
       >
-      </CategoryFilterButtons>
+      </GalleryFilterButtons>
 
       { /* buttons for each Tag (plus 'all') */ }
-      <CategoryFilterButtons
+      <GalleryFilterButtons
         filterTitle={"Tags"}
         allCats={allTags}
         selectedCats={selectedTags}
         setSelectedCats={setSelectedTags}
       >
-      </CategoryFilterButtons>
+      </GalleryFilterButtons>
 
       { /* form for searching titles and descriptions */ }
-      <form onSubmit={(e) => e.preventDefault()}>
-      <input
-      type="search"
-      placeholder="Search titles and descriptions..."
-      aria-label="Search projects"
-      value={searchText}
-      onChange={(e) => setSearchText(e.target.value)}
+      <GallerySearchForm
+        placeholder="Search titles and descriptions..."
+        label="Search projects"
+        searchText={searchText}
+        setSearchText={setSearchText}
       />
-      </form>
 
       <section className='gallery portfolio-gallery'>
         {projects

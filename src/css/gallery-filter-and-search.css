@@ -1,9 +1,10 @@
 .cat-button {
   border-radius: 1em;
   background-color: lightGrey;
-  border: none;
+  border-style: solid;
+  border-color: transparent;
   color: Black;
-  padding: 8px 10px;
+  padding: 6px 10px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -26,7 +27,8 @@
 }
 
 form {
-  margin: 0.5em 0;
+  display: inline-block;
+  margin: 0.5em;
 }
 
 form input[type=search] {
@@ -38,8 +40,11 @@ form input[type=search] {
   border-style: solid;
 }
 
-form input[type=search]:focus {
+form input[type=search]:focus, .cat-button:focus {
   outline: none;
-  border-width: 2px;
   border-color: Black;
+}
+
+.cat-button:focus {
+  border-color: transparent;
 }
