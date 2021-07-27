@@ -7,6 +7,7 @@ import ultimatePuzzle from "./../images/the-ultimate-puzzle-image.png";
 import hearts from "./../images/card-suits-image.svg";
 import weakSwap from "./../images/weak-swap-image.png";
 import websiteLogo from "./../images/logo.svg";
+import ticTacToe from "./../images/tic-tac-toe.png";
 
 /* this will be sorted by id, so can be in any order */
 export const projects = [
@@ -114,7 +115,7 @@ export const projects = [
     title: "Tic Tac Toe",
     id: 202102,
     url: "https://kr-matthews.github.io/tic-tac-toe/",
-    image: "",
+    image: ticTacToe,
     tags: ["Web App", "Game"],
     languages: ["React"],
     year: 2021,
