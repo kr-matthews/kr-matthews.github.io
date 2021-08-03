@@ -48,7 +48,7 @@ export const projects = [
     title: '"The Ultimate Puzzle" Solver',
     id: 201901,
     url: "https://github.com/kr-matthews/the-ultimate-puzzle-solver",
-    image: ultimatePuzzle,
+    image: ultimatePuzzle, // consider replacing picture
     tags: ["Puzzle", "Puzzle Solver"],
     languages: ["Racket"],
     year: 2019,
@@ -121,6 +121,17 @@ export const projects = [
     year: 2021,
     description:
       "There are two players playing against each other on a common interface (screen). Each player can be human-controlled or one of several built-in computer players (of varying difficulty).",
+  },
+  {
+    title: "Minesweeper [WIP]",
+    id: 202103,
+    url: "https://github.com/kr-matthews/minesweeper", // to update
+    //image: "", // to update
+    tags: ["Web App", "Game"],
+    languages: ["React"],
+    year: 2021,
+    description:
+      "The standard minesweeper game for one human player. Select from standard difficulties, or specify custom parameters (dimensions and mine count).",
   },
   /*
     title: "",
