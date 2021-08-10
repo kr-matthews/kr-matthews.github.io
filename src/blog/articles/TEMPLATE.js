@@ -1,13 +1,9 @@
-import React from "react"
-
-function Content(props) {
+function Content() {
   return (
     <>
-      <p>
-      
-      </p>
+      <p></p>
     </>
-  )
+  );
 }
 
 export default Content;
