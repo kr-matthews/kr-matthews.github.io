@@ -23,12 +23,6 @@ function Blog(props) {
     <div className="page narrow-page">
       <h1>Blog</h1>
       <p>Articles that I've written.</p>
-      <p>
-        <span style={{ color: "red" }}>
-          I don't have any articles yet (but I will soon!); so far these are
-          randomly generated samples.
-        </span>
-      </p>
 
       {/* buttons for each Language (plus 'all') */}
       <GalleryFilterButtons

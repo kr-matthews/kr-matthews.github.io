@@ -9,7 +9,7 @@ function ArticlePreview({
   editDate,
   image,
   tags,
-  content,
+  preview,
 }) {
   return (
     <Link to={"blog/" + link} className="item">
@@ -20,8 +20,7 @@ function ArticlePreview({
       <div className="info-container">
         <h2>{title}</h2>
         <div className="specs">{publishDate.toISOString().split("T")[0]}</div>
-        {/* content is all displayed; should do this better */}
-        <div className="preview">{content}</div>
+        <div className="preview">{preview}</div>
       </div>
     </Link>
   );
