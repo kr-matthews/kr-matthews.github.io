@@ -8,6 +8,7 @@ import hearts from "./../images/card-suits-image.svg";
 import weakSwap from "./../images/weak-swap-image.png";
 import websiteLogo from "./../images/logo.svg";
 import ticTacToe from "./../images/tic-tac-toe-styled.png";
+import minesweeper from "./../images/minesweeper.png";
 
 /* this will be sorted by id, so can be in any order */
 export const projects = [
@@ -123,15 +124,15 @@ export const projects = [
       "There are two players playing against each other on a common interface (screen). Each player can be human-controlled or one of several built-in computer players (of varying difficulty).",
   },
   {
-    title: "Minesweeper [WIP]",
+    title: "Minesweeper",
     id: 202103,
-    url: "https://github.com/kr-matthews/minesweeper", // to update
-    //image: "", // to update
+    url: "https://kr-matthews.github.io/minesweeper/",
+    image: minesweeper,
     tags: ["Web App", "Game"],
     languages: ["React"],
     year: 2021,
     description:
-      "The standard minesweeper game for one human player. Select from standard difficulties, or specify custom parameters (dimensions and mine count).",
+      "The standard minesweeper game for one human player. Select from standard difficulties, or specify custom parameters. Times and tracks high-scores.",
   },
   /*
     title: "",
