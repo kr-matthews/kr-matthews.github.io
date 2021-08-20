@@ -1,33 +1,25 @@
-// import article contents
+// import artcle contents
 
-import SamplePost from "./articles/sample-post-1.js";
-import AnotherSamplePost from "./articles/sample-post-2.js";
+import RubiksCubeBlindfolded from "./articles/001-rubiks-cube-blindfolded/rubiks-cube-blindfolded.js";
 
 // import article preview images
 
-import cardSuits from "./../images/card-suits-image.svg";
+import altSolvedCube from "./articles/001-rubiks-cube-blindfolded/alt-solved-cube-physical.jpg";
 
 /* this will be sorted by publishDate, so can be in any order */
 export const articles = [
   {
-    title: "Sample Blog Post",
-    link: "sample-post",
-    startDate: new Date("2021-02-01"),
-    publishDate: new Date("2021-06-05"),
+    title:
+      "Understanding how someone else might be able to solve a Rubik's Cube blindfolded",
+    link: "rubiks-cube-blindfolded",
+    startDate: new Date("2021-07-31"),
+    publishDate: new Date("2021-08-19"),
     editDate: "",
-    image: "",
-    tags: ["test", "writing", "code", "unique"],
-    content: <SamplePost />,
-  },
-  {
-    title: "Another Sample Blog Post: With a Longer Title Which Wraps Around",
-    link: "another-sample-post",
-    startDate: new Date("2021-01-03"),
-    publishDate: new Date("2021-06-07"),
-    editDate: new Date("2021-06-23"),
-    image: cardSuits,
-    tags: ["test", "unique2", "writing"],
-    content: <AnotherSamplePost />,
+    image: altSolvedCube,
+    tags: ["Rubik's Cubes"],
+    preview:
+      "This is the first in a series of articles about solving Rubik's Cubes blindfolded. There are no prerequisites — you don't need to know how to solve a Rubik's Cube, or anything about them really.",
+    content: <RubiksCubeBlindfolded />,
   },
   /*
     title: "",
@@ -37,6 +29,8 @@ export const articles = [
     editDate: new Date(''),
     image: "",
     tags: [],
-    content: ""
+    preview: ""
   */
 ];
+
+// TODO: add preview text, to replace full content

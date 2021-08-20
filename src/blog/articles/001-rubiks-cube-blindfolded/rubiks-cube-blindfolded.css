@@ -1,0 +1,30 @@
+.large-img {
+  width: 25em;
+}
+
+.cards {
+  text-align: center;
+  padding: 0.67em;
+}
+
+.cards img {
+  display: inline-block;
+  width: 6em;
+}
+
+.cards .caption {
+  font-size: 85%;
+}
+
+.image-row {
+  text-align: center;
+}
+
+.image-row img {
+  display: inline-block;
+}
+
+.small-img {
+  width: 15em;
+  padding: 1em;
+}
