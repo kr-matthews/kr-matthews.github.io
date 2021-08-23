@@ -1,9 +1,9 @@
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { useState } from "react";
+import { Link } from "react-router-dom";
 
-import { ReactComponent as Logo } from './../images/website-logo.svg';
-import { ReactComponent as OpenMenu } from './../images/menu.svg';
-import { ReactComponent as CloseMenu } from './../images/close.svg';
+import { ReactComponent as Logo } from "./../images/website-logo.svg";
+import { ReactComponent as OpenMenu } from "./../images/menu.svg";
+import { ReactComponent as CloseMenu } from "./../images/close.svg";
 
 function Header() {
   /* pages which exist, to appear in navigation menu */
@@ -20,7 +20,6 @@ function Header() {
 
   return (
     <header>
-
       {/* Logo to navigate to home page */}
       <span className="icon-container home-option" onClick={close}>
         <Link to="/">
@@ -30,33 +29,28 @@ function Header() {
 
       {/* Icon to toggle mobile menu; only visible on moble */}
       <span className="icon-container toggle-option">
-        {
-          isOpen ?
-          <CloseMenu className="icon" onClick={handleClick} /> :
+        {isOpen ? (
+          <CloseMenu className="icon" onClick={handleClick} />
+        ) : (
           <OpenMenu className="icon" onClick={handleClick} />
-        }
+        )}
       </span>
 
       {/* navigation link for each entry in {pages} */}
       <nav>
         <ul className={isOpen ? "nav-options" : "nav-options hidden"}>
-          {
-            pages.map((page) => {
-              return (
-                <li className="option" onClick={close} key={page}>
-                  {/* assumes link will be lowercase version of name */}
-                  <Link to={"/" + page.toLowerCase()}>
-                    {page}
-                  </Link>
-                </li>
-              )
-            })
-          }
+          {pages.map((page) => {
+            return (
+              <li className="option" onClick={close} key={page}>
+                {/* assumes link will be lowercase version of name */}
+                <Link to={"/" + page.toLowerCase()}>{page}</Link>
+              </li>
+            );
+          })}
         </ul>
       </nav>
-
     </header>
-  )
+  );
 }
 
 export default Header;

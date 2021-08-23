@@ -32,5 +32,3 @@ export const articles = [
     preview: ""
   */
 ];
-
-// TODO: add preview text, to replace full content
