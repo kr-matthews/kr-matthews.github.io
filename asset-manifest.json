@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/static/css/main.99c87eb7.chunk.css",
-    "main.js": "/static/js/main.dd58c2e1.chunk.js",
-    "main.js.map": "/static/js/main.dd58c2e1.chunk.js.map",
+    "main.js": "/static/js/main.2e9c4c54.chunk.js",
+    "main.js.map": "/static/js/main.2e9c4c54.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.3a5dd6d3.js",
     "runtime-main.js.map": "/static/js/runtime-main.3a5dd6d3.js.map",
     "static/js/2.8de21c49.chunk.js": "/static/js/2.8de21c49.chunk.js",
@@ -35,7 +35,7 @@
     "static/media/memo-tool-image.28ed7720.png": "/static/media/memo-tool-image.28ed7720.png",
     "static/media/memo-tools-image.a93f4363.png": "/static/media/memo-tools-image.a93f4363.png",
     "static/media/menu.f72654b3.svg": "/static/media/menu.f72654b3.svg",
-    "static/media/minesweeper.b7473273.png": "/static/media/minesweeper.b7473273.png",
+    "static/media/minesweeper - game type to high score.d7e08eb9.png": "/static/media/minesweeper - game type to high score.d7e08eb9.png",
     "static/media/misplaced-edge-physical.b7aa7a90.jpg": "/static/media/misplaced-edge-physical.b7aa7a90.jpg",
     "static/media/scrambled-virtual.01798c83.png": "/static/media/scrambled-virtual.01798c83.png",
     "static/media/seq-2-virtual.bf25b295.png": "/static/media/seq-2-virtual.bf25b295.png",
@@ -54,6 +54,6 @@
     "static/js/runtime-main.3a5dd6d3.js",
     "static/js/2.8de21c49.chunk.js",
     "static/css/main.99c87eb7.chunk.css",
-    "static/js/main.dd58c2e1.chunk.js"
+    "static/js/main.2e9c4c54.chunk.js"
   ]
 }
