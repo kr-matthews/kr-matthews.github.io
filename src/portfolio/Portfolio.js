@@ -32,8 +32,8 @@ function Portfolio(props) {
     <div className="page">
       <h1>Projects</h1>
       <p>
-        Notable projects that I've created. Most, but not all, are programming
-        projects. Many have public repositories on{" "}
+        Notable (personal) projects that I've created. Most, but not all, are
+        programming projects. Many have public repositories on{" "}
         <a
           href="https://github.com/kr-matthews"
           target="_blank"

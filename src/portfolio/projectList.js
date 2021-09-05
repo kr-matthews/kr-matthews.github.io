@@ -10,6 +10,7 @@ import websiteLogo from "./../images/logo.svg";
 import ticTacToe from "./../images/tic-tac-toe-styled.png";
 import minesweeper from "./../images/minesweeper - game type to high score.png";
 // note: there are 3 alternative minesweeper images
+import connect4 from "./../images/connect-4-wip.png";
 
 // this will be sorted by id, so can be in any order
 export const projects = [
@@ -127,13 +128,23 @@ export const projects = [
   {
     title: "Minesweeper",
     id: 202103,
-    url: "https://kr-matthews.github.io/minesweeper/",
+    url: "https://kr-matthews.github.io/minesweeper",
     image: minesweeper,
     tags: ["Web App", "Game"],
     languages: ["React"],
     year: 2021,
     description:
       "The standard minesweeper game for one human player. Select from standard difficulties, or specify custom parameters. Times and tracks high-scores.",
+  },
+  {
+    title: "Connect 4",
+    id: 202104,
+    url: "https://kr-matthews.github.io/connect-4",
+    image: connect4,
+    tags: ["Web App", "Game"],
+    languages: ["React"],
+    year: 2021,
+    description: "WIP -- intended to be playable across the internet.",
   },
   /*
     title: "",
