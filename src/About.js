@@ -21,13 +21,26 @@ function About(props) {
       </p>
       <p>
         I know how to solve a Rubik's cube (blindfolded), and have{" "}
-        <a href="https://www.worldcubeassociation.org/persons/2010MATT02">
+        <a
+          href="https://www.worldcubeassociation.org/persons/2010MATT02"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           competed
         </a>{" "}
-        in about 100 competitions across North America, a few of which I helped
-        organize. Most of my early programming{" "}
+        in about 100 competitions across North America, many of which I helped
+        organize and run as a volunteer. Most of my early programming{" "}
         <Link to="/projects">projects</Link> were cube-based tools, designed to
-        help with learning and/or practising the cube.
+        help with learning and/or practising the cube. I've also recently
+        started helping the World Cube Association's{" "}
+        <a
+          href="https://github.com/thewca"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          software team
+        </a>{" "}
+        as a volunteer.
       </p>
       <p>
         I'm currently in BC, Canada. I can be contacted at my email, which is
