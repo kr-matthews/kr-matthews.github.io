@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/static/css/main.ccf0e165.chunk.css",
-    "main.js": "/static/js/main.e54185c8.chunk.js",
-    "main.js.map": "/static/js/main.e54185c8.chunk.js.map",
+    "main.js": "/static/js/main.967fc73b.chunk.js",
+    "main.js.map": "/static/js/main.967fc73b.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.3a5dd6d3.js",
     "runtime-main.js.map": "/static/js/runtime-main.3a5dd6d3.js.map",
-    "static/js/2.8de21c49.chunk.js": "/static/js/2.8de21c49.chunk.js",
-    "static/js/2.8de21c49.chunk.js.map": "/static/js/2.8de21c49.chunk.js.map",
+    "static/js/2.7428f667.chunk.js": "/static/js/2.7428f667.chunk.js",
+    "static/js/2.7428f667.chunk.js.map": "/static/js/2.7428f667.chunk.js.map",
     "index.html": "/index.html",
     "static/css/main.ccf0e165.chunk.css.map": "/static/css/main.ccf0e165.chunk.css.map",
-    "static/js/2.8de21c49.chunk.js.LICENSE.txt": "/static/js/2.8de21c49.chunk.js.LICENSE.txt",
+    "static/js/2.7428f667.chunk.js.LICENSE.txt": "/static/js/2.7428f667.chunk.js.LICENSE.txt",
     "static/media/2-edges-pre-swap.17f591ec.png": "/static/media/2-edges-pre-swap.17f591ec.png",
     "static/media/2-edges-swap-v1.955f7f60.png": "/static/media/2-edges-swap-v1.955f7f60.png",
     "static/media/2-edges-swap-v2.16341f66.png": "/static/media/2-edges-swap-v2.16341f66.png",
@@ -53,8 +53,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.3a5dd6d3.js",
-    "static/js/2.8de21c49.chunk.js",
+    "static/js/2.7428f667.chunk.js",
     "static/css/main.ccf0e165.chunk.css",
-    "static/js/main.e54185c8.chunk.js"
+    "static/js/main.967fc73b.chunk.js"
   ]
 }
