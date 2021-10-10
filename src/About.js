@@ -5,34 +5,47 @@ function About(props) {
     <div className="page narrow-page">
       <h1>About</h1>
       <p>
-        I'm Kevin Matthews, a mathematician by training. Generally, I'm
-        interested in most kinds of problem solving related to mathematics and
-        programming. I like systems design -- how software applications are
-        structured, how cities function, how organizations setup their
-        workflows, and such.
+        I'm Kevin Matthews, a mathematician by training and a self-taught
+        programmer. Generally, I'm interested in most kinds of problem solving
+        related to mathematics and programming. I like systems design -- how
+        software applications are structured, how cities function, how
+        organizations setup their workflows, and such.
       </p>
       <p>
-        I have a Bachelor of Mathematics from the University of Waterloo, where
-        I studied Pure Math, Applied Math, Combinatorics & Optimization, and
-        Computational Math. I also have a Master of Arts from the University of
-        California, Los Angeles, where I studied Mathematical Logic. More
-        recently, I've been working behind-the-scenes with financial
-        planning/advising workflows and processes.
-      </p>
-      <p>
-        I know how to solve a Rubik's cube (blindfolded), and have{" "}
+        I have a Bachelor of Mathematics from the{" "}
         <a
-          href="https://www.worldcubeassociation.org/persons/2010MATT02"
+          href="https://uwaterloo.ca/math/"
           target="_blank"
           rel="noopener noreferrer"
         >
-          competed
-        </a>{" "}
-        in about 100 competitions across North America, many of which I helped
-        organize and run as a volunteer. Most of my early programming{" "}
-        <Link to="/projects">projects</Link> were cube-based tools, designed to
-        help with learning and/or practising the cube. I've also recently
-        started helping the World Cube Association's{" "}
+          University of Waterloo
+        </a>
+        , where I studied Pure Math, Applied Math, Combinatorics & Optimization,
+        and Computational Math. I also have a Master of Arts from the{" "}
+        <a
+          href="https://ww3.math.ucla.edu/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          University of California, Los Angeles
+        </a>
+        , where I studied Mathematical Logic.
+      </p>
+      <p>
+        Since then, I've been working in Financial Technology with
+        behind-the-scenes financial planning workflows and processes, while
+        simultaneously working on numerous personal{" "}
+        <Link to="/projects">projects</Link> to improve my skills while learning
+        new languages and techniques.
+      </p>
+      <p>
+        I've been solving <Link to="/cubing">Rubik's Cubes</Link> for over a
+        decade, and have helped organize and run numerous competitions as a
+        volunteer, achieving a few Canadian records along the way. Most of my
+        early programming <Link to="/projects">projects</Link> were cube-based
+        tools, designed to help with learning how to solve the cube blindfolded
+        and to help practice what you know. I've also recently started helping
+        the World Cube Association's{" "}
         <a
           href="https://github.com/thewca"
           target="_blank"
@@ -43,9 +56,9 @@ function About(props) {
         as a volunteer.
       </p>
       <p>
-        I'm currently in Vancouver, BC, Canada. I can be contacted at my email,
-        which is 'kvn' then 'r' followed by my last name, at Google's mail
-        platform.
+        I'm currently in <Link to="/vancouver">Vancouver</Link>, BC, Canada. I
+        can be contacted at my email, which is 'kvn' then 'r' followed by my
+        last name, at Google's mail platform.
       </p>
     </div>
   );
