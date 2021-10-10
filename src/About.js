@@ -43,8 +43,9 @@ function About(props) {
         as a volunteer.
       </p>
       <p>
-        I'm currently in BC, Canada. I can be contacted at my email, which is
-        'kvn' then 'r' followed by my last name, at Google's mail platform.
+        I'm currently in Vancouver, BC, Canada. I can be contacted at my email,
+        which is 'kvn' then 'r' followed by my last name, at Google's mail
+        platform.
       </p>
     </div>
   );

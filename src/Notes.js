@@ -1,4 +1,4 @@
-function About(props) {
+function Notes(props) {
   return (
     <div className="page narrow-page">
       <h1>Notes</h1>
@@ -7,4 +7,4 @@ function About(props) {
   );
 }
 
-export default About;
+export default Notes;

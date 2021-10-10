@@ -8,7 +8,8 @@ import Footer from "./header-footer/Footer.js";
 import Home from "./Home.js";
 import Portfolio from "./portfolio/Portfolio.js";
 import Blog from "./blog/Blog.js";
-import Notes from "./Notes.js";
+import Cubing from "./Cubing.js";
+import Vancouver from "./Vancouver.js";
 import Books from "./Books.js";
 import About from "./About.js";
 
@@ -34,7 +35,8 @@ function App() {
       {/* should be one of these for each page listed in Header.js */}
       <Route exact path="/projects" component={Portfolio} />
       <Route exact path="/blog" component={Blog} />
-      <Route exact path="/notes" component={Notes} />
+      <Route exact path="/cubing" component={Cubing} />
+      <Route exact path="/vancouver" component={Vancouver} />
       <Route exact path="/books" component={Books} />
       <Route exact path="/about" component={About} />
 

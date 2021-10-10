@@ -8,7 +8,7 @@ import { ReactComponent as CloseMenu } from "./../images/close.svg";
 function Header() {
   /* pages which exist, to appear in navigation menu */
   /* uses lowercase of word for url */
-  const pages = ["Projects", "Blog", "Notes", "About"];
+  const pages = ["Projects", "Blog", "Cubing", "Vancouver", "About"];
 
   /* these three are only needed on mobile (ie screen <= 600) */
   /* whether the mobile menu is expanded and visible */
