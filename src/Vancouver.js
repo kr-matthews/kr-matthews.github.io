@@ -48,7 +48,7 @@ function Vancouver(props) {
           >
             article
           </a>{" "}
-          from the CBC examining the origins of all Vancouver streets
+          from the CBC examining the origins of all Vancouver street names
         </li>
       </ul>
     </div>
