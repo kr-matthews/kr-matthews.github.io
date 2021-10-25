@@ -17,10 +17,12 @@ header {
 nav ul {
   list-style-type: none;
 }
-.option, .home-option {
+.option,
+.home-option {
   float: left;
 }
-.option a, .home-option a {
+.option a,
+.home-option a {
   display: block;
   color: black;
   text-align: center;
@@ -31,7 +33,8 @@ nav ul {
   padding: 6.5px;
   text-align: left;
 }
-.option a:hover, .icon-container:hover {
+.option a:hover,
+.icon-container:hover {
   cursor: pointer;
   background-color: DarkGray;
   /* color: White; */
@@ -53,7 +56,8 @@ nav ul {
   .option a {
     padding: 8px;
   }
-  .option, .home-option {
+  .option,
+  .home-option {
     float: none;
   }
 }

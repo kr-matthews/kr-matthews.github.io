@@ -31,7 +31,7 @@ form {
   margin: 0.5em;
 }
 
-form input[type=search] {
+form input[type="search"] {
   width: 25em;
   padding: 4px;
   border-radius: 0.8em;
@@ -40,7 +40,8 @@ form input[type=search] {
   border-style: solid;
 }
 
-form input[type=search]:focus, .cat-button:focus {
+form input[type="search"]:focus,
+.cat-button:focus {
   outline: none;
   border-color: Black;
 }
