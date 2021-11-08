@@ -1225,6 +1225,64 @@ function Content() {
         </a>
         .
       </p>
+
+      <h2>Update</h2>
+
+      <p>
+        My Connect 4 game is nearly done now, a few weeks after writing this
+        article. I learnt a lot more about React (and JavaScript) since then,
+        and a few of those things I learnt were related to state management, so
+        I figured I'd include them here in a brief update.
+      </p>
+      <p>
+        If you find yourself doing two or more things together repeatedly, it's
+        natural to consider wrapping them up together in a helper function and
+        just calling that repeatedly instead. However, if you <em>always</em> do
+        those things together and never individually, then you could consider
+        instead making one a side-effect.
+      </p>
+      <p>
+        For example, if you frequently use <code>setWinner(true)</code> when the
+        user wins, and then you always play some sound to let them know, then
+        it's probably best to just use a side-effect which runs whenever{" "}
+        <code>winner</code> updates and plays the sound if it's true. This may
+        be better than a helper function which sets the winner and plays the
+        sound, as this way you can easily out-source the sound effect into its
+        own hook, say. Then in another context where you're using the game hook
+        you've created but you don't want sound effects, you can just not call
+        the sound effect hook. There's no need to edit any helper functions.
+      </p>
+      <p>
+        When I tried to do something along these lines, I ran into a problem. I
+        had added an option to mute all sounds, via <code>soundIsOn</code>. So
+        my side effect (using a <code>useEffect</code>) must check whether that
+        value is true and whether the user has won. So now both of these values
+        must be in the dependency array, and the side effect will run whenever
+        the user turns sound on. The specific problem arises when the user
+        previously won the game (so <code>winner</code> is <code>true</code>)
+        with sound off, and then they turn the sound on. The side effect is
+        triggered and both values are true so the sound plays. But it should
+        only play <em>when</em> the user wins (if sound is on).
+      </p>
+      <p>
+        The workaround here is to essentially set a flag that a sound may need
+        to be played. This flag is set in the original side effect above, which
+        no longer directly plays the sound and no longer depends on{" "}
+        <code>soundIsOn</code>. A separate side effect runs when that flag
+        changes and, unless sound is muted, plays the sound, and then that same
+        effect turns the flag off, regardless of whether sound is muted.
+      </p>
+      <p>
+        That was a pretty quick explanation. See the{" "}
+        <a
+          href="https://stackoverflow.com/questions/69732411/react-useeffect-runs-too-often"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          stack overflow question I asked
+        </a>{" "}
+        for more details.
+      </p>
     </>
   );
 }

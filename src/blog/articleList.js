@@ -28,7 +28,7 @@ export const articles = [
     link: "react-state-management",
     startDate: new Date("2021-10-09"),
     publishDate: new Date("2021-10-24"),
-    editDate: "",
+    editDate: new Date("2021-11-08"),
     image: reactLogo,
     tags: ["Programming", "React"],
     preview:
