@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/static/css/main.5138dfc5.chunk.css",
-    "main.js": "/static/js/main.dde19650.chunk.js",
-    "main.js.map": "/static/js/main.dde19650.chunk.js.map",
+    "main.js": "/static/js/main.47b2f31f.chunk.js",
+    "main.js.map": "/static/js/main.47b2f31f.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.3a5dd6d3.js",
     "runtime-main.js.map": "/static/js/runtime-main.3a5dd6d3.js.map",
     "static/js/2.7428f667.chunk.js": "/static/js/2.7428f667.chunk.js",
@@ -24,7 +24,7 @@
     "static/media/alt-solved-cube-physical.9d49f7dd.jpg": "/static/media/alt-solved-cube-physical.9d49f7dd.jpg",
     "static/media/card-suits-image.0e314b0e.svg": "/static/media/card-suits-image.0e314b0e.svg",
     "static/media/close.0135cc7f.svg": "/static/media/close.0135cc7f.svg",
-    "static/media/connect-4-wip.081fcaee.png": "/static/media/connect-4-wip.081fcaee.png",
+    "static/media/connect-4.c7d02159.png": "/static/media/connect-4.c7d02159.png",
     "static/media/core-physical.9b76e7ec.jpg": "/static/media/core-physical.9b76e7ec.jpg",
     "static/media/corner-twist-image.4b43024b.png": "/static/media/corner-twist-image.4b43024b.png",
     "static/media/correct-first-swap.e26de2d1.png": "/static/media/correct-first-swap.e26de2d1.png",
@@ -56,6 +56,6 @@
     "static/js/runtime-main.3a5dd6d3.js",
     "static/js/2.7428f667.chunk.js",
     "static/css/main.5138dfc5.chunk.css",
-    "static/js/main.dde19650.chunk.js"
+    "static/js/main.47b2f31f.chunk.js"
   ]
 }
