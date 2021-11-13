@@ -4,13 +4,15 @@ function About(props) {
   return (
     <div className="page narrow-page">
       <h1>About</h1>
+      <h3>Interests</h3>
       <p>
         I'm Kevin Matthews, a mathematician by training and a self-taught
         programmer. Generally, I'm interested in most kinds of problem solving
-        related to mathematics and programming. I like systems design -- how
-        software applications are structured, how cities function, how
-        organizations setup their workflows, and such.
+        related to mathematics and programming. Among other things, I like
+        systems design -- how software applications are structured, how cities
+        function, how organizations setup their workflows, and such.
       </p>
+      <h3>Education and Work</h3>
       <p>
         I have a Bachelor of Mathematics from the{" "}
         <a
@@ -32,11 +34,21 @@ function About(props) {
         , where I studied Mathematical Logic.
       </p>
       <p>
-        Since then, I've been working in Financial Technology with
-        behind-the-scenes financial planning workflows and processes, while
-        simultaneously working on numerous personal{" "}
-        <Link to="/projects">projects</Link> to improve my skills while learning
-        new languages and techniques.
+        I've recently started working at{" "}
+        <a href="https://rivian.com/" target="_blank" rel="noopener noreferrer">
+          Rivian
+        </a>
+        , an electric truck company, as a Software Engineer, where I hope to
+        learn a lot of new techniques and skills. Before that, I worked in
+        Financial Technology for a couple of years, focusing on
+        behind-the-scenes financial planning workflows and processes.
+      </p>
+      <h3>Projects and Hobbies</h3>
+      <p>
+        For the past year or so, I've been consistently working on numerous
+        personal <Link to="/projects">projects</Link> to improve my skills while
+        learning new languages and techniques. Most are simple games, but I have
+        ideas for other types of projects in the future.
       </p>
       <p>
         I've been solving <Link to="/cubing">Rubik's Cubes</Link> for over a
@@ -44,8 +56,8 @@ function About(props) {
         volunteer, achieving a few Canadian records along the way. Most of my
         early programming <Link to="/projects">projects</Link> were cube-based
         tools, designed to help with learning how to solve the cube blindfolded
-        and to help practice what you know. I've also recently started helping
-        the World Cube Association's{" "}
+        and to help practice what you know. I've also recently joined the World
+        Cube Association's{" "}
         <a
           href="https://github.com/thewca"
           target="_blank"
@@ -55,6 +67,7 @@ function About(props) {
         </a>{" "}
         as a volunteer.
       </p>
+      <h3>Contact</h3>
       <p>
         I'm currently in <Link to="/vancouver">Vancouver</Link>, BC, Canada. I
         can be contacted at my email, which is 'kvn' then 'r' followed by my
