@@ -137,7 +137,7 @@ export const projects = [
       "The standard minesweeper game for one human player. Select from standard difficulties, or specify custom parameters. Times and tracks high-scores.",
   },
   {
-    title: "Connect 4 [WIP]",
+    title: "Connect 4",
     id: 202104,
     url: "https://kr-matthews.github.io/connect-4",
     image: connect4,
