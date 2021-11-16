@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/static/css/main.5138dfc5.chunk.css",
-    "main.js": "/static/js/main.bf862326.chunk.js",
-    "main.js.map": "/static/js/main.bf862326.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.3a5dd6d3.js",
-    "runtime-main.js.map": "/static/js/runtime-main.3a5dd6d3.js.map",
-    "static/js/2.7428f667.chunk.js": "/static/js/2.7428f667.chunk.js",
-    "static/js/2.7428f667.chunk.js.map": "/static/js/2.7428f667.chunk.js.map",
+    "main.js": "/static/js/main.a8ef2745.chunk.js",
+    "main.js.map": "/static/js/main.a8ef2745.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.8e4e49e3.js",
+    "runtime-main.js.map": "/static/js/runtime-main.8e4e49e3.js.map",
+    "static/js/2.4aea7a37.chunk.js": "/static/js/2.4aea7a37.chunk.js",
+    "static/js/2.4aea7a37.chunk.js.map": "/static/js/2.4aea7a37.chunk.js.map",
     "index.html": "/index.html",
     "static/css/main.5138dfc5.chunk.css.map": "/static/css/main.5138dfc5.chunk.css.map",
-    "static/js/2.7428f667.chunk.js.LICENSE.txt": "/static/js/2.7428f667.chunk.js.LICENSE.txt",
+    "static/js/2.4aea7a37.chunk.js.LICENSE.txt": "/static/js/2.4aea7a37.chunk.js.LICENSE.txt",
     "static/media/2-edges-pre-swap.17f591ec.png": "/static/media/2-edges-pre-swap.17f591ec.png",
     "static/media/2-edges-swap-v1.955f7f60.png": "/static/media/2-edges-swap-v1.955f7f60.png",
     "static/media/2-edges-swap-v2.16341f66.png": "/static/media/2-edges-swap-v2.16341f66.png",
@@ -24,7 +24,7 @@
     "static/media/alt-solved-cube-physical.9d49f7dd.jpg": "/static/media/alt-solved-cube-physical.9d49f7dd.jpg",
     "static/media/card-suits-image.0e314b0e.svg": "/static/media/card-suits-image.0e314b0e.svg",
     "static/media/close.0135cc7f.svg": "/static/media/close.0135cc7f.svg",
-    "static/media/connect-4.2f193f5a.png": "/static/media/connect-4.2f193f5a.png",
+    "static/media/connect-4.e35d0cd4.png": "/static/media/connect-4.e35d0cd4.png",
     "static/media/core-physical.9b76e7ec.jpg": "/static/media/core-physical.9b76e7ec.jpg",
     "static/media/corner-twist-image.4b43024b.png": "/static/media/corner-twist-image.4b43024b.png",
     "static/media/correct-first-swap.e26de2d1.png": "/static/media/correct-first-swap.e26de2d1.png",
@@ -53,9 +53,9 @@
     "static/media/website-logo.2a15d8d0.svg": "/static/media/website-logo.2a15d8d0.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.3a5dd6d3.js",
-    "static/js/2.7428f667.chunk.js",
+    "static/js/runtime-main.8e4e49e3.js",
+    "static/js/2.4aea7a37.chunk.js",
     "static/css/main.5138dfc5.chunk.css",
-    "static/js/main.bf862326.chunk.js"
+    "static/js/main.a8ef2745.chunk.js"
   ]
 }
