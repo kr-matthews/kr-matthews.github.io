@@ -26,7 +26,6 @@ function Vancouver(props) {
       ></iframe>
       <h2>Street Name Resources</h2>
       Here are some links with more information:
-      {/* // TODO: fix css for list/list items */}
       <ul>
         <li>
           a{" "}

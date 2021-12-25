@@ -51,7 +51,7 @@ function Cubing(props) {
         </a>{" "}
         I made for organizers here in BC, Canada. I would, however, recommend
         attending at least a few competitions before organizing one, and
-        thoroughly reading through the template to make sure the expactations
+        thoroughly reading through the template to make sure the expectations
         and workload are clear.
       </p>
 
