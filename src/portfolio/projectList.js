@@ -11,6 +11,7 @@ import ticTacToe from "./../images/tic-tac-toe-styled.png";
 import minesweeper from "./../images/minesweeper - game type to high score.png";
 // note: there are 3 alternative minesweeper images
 import connect4 from "./../images/connect-4.png";
+import temporaryCribbage from "./../images/temporary-crib.jpeg";
 
 // this will be sorted by id, so can be in any order
 export const projects = [
@@ -147,14 +148,25 @@ export const projects = [
     description:
       "Play against the computer or a friend locally, or play remotely in a virtual room (via PubNub). Includes custom name and colour, and optional sound effects.",
   },
+  {
+    title: "Cribbage [WIP]",
+    id: 202201,
+    url: "https://kr-matthews.github.io/cribbage",
+    image: temporaryCribbage,
+    tags: ["Web App", "Game", "Cards"],
+    languages: ["React"],
+    year: 2022,
+    description:
+      "A game of Cribbage for 2 or 3 players. Play locally or remotely, with computer players available in either situation.",
+  },
   /*
     title: "",
-    id: 202199,
+    id: 202299,
     url: "",
     image: "",
     tags: [],
     languages: [],
-    year: 2021,
+    year: 2022,
     description: ""
   */
 ];
