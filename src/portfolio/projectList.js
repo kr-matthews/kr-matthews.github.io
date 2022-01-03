@@ -157,7 +157,7 @@ export const projects = [
     languages: ["React"],
     year: 2022,
     description:
-      "A game of Cribbage for 2 or 3 players. Play locally or remotely, with computer players available in either situation.",
+      "A game of Cribbage for 2 or 3 players. Play locally against computer players, or remotely with other users (and/or computer players).",
   },
   /*
     title: "",
