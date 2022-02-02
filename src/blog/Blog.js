@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { articles } from "./articleList.js";
 import ArticlePreview from "./ArticlePreview.js";
-import GalleryFilterButtons, { filterCat } from "./../gallery-filter.js";
+import GalleryFilterButtons, { filterCat } from "./../CategoryFilterButtons.js";
 import GallerySearchForm from "./../gallery-search.js";
 
 function Blog(props) {

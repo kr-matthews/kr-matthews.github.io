@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { projects } from "./projectList.js";
 import ProjectPreview from "./ProjectPreview.js";
-import GalleryFilterButtons, { filterCat } from "./../gallery-filter.js";
+import GalleryFilterButtons, { filterCat } from "./../CategoryFilterButtons.js";
 import GallerySearchForm from "./../gallery-search.js";
 
 function Portfolio(props) {
