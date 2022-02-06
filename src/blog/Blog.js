@@ -1,22 +1,17 @@
 import { useState } from "react";
-import { articles } from "./articleList.js";
+
 import ArticlePreview from "./ArticlePreview.js";
-import GalleryFilterButtons, { filterCat } from "./../CategoryFilterButtons.js";
+import CategoryFilterButtons from "./../CategoryFilterButtons.js";
 import GallerySearchForm from "./../gallery-search.js";
 
-function Blog(props) {
-  /* constants */
-  /* selected useStates are not initialized, which is ok because
-    'all' applies if 'true' is not present (and 'true' isn't in empty) */
-  const allTags = [
-    ...new Set(
-      articles
-        .slice()
-        .map((art) => art.tags)
-        .flat()
-    ),
-  ].sort();
-  const [selectedTags, setSelectedTags] = useState({});
+import { articles } from "./articleList.js"; // TODO: make default
+
+import useCategoryFilter from "./../useCategoryFilter.js";
+
+export default function Blog(props) {
+  const allTags = [...new Set(articles.map((art) => art.tags).flat())].sort();
+  const tags = useCategoryFilter(allTags);
+
   const [searchText, setSearchText] = useState("");
 
   return (
@@ -25,12 +20,14 @@ function Blog(props) {
       <p>Articles that I've written.</p>
 
       {/* buttons for each Language (plus 'all') */}
-      <GalleryFilterButtons
-        filterTitle={"Tags"}
-        allCats={allTags}
-        selectedCats={selectedTags}
-        setSelectedCats={setSelectedTags}
-      ></GalleryFilterButtons>
+      <CategoryFilterButtons
+        title={"Tags"}
+        categories={allTags}
+        areSelected={tags.areSelected}
+        clickACategoryHandler={tags.toggleOne}
+        isAllSelected={tags.areAllOff}
+        clickAllHandler={tags.allToSame}
+      />
 
       {/* form for searching titles (but not contents) */}
       <GallerySearchForm
@@ -42,11 +39,11 @@ function Blog(props) {
 
       <section className="gallery blog-gallery">
         {articles
-          .sort((a, b) => b.publishDate - a.publishDate)
-          .filter(filterCat("tags", selectedTags))
+          .filter((article) => tags.areAnySelected(article.tags))
           .filter((art) => {
             return art.title.toLowerCase().includes(searchText.toLowerCase());
           })
+          .sort((a, b) => b.publishDate - a.publishDate)
           .map((article) => {
             return (
               <ArticlePreview key={article.link} {...article}></ArticlePreview>
@@ -57,4 +54,4 @@ function Blog(props) {
   );
 }
 
-export default Blog;
+// item[cat].filter((cat) => selectedCats[cat]).length > 0

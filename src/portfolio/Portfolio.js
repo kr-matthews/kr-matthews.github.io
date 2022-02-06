@@ -1,31 +1,22 @@
 import { useState } from "react";
-import { projects } from "./projectList.js";
+
 import ProjectPreview from "./ProjectPreview.js";
-import GalleryFilterButtons, { filterCat } from "./../CategoryFilterButtons.js";
+import CategoryFilterButtons from "./../CategoryFilterButtons.js";
 import GallerySearchForm from "./../gallery-search.js";
 
+import { projects } from "./projectList.js";
+
+import useCategoryFilter from "./../useCategoryFilter.js";
+
 function Portfolio(props) {
-  /* constants */
-  /* selected useStates are not initialized, which is ok because
-    'all' applies if 'true' is not present (and 'true' isn't in empty) */
-  const allTags = [
-    ...new Set(
-      projects
-        .slice()
-        .map((proj) => proj.tags)
-        .flat()
-    ),
+  const allTags = [...new Set(projects.map((proj) => proj.tags).flat())].sort();
+  const tags = useCategoryFilter(allTags);
+
+  const allLanguages = [
+    ...new Set(projects.map((proj) => proj.languages).flat()),
   ].sort();
-  const [selectedTags, setSelectedTags] = useState({});
-  const allLangs = [
-    ...new Set(
-      projects
-        .slice()
-        .map((proj) => proj.languages)
-        .flat()
-    ),
-  ].sort();
-  const [selectedLangs, setSelectedLangs] = useState({});
+  const languages = useCategoryFilter(allLanguages);
+
   const [searchText, setSearchText] = useState("");
 
   return (
@@ -44,21 +35,23 @@ function Portfolio(props) {
         .
       </p>
 
-      {/* buttons for each Language (plus 'all') */}
-      <GalleryFilterButtons
-        filterTitle={"Languages"}
-        allCats={allLangs}
-        selectedCats={selectedLangs}
-        setSelectedCats={setSelectedLangs}
-      ></GalleryFilterButtons>
+      <CategoryFilterButtons
+        title={"Languages"}
+        categories={allLanguages}
+        areSelected={languages.areSelected}
+        clickACategoryHandler={languages.toggleOne}
+        isAllSelected={languages.areAllOff}
+        clickAllHandler={languages.allToSame}
+      />
 
-      {/* buttons for each Tag (plus 'all') */}
-      <GalleryFilterButtons
-        filterTitle={"Tags"}
-        allCats={allTags}
-        selectedCats={selectedTags}
-        setSelectedCats={setSelectedTags}
-      ></GalleryFilterButtons>
+      <CategoryFilterButtons
+        title={"Tags"}
+        categories={allTags}
+        areSelected={tags.areSelected}
+        clickACategoryHandler={tags.toggleOne}
+        isAllSelected={tags.areAllOff}
+        clickAllHandler={tags.allToSame}
+      />
 
       {/* form for searching titles and descriptions */}
       <GallerySearchForm
@@ -70,15 +63,15 @@ function Portfolio(props) {
 
       <section className="gallery portfolio-gallery">
         {projects
-          .sort((a, b) => b.id - a.id) /* reverse chron. order */
-          .filter(filterCat("tags", selectedTags))
-          .filter(filterCat("languages", selectedLangs))
+          .filter((project) => tags.areAnySelected(project.tags))
+          .filter((project) => languages.areAnySelected(project.languages))
           .filter((proj) => {
             return (
               proj.title.toLowerCase().includes(searchText.toLowerCase()) ||
               proj.description.toLowerCase().includes(searchText.toLowerCase())
             );
           })
+          .sort((a, b) => b.id - a.id) /* reverse chron. order */
           .map((project) => {
             /* display the panel in the gallery */
             return (
