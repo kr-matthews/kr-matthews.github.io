@@ -1,14 +1,14 @@
 import { useState } from "react";
 
 import ProjectPreview from "./ProjectPreview.js";
-import CategoryFilterButtons from "./../CategoryFilterButtons.js";
-import GallerySearchForm from "./../gallery-search.js";
+import CategoryFilterButtons from "../components/CategoryFilterButtons.js";
+import SearchTextBox from "../components/SearchTextBox.js";
+
+import useCategoryFilter from "./../hooks/useCategoryFilter.js";
 
 import { projects } from "./projectList.js";
 
-import useCategoryFilter from "./../useCategoryFilter.js";
-
-function Portfolio(props) {
+export default function Portfolio(props) {
   const allTags = [...new Set(projects.map((proj) => proj.tags).flat())].sort();
   const tags = useCategoryFilter(allTags);
 
@@ -54,7 +54,7 @@ function Portfolio(props) {
       />
 
       {/* form for searching titles and descriptions */}
-      <GallerySearchForm
+      <SearchTextBox
         placeholder="Search titles and descriptions..."
         label="Search projects"
         searchText={searchText}
@@ -82,5 +82,3 @@ function Portfolio(props) {
     </div>
   );
 }
-
-export default Portfolio;

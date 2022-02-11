@@ -1,12 +1,12 @@
 import { useState } from "react";
 
 import ArticlePreview from "./ArticlePreview.js";
-import CategoryFilterButtons from "./../CategoryFilterButtons.js";
-import GallerySearchForm from "./../gallery-search.js";
+import CategoryFilterButtons from "../components/CategoryFilterButtons.js";
+import SearchTextBox from "../components/SearchTextBox.js";
+
+import useCategoryFilter from "./../hooks/useCategoryFilter.js";
 
 import { articles } from "./articleList.js"; // TODO: make default
-
-import useCategoryFilter from "./../useCategoryFilter.js";
 
 export default function Blog(props) {
   const allTags = [...new Set(articles.map((art) => art.tags).flat())].sort();
@@ -30,7 +30,7 @@ export default function Blog(props) {
       />
 
       {/* form for searching titles (but not contents) */}
-      <GallerySearchForm
+      <SearchTextBox
         placeholder="Search titles..."
         label="Search articles"
         searchText={searchText}
@@ -53,5 +53,3 @@ export default function Blog(props) {
     </div>
   );
 }
-
-// item[cat].filter((cat) => selectedCats[cat]).length > 0

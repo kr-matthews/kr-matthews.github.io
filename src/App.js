@@ -5,13 +5,13 @@ import Header from "./header-footer/Header.js";
 import Footer from "./header-footer/Footer.js";
 
 // Nav-bar components
-import Home from "./Home.js";
+import Home from "./pages/Home.js";
 import Portfolio from "./portfolio/Portfolio.js";
 import Blog from "./blog/Blog.js";
-import Cubing from "./Cubing.js";
-import Vancouver from "./Vancouver.js";
-import Books from "./Books.js";
-import About from "./About.js";
+import Cubing from "./pages/Cubing.js";
+import Vancouver from "./pages/Vancouver.js";
+import Books from "./pages/Books.js";
+import About from "./pages/About.js";
 
 // Prortfolio & Blog gallery and entries
 import { articles } from "./blog/articleList.js";
