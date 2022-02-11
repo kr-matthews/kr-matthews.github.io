@@ -10,8 +10,8 @@ import altSolvedCube from "./articles/001-rubiks-cube-blindfolded/alt-solved-cub
 import reactLogo from "./articles/002-react-state-management/react-logo.png";
 import codeIcon from "./articles/003-terminal-custom-commands/code-icon.png";
 
-/* this will be sorted by publishDate, so can be in any order */
-export const articles = [
+// this will be sorted by publishDate, so can be in any order
+const articles = [
   {
     title:
       "Understanding how someone else might be able to solve a Rubik's Cube blindfolded",
@@ -61,3 +61,5 @@ export const articles = [
     content: </>
   */
 ];
+
+export default articles;

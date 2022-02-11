@@ -1,12 +1,12 @@
 import { useState } from "react";
 
-import ProjectPreview from "./ProjectPreview.js";
+import ProjectPreview from "../portfolio/ProjectPreview.js";
 import CategoryFilterButtons from "../components/CategoryFilterButtons.js";
 import SearchTextBox from "../components/SearchTextBox.js";
 
-import useCategoryFilter from "./../hooks/useCategoryFilter.js";
+import useCategoryFilter from "../hooks/useCategoryFilter.js";
 
-import { projects } from "./projectList.js";
+import { projects } from "../portfolio/projectList.js";
 
 export default function Portfolio(props) {
   const allTags = [...new Set(projects.map((proj) => proj.tags).flat())].sort();

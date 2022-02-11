@@ -1,12 +1,12 @@
 import { useState } from "react";
 
-import ArticlePreview from "./ArticlePreview.js";
+import ArticlePreview from "../blog/ArticlePreview.js";
 import CategoryFilterButtons from "../components/CategoryFilterButtons.js";
 import SearchTextBox from "../components/SearchTextBox.js";
 
-import useCategoryFilter from "./../hooks/useCategoryFilter.js";
+import useCategoryFilter from "../hooks/useCategoryFilter.js";
 
-import { articles } from "./articleList.js"; // TODO: make default
+import articles from "../blog/articleList.js";
 
 export default function Blog(props) {
   const allTags = [...new Set(articles.map((art) => art.tags).flat())].sort();

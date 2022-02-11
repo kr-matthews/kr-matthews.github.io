@@ -4,17 +4,17 @@ import { BrowserRouter, Route } from "react-router-dom";
 import Header from "./header-footer/Header.js";
 import Footer from "./header-footer/Footer.js";
 
-// Nav-bar components
+// Pages
 import Home from "./pages/Home.js";
-import Portfolio from "./portfolio/Portfolio.js";
-import Blog from "./blog/Blog.js";
+import Portfolio from "./pages/Portfolio.js";
+import Blog from "./pages/Blog.js";
 import Cubing from "./pages/Cubing.js";
 import Vancouver from "./pages/Vancouver.js";
 import Books from "./pages/Books.js";
 import About from "./pages/About.js";
 
-// Prortfolio & Blog gallery and entries
-import { articles } from "./blog/articleList.js";
+// Blog-routing
+import articles from "./blog/articleList.js";
 import Article from "./blog/Article.js";
 
 // css
