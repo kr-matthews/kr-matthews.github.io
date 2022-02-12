@@ -1,11 +1,11 @@
-function Article({
-  title,
+export default function Article({
+  title = "Article Title",
   startDate,
   publishDate,
   editDate,
   image,
-  tags,
-  content,
+  tags = [],
+  content = "Sorry, no content found.",
 }) {
   return (
     <article className="page narrow-page">
@@ -13,11 +13,13 @@ function Article({
         <h1>{title}</h1>
         {image && <img src={image} alt={title} />}
         <div className="date">
-          {"Published: " + publishDate.toISOString().split("T")[0]}
+          {`Published: ${
+            publishDate ? publishDate.toISOString().split("T")[0] : "Unknown"
+          }`}
         </div>
         {editDate && (
           <div className="date">
-            {"Last Updated: " + editDate.toISOString().split("T")[0]}
+            {`Last Updated: ${editDate.toISOString().split("T")[0]}`}
           </div>
         )}
       </div>
@@ -25,5 +27,3 @@ function Article({
     </article>
   );
 }
-
-export default Article;
