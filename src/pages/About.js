@@ -1,9 +1,10 @@
 import { Link } from "react-router-dom";
 
-function About(props) {
+export default function About(props) {
   return (
     <div className="page narrow-page">
       <h1>About</h1>
+
       <h3>Interests</h3>
       <p>
         I'm Kevin Matthews, a mathematician by training and a self-taught
@@ -12,6 +13,7 @@ function About(props) {
         systems design -- how software applications are structured, how cities
         function, how organizations setup their workflows, and such.
       </p>
+
       <h3>Education and Work</h3>
       <p>
         I have a Bachelor of Mathematics from the{" "}
@@ -43,6 +45,7 @@ function About(props) {
         Financial Technology for a couple of years, focusing on
         behind-the-scenes financial planning workflows and processes.
       </p>
+
       <h3>Projects and Hobbies</h3>
       <p>
         For the past year or so, I've been consistently working on numerous
@@ -67,6 +70,7 @@ function About(props) {
         </a>{" "}
         as a volunteer.
       </p>
+
       <h3>Contact</h3>
       <p>
         I'm currently in <Link to="/vancouver">Vancouver</Link>, BC, Canada. I
@@ -76,5 +80,3 @@ function About(props) {
     </div>
   );
 }
-
-export default About;

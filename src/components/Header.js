@@ -1,21 +1,21 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
-import { ReactComponent as Logo } from "./../images/website-logo.svg";
+import { ReactComponent as Logo } from "./../images/logo.svg";
 import { ReactComponent as OpenMenu } from "./../images/menu.svg";
 import { ReactComponent as CloseMenu } from "./../images/close.svg";
 
-function Header() {
-  /* pages which exist, to appear in navigation menu */
-  /* uses lowercase of word for url */
+export default function Header() {
+  // pages which exist, to appear in navigation menu
+  // uses lowercase of word for url
   const pages = ["Projects", "Blog", "Cubing", "Vancouver", "About"];
 
-  /* these three are only needed on mobile (ie screen <= 600) */
-  /* whether the mobile menu is expanded and visible */
+  //// these three are only needed on mobile (ie screen <= 600)
+  // whether the mobile menu is expanded and visible
   const [isOpen, setIsOpen] = useState(false);
-  /* toggles the state of the mobile menu */
-  const handleClick = () => setIsOpen(!isOpen);
-  /* close the mobile menu, regardless of its state */
+  // toggles the state of the mobile menu
+  const toggle = () => setIsOpen((isOpen) => !isOpen);
+  // close the mobile menu, regardless of its state
   const close = () => setIsOpen(false);
 
   return (
@@ -30,20 +30,20 @@ function Header() {
       {/* Icon to toggle mobile menu; only visible on moble */}
       <span className="icon-container toggle-option">
         {isOpen ? (
-          <CloseMenu className="icon" onClick={handleClick} />
+          <CloseMenu className="icon" onClick={toggle} />
         ) : (
-          <OpenMenu className="icon" onClick={handleClick} />
+          <OpenMenu className="icon" onClick={toggle} />
         )}
       </span>
 
-      {/* navigation link for each entry in {pages} */}
+      {/* navigation link for each page */}
       <nav>
         <ul className={isOpen ? "nav-options" : "nav-options hidden"}>
           {pages.map((page) => {
             return (
               <li className="option" onClick={close} key={page}>
                 {/* assumes link will be lowercase version of name */}
-                <Link to={"/" + page.toLowerCase()}>{page}</Link>
+                <Link to={`/${page.toLowerCase()}`}>{page}</Link>
               </li>
             );
           })}
@@ -52,5 +52,3 @@ function Header() {
     </header>
   );
 }
-
-export default Header;

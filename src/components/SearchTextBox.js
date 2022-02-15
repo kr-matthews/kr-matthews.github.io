@@ -1,7 +1,9 @@
-function GallerySearchForm(props) {
-  /* constants */
-  const { placeholder, label, searchText, setSearchText } = props;
-
+export default function SearchTextBox({
+  placeholder = "Enter search text...",
+  label = "Search",
+  searchText,
+  setSearchText,
+}) {
   return (
     <div>
       Search:
@@ -17,5 +19,3 @@ function GallerySearchForm(props) {
     </div>
   );
 }
-
-export default GallerySearchForm;

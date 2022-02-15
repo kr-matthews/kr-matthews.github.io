@@ -1,23 +1,23 @@
 import { BrowserRouter, Route } from "react-router-dom";
 
-/* Header and Footer */
-import Header from "./header-footer/Header.js";
-import Footer from "./header-footer/Footer.js";
+// Header and Footer
+import Header from "./components/Header.js";
+import Footer from "./components/Footer.js";
 
-/* Nav-bar components */
-import Home from "./Home.js";
-import Portfolio from "./portfolio/Portfolio.js";
-import Blog from "./blog/Blog.js";
-import Cubing from "./Cubing.js";
-import Vancouver from "./Vancouver.js";
-import Books from "./Books.js";
-import About from "./About.js";
+// Pages
+import Home from "./pages/Home.js";
+import Portfolio from "./pages/Portfolio.js";
+import Blog from "./pages/Blog.js";
+import Cubing from "./pages/Cubing.js";
+import Vancouver from "./pages/Vancouver.js";
+import Books from "./pages/Books.js";
+import About from "./pages/About.js";
 
-/* Prortfolio & Blog gallery and entries */
+// Blog-routing
 import { articles } from "./blog/articleList.js";
 import Article from "./blog/Article.js";
 
-/* CSS */
+// css
 import "./css/index.css";
 import "./css/header.css";
 import "./css/gallery.css";
@@ -26,7 +26,7 @@ import "./css/blog-gallery.css";
 import "./css/article.css";
 import "./css/gallery-filter-and-search.css";
 
-function App() {
+export default function App() {
   return (
     <BrowserRouter>
       <Header />
@@ -57,5 +57,3 @@ function App() {
     </BrowserRouter>
   );
 }
-
-export default App;

@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-function Cubing(props) {
+export default function Cubing(props) {
   return (
     <div className="page narrow-page">
       <h1>Cubing</h1>
@@ -153,5 +153,3 @@ function Cubing(props) {
     </div>
   );
 }
-
-export default Cubing;
