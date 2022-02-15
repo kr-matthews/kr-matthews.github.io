@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import notepad from "./../images/notepad.png";
+import notepad from "./notepad.png";
 
 export default function ArticlePreview({
   link = "",

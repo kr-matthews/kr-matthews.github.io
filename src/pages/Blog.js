@@ -6,7 +6,7 @@ import SearchTextBox from "../components/SearchTextBox.js";
 
 import useCategoryFilter from "../hooks/useCategoryFilter.js";
 
-import articles from "../blog/articleList.js";
+import { articles } from "../blog/articleList.js";
 
 export default function Blog(props) {
   const allTags = [...new Set(articles.map((art) => art.tags).flat())].sort();

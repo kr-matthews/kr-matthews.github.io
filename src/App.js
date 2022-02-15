@@ -14,7 +14,7 @@ import Books from "./pages/Books.js";
 import About from "./pages/About.js";
 
 // Blog-routing
-import articles from "./blog/articleList.js";
+import { articles } from "./blog/articleList.js";
 import Article from "./blog/Article.js";
 
 // css
