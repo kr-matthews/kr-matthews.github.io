@@ -18,6 +18,10 @@ export default function Vancouver(props) {
         things.
       </p>
       <h2>Custom Map</h2>
+      <p>
+        Click on icons for pictures and information, or open the left panel to
+        filter by category.
+      </p>
       <iframe
         title="vancouverMap"
         src="https://www.google.com/maps/d/u/0/embed?mid=1VjjBQZ-70CWIjFpoo8BHS_bLgm3xpQQ3"

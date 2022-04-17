@@ -36,14 +36,14 @@ export default function About(props) {
         , where I studied Mathematical Logic.
       </p>
       <p>
-        I've recently started working at{" "}
+        I currently work as a Software Engineer in Android development at{" "}
         <a href="https://rivian.com/" target="_blank" rel="noopener noreferrer">
           Rivian
         </a>
-        , an electric truck company, as a Software Engineer, where I hope to
-        learn a lot of new techniques and skills. Before that, I worked in
-        Financial Technology for a couple of years, focusing on
-        behind-the-scenes financial planning workflows and processes.
+        , an electric vehicle company, where I hope to learn a lot of new
+        techniques and skills. Before that, I worked in Financial Technology for
+        a couple of years, focusing on behind-the-scenes financial planning
+        workflows and processes.
       </p>
 
       <h3>Projects and Hobbies</h3>
