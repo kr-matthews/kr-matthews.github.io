@@ -3,12 +3,14 @@
 import RubiksCubeBlindfolded from "./articles/001-rubiks-cube-blindfolded/rubiks-cube-blindfolded.js";
 import ReactStateManagement from "./articles/002-react-state-management/react-state-management.js";
 import TerminalCustomCommands from "./articles/003-terminal-custom-commands/terminal-custom-commands.js";
+import TestingReactHooks from "./articles/004-testing-react-hooks/testing-react-hooks.js";
 
 //// article images
 
 import RubiksCubeBlindfoldedImage from "./articles/001-rubiks-cube-blindfolded/alt-solved-cube-physical.jpg";
 import ReactStateManagementImage from "./articles/002-react-state-management/react-logo.png";
 import TerminalCustomCommandsImage from "./articles/003-terminal-custom-commands/code-icon.png";
+// currently using default image for TestingReactHooks
 
 //// list of articles
 
@@ -48,8 +50,20 @@ export const articles = [
     image: TerminalCustomCommandsImage,
     tags: ["Programming", "Terminal"],
     preview:
-      "Overview of a quick and simple way to remove some friction from project workflow and avoid forgetting steps.",
+      "Overview of a relatively quick and simple way to remove some friction from project workflow and avoid forgetting steps.",
     content: <TerminalCustomCommands />,
+  },
+  {
+    title: "Testing React Hooks - Actions, Effects, & Mocking",
+    link: "testing-react-hooks",
+    startDate: new Date("2022-04-23"),
+    publishDate: new Date("2022-05-27"),
+    // editDate: new Date(""),
+    // image: ,
+    tags: ["Programming", "React", "Testing"],
+    preview:
+      "The basics of testing in React, and solutions to various problems I encountered while trying to test my own custom hooks.",
+    content: <TestingReactHooks />,
   },
   /*
   {
