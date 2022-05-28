@@ -17,7 +17,7 @@ import About from "./pages/About.js";
 import { articles } from "./blog/articleList.js";
 import Article from "./blog/Article.js";
 
-// TODO: NEXT: CSS: could do with cleaning up, maybe improving
+// ! CSS: could do with cleaning up, maybe improving
 
 // css
 import "./css/index.css";
