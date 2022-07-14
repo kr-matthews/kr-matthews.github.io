@@ -42,6 +42,7 @@ export default function Blog(props) {
           .filter((article) => tags.areAnySelected(article.tags))
           .filter((art) => {
             return art.title.toLowerCase().includes(searchText.toLowerCase());
+            // !!! also search desciptions
           })
           .sort((a, b) => b.publishDate - a.publishDate)
           .map((article) => {

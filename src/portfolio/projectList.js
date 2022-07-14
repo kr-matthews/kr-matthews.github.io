@@ -12,6 +12,7 @@ import ticTacToeImage from "./images/tic-tac-toe.png";
 import minesweeperImage from "./images/minesweeper.png";
 import connectFourImage from "./images/connect-four.png";
 import cribbageImage from "./images/cribbage.jpeg";
+import stageGroupsImage from "./images/stage-groups.png";
 
 // website logo used directly
 import personalWebsiteImage from "./../images/logo.svg";
@@ -123,7 +124,7 @@ export const projects = [
   {
     title: "Tic Tac Toe",
     id: 202102,
-    url: "https://kr-matthews.github.io/tic-tac-toe/",
+    url: "https://kr-matthews.github.io/tic-tac-toe",
     image: ticTacToeImage,
     tags: ["Web App", "Game"],
     languages: ["React"],
@@ -163,6 +164,17 @@ export const projects = [
     year: 2022,
     description:
       "A game of Cribbage for 2 or 3 players. Play locally against computer players, or remotely with other users (and/or computer players).",
+  },
+  {
+    title: "Competition Current Groups",
+    id: 202202,
+    url: "https://kr-matthews.github.io/stage-groups",
+    image: stageGroupsImage,
+    tags: ["Web App", "Rubik's Cubes"],
+    languages: ["React"],
+    year: 2022,
+    description:
+      "A quick and simple web app to project in the main room at the North American Championships 2022 Rubik's Cube competition.",
   },
   /*
   {
