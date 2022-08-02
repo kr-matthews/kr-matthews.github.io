@@ -36,14 +36,17 @@ export default function About(props) {
         , where I studied Mathematical Logic.
       </p>
       <p>
-        I currently work as a Software Engineer in Android development at{" "}
+        I worked most recently as a Software Engineer in Android development at{" "}
         <a href="https://rivian.com/" target="_blank" rel="noopener noreferrer">
           Rivian
         </a>
-        , an electric vehicle company, where I hope to learn a lot of new
-        techniques and skills. Before that, I worked in Financial Technology for
-        a couple of years, focusing on behind-the-scenes financial planning
-        workflows and processes.
+        , an electric vehicle company, where I learnt a lot of new techniques
+        and skills. My main focus was on setup/pairing flows for devices via
+        Bluetooth low energy, but I also assisted other teams as needed, and was
+        part of several app-wide initiatives to improve reusability and
+        consistency. Before that, I worked in Financial Technology for a couple
+        of years, focusing on behind-the-scenes financial planning workflows and
+        processes.
       </p>
 
       <h3>Projects and Hobbies</h3>
@@ -59,8 +62,8 @@ export default function About(props) {
         volunteer, achieving a few Canadian records along the way. Most of my
         early programming <Link to="/projects">projects</Link> were cube-based
         tools, designed to help with learning how to solve the cube blindfolded
-        and to help practice what you know. I've also recently joined the World
-        Cube Association's{" "}
+        and to help practice what you know. I'm also on the World Cube
+        Association's{" "}
         <a
           href="https://github.com/thewca"
           target="_blank"
@@ -68,7 +71,8 @@ export default function About(props) {
         >
           software team
         </a>{" "}
-        as a volunteer.
+        as a volunteer, where my main focus is assisting on transitioning our
+        website's front-end from Rails to React.
       </p>
 
       <h3>Contact</h3>
