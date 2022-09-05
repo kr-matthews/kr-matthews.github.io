@@ -4,8 +4,6 @@ export default function Cubing(props) {
   return (
     <div className="page narrow-page">
       <h1>Cubing</h1>
-
-      <h2>Rubik's Cubes and the World Cube Association</h2>
       <p>
         I know how to solve a Rubik's Cube (blindfolded), and since 2010{" "}
         <a
@@ -15,10 +13,59 @@ export default function Cubing(props) {
         >
           I've competed
         </a>{" "}
-        in about 100 competitions across North America, many of which I helped
-        organize and run as a volunteer. I've held a few Canadian records in the
-        multiple-blindfolded event and the fewest moves event.
+        in over 100 competitions across North America, many of which I helped
+        organize and run as a volunteer -- including the{" "}
+        <a
+          href="https://nac2022.speedcubingcanada.org/en"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          inaugural North American Championship
+        </a>{" "}
+        in 2022 in Toronto with 500 competitors over 4 days. I've held a few
+        Canadian records in the multiple-blindfolded event and the fewest moves
+        event.
       </p>
+      <p>
+        I've been a volunteer member of the World Cube Association's{" "}
+        <a
+          href="https://github.com/thewca"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          software team
+        </a>{" "}
+        for over a year now, where my focus is on transitioning the front-end of
+        the website from Rails to React. If you can code, consider volunteering,
+        as they always need more help. The website is run mainly with Ruby on
+        Rails and React.
+      </p>
+      <p>
+        Reconstructions of some of my notable solves can be found{" "}
+        <a
+          href="https://docs.google.com/spreadsheets/d/1PJ1k_EXqv_mafcMDRbrD5OAyBHie2z5PH5OkHLs8BtE/edit#gid=1878622909"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          here
+        </a>
+        , including both regular and blindfolded solving for several different
+        events. Note that you can apply existing filters to filter by event. For
+        my fewest moves solves, see{" "}
+        <a
+          href="https://csclub.uwaterloo.ca/~krmatthe/FMC/old-index"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          here
+        </a>
+        , but note that this is not currently up-to-date and I have plans for
+        creating a more comprehensive spreadsheet in the future (which I may or
+        may not ever finish).
+      </p>
+
+      <h2>Competitions, World Cube Association, and Speedcubing Canada</h2>
+
       <p>
         If you're interested in attending a competition,{" "}
         <a
@@ -36,9 +83,27 @@ export default function Cubing(props) {
         >
           World Cube Association
         </a>{" "}
-        (WCA). The WCA is the governing body of Rubik's Cube competitions, and
-        are a non-profit run purely by volunteers. Note that you don't need to
-        be competitive/fast to attend; everyone is welcome.
+        (WCA) -- or, if you're in Canada, sign up for{" "}
+        <a
+          href="https://www.speedcubingcanada.org/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Speedcubing Canada
+        </a>
+        's (SCC){" "}
+        <a
+          href="https://share.hsforms.com/1eWkfr6anSF-HKTZJVrElZQcrqzz"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          mailing list
+        </a>{" "}
+        to be notified of new competitions. The WCA is the governing body of
+        Rubik's Cube competitions and SCC is Canada's regional organization
+        which is recognized by the WCA. Both are not-for-profits run purely by
+        volunteers. Note that you don't need to be competitive/fast to attend a
+        competition; everyone is welcome.
       </p>
       <p>
         If you're interested in organizing a competition, I have a{" "}
@@ -56,6 +121,7 @@ export default function Cubing(props) {
       </p>
 
       <h2>Software and Tools</h2>
+
       <p>
         {" "}
         I have several <Link to="/projects">web apps</Link> based on cubes,
@@ -65,19 +131,12 @@ export default function Cubing(props) {
         practising, you'll find them helpful.
       </p>
       <p>
-        I've recently started helping the WCA's{" "}
-        <a
-          href="https://github.com/thewca"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          software team
-        </a>{" "}
-        as a volunteer. If you can code, consider volunteering, as they always
-        need more help. The website is run mainly with Ruby on Rails and React.
+        There are plenty of other tools out there, made by other people. I don't
+        have a comprehensive list handy, but you can search for them.
       </p>
 
-      <h2>Personal System</h2>
+      <h2>Personal Blindfolded-Solving System</h2>
+
       <p>
         I have{" "}
         <a
@@ -118,6 +177,7 @@ export default function Cubing(props) {
       </p>
 
       <h2>Method Development: Weak Swap</h2>
+
       <p>
         Together with{" "}
         <a
