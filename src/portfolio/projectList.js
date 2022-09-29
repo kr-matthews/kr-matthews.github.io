@@ -11,7 +11,7 @@ import weakSwapImage from "./images/weak-swap.png";
 import ticTacToeImage from "./images/tic-tac-toe.png";
 import minesweeperImage from "./images/minesweeper.png";
 import connectFourImage from "./images/connect-four.png";
-import cribbageImage from "./images/cribbage.jpeg";
+import cribbageImage from "./images/cribbage.png";
 import stageGroupsImage from "./images/stage-groups.png";
 
 // website logo used directly
@@ -155,7 +155,7 @@ export const projects = [
       "Play against the computer or a friend locally, or play remotely in a virtual room (via PubNub). Includes custom name and colour, and optional sound effects.",
   },
   {
-    title: "Cribbage [WIP]",
+    title: "Cribbage",
     id: 202201,
     url: "https://kr-matthews.github.io/cribbage",
     image: cribbageImage,
@@ -163,7 +163,7 @@ export const projects = [
     languages: ["React"],
     year: 2022,
     description:
-      "A game of Cribbage for 2 or 3 players. Play locally against computer players, or remotely with other users (and/or computer players).",
+      "A game of Cribbage for 2 or 3 players, with remote play. Includes score board, match log, sounds effects, automatic scoring, and more.",
   },
   {
     title: "Competition Current Groups",
