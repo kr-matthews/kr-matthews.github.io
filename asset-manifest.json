@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/static/css/main.f2d988be.chunk.css",
-    "main.js": "/static/js/main.b47ff16e.chunk.js",
-    "main.js.map": "/static/js/main.b47ff16e.chunk.js.map",
+    "main.js": "/static/js/main.3478dbc6.chunk.js",
+    "main.js.map": "/static/js/main.3478dbc6.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.578df7c8.js",
     "runtime-main.js.map": "/static/js/runtime-main.578df7c8.js.map",
     "static/js/2.907986d9.chunk.js": "/static/js/2.907986d9.chunk.js",
@@ -28,7 +28,7 @@
     "static/media/core-physical.9b76e7ec.jpg": "/static/media/core-physical.9b76e7ec.jpg",
     "static/media/corner-twist-alg-generator.4b43024b.png": "/static/media/corner-twist-alg-generator.4b43024b.png",
     "static/media/correct-first-swap.e26de2d1.png": "/static/media/correct-first-swap.e26de2d1.png",
-    "static/media/cribbage.fe9b6284.png": "/static/media/cribbage.fe9b6284.png",
+    "static/media/cribbage.abfe12d8.png": "/static/media/cribbage.abfe12d8.png",
     "static/media/edges-solved-2-corners-swapped.132c75ee.png": "/static/media/edges-solved-2-corners-swapped.132c75ee.png",
     "static/media/flipped-edge-physical.6f24b606.jpg": "/static/media/flipped-edge-physical.6f24b606.jpg",
     "static/media/hearts.0e314b0e.svg": "/static/media/hearts.0e314b0e.svg",
@@ -57,6 +57,6 @@
     "static/js/runtime-main.578df7c8.js",
     "static/js/2.907986d9.chunk.js",
     "static/css/main.f2d988be.chunk.css",
-    "static/js/main.b47ff16e.chunk.js"
+    "static/js/main.3478dbc6.chunk.js"
   ]
 }
