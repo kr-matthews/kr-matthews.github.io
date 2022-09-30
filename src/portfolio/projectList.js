@@ -163,7 +163,7 @@ export const projects = [
     languages: ["React"],
     year: 2022,
     description:
-      "A game of Cribbage for 2 or 3 players, with remote play. Includes score board, match log, sounds effects, automatic scoring, and more.",
+      "A game of Cribbage for 2 or 3 players, with remote play. Includes score board, match log, sounds effects, automatic scoring, computer players, and more.",
   },
   {
     title: "Competition Current Groups",
