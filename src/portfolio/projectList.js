@@ -17,6 +17,8 @@ import stageGroupsImage from "./images/stage-groups.png";
 // website logo used directly
 import personalWebsiteImage from "./../images/logo.svg";
 
+import wip from "./images/wip.png";
+
 //// list
 
 // this will be sorted by id, so can be in any order
@@ -96,7 +98,7 @@ export const projects = [
     languages: ["Racket"],
     year: 2019,
     description:
-      "Given 3 cyclicly-permuted corners of a Rubik's cube, finds (intuitive) commutators which solve the case and sorts them by estimated speed (based on move-count, finger-friendlyness).",
+      "Given 3 cyclicly-permuted corners of a Rubik's cube, finds (intuitive) commutators which solve the case and sorts them by estimated speed (based on move-count, finger-friendliness).",
   },
   {
     title: "Corner Twist Alg Generator",
@@ -107,7 +109,7 @@ export const projects = [
     languages: ["Racket"],
     year: 2020,
     description:
-      "Given 2 or 3 twisted corners of a Rubik's cube, finds pairs of (intuitive) commutators which solve the case and sorts them by estimated speed (based on move-count, finger-friendlyness).",
+      "Given 2 or 3 twisted corners of a Rubik's cube, finds pairs of (intuitive) commutators which solve the case and sorts them by estimated speed (based on move-count, finger-friendliness).",
   },
   {
     title: "Personal Website",
@@ -175,6 +177,17 @@ export const projects = [
     year: 2022,
     description:
       "A quick and simple web app to project in the main room at the North American Championships 2022 Rubik's Cube competition.",
+  },
+  {
+    title: "Activities On-This-Day",
+    id: 202203,
+    url: "https://activities-on-this-day.netlify.app/",
+    image: wip,
+    tags: ["Web App", "Strava", "API"],
+    languages: ["React"],
+    year: 2022,
+    description:
+      "An app to display all your Strava activities from this day in history, using Netlify 'serverless functions' and the Strava API.",
   },
   /*
   {
