@@ -36,7 +36,16 @@ export default function About(props) {
         , where I studied Mathematical Logic.
       </p>
       <p>
-        I worked most recently as a Software Engineer in Android development at{" "}
+        I recently joined{" "}
+        <a
+          href="https://ensemble.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Ensemble Systems
+        </a>{" "}
+        as a Software Developer. Before that, I worked as a Software Engineer in
+        Android development at{" "}
         <a href="https://rivian.com/" target="_blank" rel="noopener noreferrer">
           Rivian
         </a>
@@ -44,9 +53,7 @@ export default function About(props) {
         and skills. My main focus was on setup/pairing flows for devices via
         Bluetooth low energy, but I also assisted other teams as needed, and was
         part of several app-wide initiatives to improve reusability and
-        consistency. Before that, I worked in Financial Technology for a couple
-        of years, focusing on behind-the-scenes financial planning workflows and
-        processes.
+        consistency.
       </p>
 
       <h3>Projects and Hobbies</h3>
@@ -73,6 +80,18 @@ export default function About(props) {
         </a>{" "}
         as a volunteer, where my main focus is assisting on transitioning our
         website's front-end from Rails to React.
+      </p>
+      <p>
+        I also like playing{" "}
+        <a
+          href="https://www.geoguessr.com/maps/6180d71598cffd00011e1e91"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          GeoGuessr
+        </a>
+        , restricted to Vancouver or subsets of Metro Vancouver with the 'no
+        move' rule.
       </p>
 
       <h3>Contact</h3>
