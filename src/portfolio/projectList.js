@@ -13,11 +13,12 @@ import minesweeperImage from "./images/minesweeper.png";
 import connectFourImage from "./images/connect-four.png";
 import cribbageImage from "./images/cribbage.png";
 import stageGroupsImage from "./images/stage-groups.png";
+import activitiesOnThisDayImage from "./images/calendar-activity.svg";
 
 // website logo used directly
 import personalWebsiteImage from "./../images/logo.svg";
 
-import wip from "./images/wip.png";
+// import wip from "./images/wip.png";
 
 //// list
 
@@ -182,7 +183,7 @@ export const projects = [
     title: "Activities On-This-Day",
     id: 202203,
     url: "https://activities-on-this-day.netlify.app/",
-    image: wip,
+    image: activitiesOnThisDayImage,
     tags: ["Web App", "Strava", "API"],
     languages: ["React"],
     year: 2022,

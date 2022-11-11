@@ -1,7 +1,7 @@
 {
   "homepage": "https://kr-matthews.github.io/",
   "name": "react-website",
-  "version": "0.1.14",
+  "version": "0.1.15",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
