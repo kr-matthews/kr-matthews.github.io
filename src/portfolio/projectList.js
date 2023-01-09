@@ -14,6 +14,7 @@ import connectFourImage from "./images/connect-four.png";
 import cribbageImage from "./images/cribbage.png";
 import stageGroupsImage from "./images/stage-groups.png";
 import activitiesOnThisDayImage from "./images/calendar-activity.svg";
+import footerImage from "./images/footer-example.png";
 
 // website logo used directly
 import personalWebsiteImage from "./../images/logo.svg";
@@ -190,15 +191,26 @@ export const projects = [
     description:
       "An app to display all your Strava activities from this day in history, using Netlify 'serverless functions' and the Strava API.",
   },
+  {
+    title: "Heavy Footer with Links",
+    id: 202301,
+    url: "https://github.com/kr-matthews/footer-dependency",
+    image: footerImage,
+    tags: ["Dependency"],
+    languages: ["React"],
+    year: 2023,
+    description:
+      "Essentially an unpublished npm package with a custom footer component (plus links) to reuse across all my web apps.",
+  },
   /*
   {
     title: "",
-    id: 202,
+    id: 2023xy,
     url: "",
     image: "",
     tags: [],
     languages: [],
-    year: 2022,
+    year: 2023,
     description: "",
   }
   */
