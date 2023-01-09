@@ -6,7 +6,7 @@ import threeStyleCornerAlgGeneratorImage from "./images/three-style-corners-alg-
 import cornerTwistAlgGeneratorImage from "./images/corner-twist-alg-generator.png";
 import blindfoldedSystemImage from "./images/blindfolded-system.png";
 import theUltimatePuzzleSolverImage from "./images/the-ultimate-puzzle-solver.png";
-import heartsImage from "./images/hearts.svg";
+import heartsImage from "./images/hearts-cards.jpg";
 import weakSwapImage from "./images/weak-swap.png";
 import ticTacToeImage from "./images/tic-tac-toe.png";
 import minesweeperImage from "./images/minesweeper.png";
