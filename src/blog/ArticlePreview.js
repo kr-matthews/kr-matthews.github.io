@@ -12,7 +12,7 @@ export default function ArticlePreview({
   preview = "Click to read.",
 }) {
   return (
-    <Link to={`blog/${link}`} className="item">
+    <Link to={link} className="item">
       <div className="image-container">
         <img src={image} alt={title} />
       </div>
@@ -21,7 +21,7 @@ export default function ArticlePreview({
         <div className="specs">
           {publishDate
             ? publishDate.toISOString().split("T")[0]
-            : "Unkonwn Date"}
+            : "Unknown Date"}
         </div>
         <div className="preview">{preview}</div>
       </div>
