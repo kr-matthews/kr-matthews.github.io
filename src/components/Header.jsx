@@ -1,9 +1,9 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
 
 import { ReactComponent as Logo } from "./../images/logo.svg";
 import { ReactComponent as OpenMenu } from "./../images/menu.svg";
 import { ReactComponent as CloseMenu } from "./../images/close.svg";
+import NavLink from "./NavLink";
 
 export default function Header() {
   // pages which exist, to appear in navigation menu
@@ -22,12 +22,12 @@ export default function Header() {
     <header>
       {/* Logo to navigate to home page */}
       <span className="icon-container home-option" onClick={close}>
-        <Link to="/">
+        <NavLink to="/" end>
           <Logo className="icon" />
-        </Link>
+        </NavLink>
       </span>
 
-      {/* Icon to toggle mobile menu; only visible on moble */}
+      {/* Icon to toggle mobile menu; only visible on mobile */}
       <span className="icon-container toggle-option">
         {isOpen ? (
           <CloseMenu className="icon" onClick={toggle} />
@@ -43,7 +43,7 @@ export default function Header() {
             return (
               <li className="option" onClick={close} key={page}>
                 {/* assumes link will be lowercase version of name */}
-                <Link to={`/${page.toLowerCase()}`}>{page}</Link>
+                <NavLink to={`/${page.toLowerCase()}`}>{page}</NavLink>
               </li>
             );
           })}
