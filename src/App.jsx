@@ -1,6 +1,7 @@
 import React from "react";
 import { RouterProvider } from "react-router-dom";
 import router from "./router";
+import LoadingSpinner from "./components/LoadingSpinner";
 
 // css
 import "./css/index.css";
@@ -12,5 +13,7 @@ import "./css/article.css";
 import "./css/gallery-filter-and-search.css";
 
 export default function App() {
-  return <RouterProvider router={router} />;
+  return (
+    <RouterProvider router={router} fallbackElement={<LoadingSpinner />} />
+  );
 }
