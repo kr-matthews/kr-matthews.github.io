@@ -8,7 +8,7 @@ import useCategoryFilter from "../hooks/useCategoryFilter.js";
 
 import { articles } from "../blog/articleList.js";
 
-export default function Blog(props) {
+export default function Blog() {
   const allTags = [...new Set(articles.map((art) => art.tags).flat())].sort();
   const tags = useCategoryFilter(allTags);
 
@@ -42,7 +42,7 @@ export default function Blog(props) {
           .filter((article) => tags.areAnySelected(article.tags))
           .filter((art) => {
             return art.title.toLowerCase().includes(searchText.toLowerCase());
-            // !!! also search desciptions
+            // !!! also search descriptions
           })
           .sort((a, b) => b.publishDate - a.publishDate)
           .map((article) => {
