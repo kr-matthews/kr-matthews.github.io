@@ -1,6 +1,7 @@
 import React, { Fragment } from "react";
-import { createBrowserRouter, Outlet } from "react-router-dom";
+import { createBrowserRouter, Navigate, Outlet } from "react-router-dom";
 import ArticleWrapper from "./blog/ArticleWrapper";
+import ErrorPage from "./components/ErrorPage";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import About from "./pages/About";
@@ -13,6 +14,7 @@ import Vancouver from "./pages/Vancouver";
 const router = createBrowserRouter([
   {
     path: "/",
+    errorElement: <ErrorPage />,
     element: (
       <Fragment>
         <Header />
@@ -35,6 +37,7 @@ const router = createBrowserRouter([
       { path: "about", element: <About /> },
     ],
   },
+  { path: "*", element: <Navigate to="/" replace /> },
 ]);
 
 export default router;
