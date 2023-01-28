@@ -1,7 +1,7 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import Article from "./Article";
-import { articles } from "./articleList";
+import { articles } from "../../../data/blog";
 
 function getArticle(id) {
   // todo: replace `link` property with `id` property

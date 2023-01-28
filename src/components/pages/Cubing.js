@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-export default function Cubing(props) {
+export default function Cubing() {
   return (
     <div className="page narrow-page">
       <h1>Cubing</h1>

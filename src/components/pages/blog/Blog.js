@@ -1,12 +1,12 @@
 import { useState } from "react";
 
-import ArticlePreview from "../blog/ArticlePreview.js";
-import CategoryFilterButtons from "../components/CategoryFilterButtons.js";
-import SearchTextBox from "../components/SearchTextBox.js";
+import ArticlePreview from "./ArticlePreview.js";
+import CategoryFilterButtons from "../../common/CategoryFilterButtons.js";
+import SearchTextBox from "../../common/SearchTextBox.js";
 
-import useCategoryFilter from "../hooks/useCategoryFilter.js";
+import useCategoryFilter from "../../../hooks/useCategoryFilter.js";
 
-import { articles } from "../blog/articleList.js";
+import { articles } from "../../../data/blog";
 
 export default function Blog() {
   const allTags = [...new Set(articles.map((art) => art.tags).flat())].sort();

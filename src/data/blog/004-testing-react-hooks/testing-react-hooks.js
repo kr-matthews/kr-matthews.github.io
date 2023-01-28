@@ -1,4 +1,4 @@
-import "./../../code.css";
+import "../../../css/code.css";
 
 export default function Content() {
   return (

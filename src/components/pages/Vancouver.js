@@ -1,4 +1,4 @@
-export default function Vancouver(props) {
+export default function Vancouver() {
   return (
     <div className="page narrow-page">
       <h1>Vancouver</h1>

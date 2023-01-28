@@ -1,8 +1,8 @@
-export default function Books(props) {
-  // ! Books page
+export default function Notes() {
+  // ! Notes page
   return (
     <div className="page narrow-page">
-      <h1>Books</h1>
+      <h1>Notes</h1>
       <p>TODO</p>
     </div>
   );

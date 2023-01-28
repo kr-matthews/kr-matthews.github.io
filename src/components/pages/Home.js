@@ -1,4 +1,4 @@
-export default function Home(props) {
+export default function Home() {
   return (
     <div className="page narrow-page">
       <h1>Kevin's Website</h1>
