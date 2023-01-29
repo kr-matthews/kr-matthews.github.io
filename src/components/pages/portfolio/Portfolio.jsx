@@ -1,8 +1,8 @@
 import { useState } from "react";
 
 import ProjectPreview from "./ProjectPreview.js";
-import CategoryFilterButtons from "../../common/CategoryFilterButtons.js";
-import SearchTextBox from "../../common/SearchTextBox.js";
+import CategoryFilterButtons from "../../common/CategoryFilterButtons.jsx";
+import SearchTextBox from "../../common/SearchTextBox.jsx";
 
 import useCategoryFilter from "../../../hooks/useCategoryFilter.js";
 
