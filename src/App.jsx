@@ -1,5 +1,6 @@
 import React from "react";
 import { RouterProvider } from "react-router-dom";
+import { ChakraProvider } from "@chakra-ui/react";
 import router from "./router";
 import LoadingSpinner from "./components/common/LoadingSpinner";
 
@@ -14,6 +15,8 @@ import "./css/gallery-filter-and-search.css";
 
 export default function App() {
   return (
-    <RouterProvider router={router} fallbackElement={<LoadingSpinner />} />
+    <ChakraProvider>
+      <RouterProvider router={router} fallbackElement={<LoadingSpinner />} />
+    </ChakraProvider>
   );
 }
