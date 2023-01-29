@@ -1,25 +1,26 @@
 //// project images
 
-import bldMemoToolImage from "./images/bld-memo-tool.png";
-import bldMemoToolsImage from "./images/bld-memo-tools.png";
-import threeStyleCornerAlgGeneratorImage from "./images/three-style-corners-alg-generator.png";
-import cornerTwistAlgGeneratorImage from "./images/corner-twist-alg-generator.png";
-import blindfoldedSystemImage from "./images/blindfolded-system.png";
-import theUltimatePuzzleSolverImage from "./images/the-ultimate-puzzle-solver.png";
-import heartsImage from "./images/hearts-cards.jpg";
-import weakSwapImage from "./images/weak-swap.png";
-import ticTacToeImage from "./images/tic-tac-toe.png";
-import minesweeperImage from "./images/minesweeper.png";
-import connectFourImage from "./images/connect-four.png";
-import cribbageImage from "./images/cribbage.png";
-import stageGroupsImage from "./images/stage-groups.png";
-import activitiesOnThisDayImage from "./images/calendar-activity.svg";
-import footerImage from "./images/footer-example.png";
+import bldMemoToolImage from "./assets/bld-memo-tool.png";
+import bldMemoToolsImage from "./assets/bld-memo-tools.png";
+import threeStyleCornerAlgGeneratorImage from "./assets/three-style-corners-alg-generator.png";
+import cornerTwistAlgGeneratorImage from "./assets/corner-twist-alg-generator.png";
+import blindfoldedSystemImage from "./assets/blindfolded-system.png";
+import theUltimatePuzzleSolverImage from "./assets/the-ultimate-puzzle-solver.png";
+import heartsImage from "./assets/hearts-cards.jpg";
+import weakSwapImage from "./assets/weak-swap.png";
+import ticTacToeImage from "./assets/tic-tac-toe.png";
+import minesweeperImage from "./assets/minesweeper.png";
+import connectFourImage from "./assets/connect-four.png";
+import cribbageImage from "./assets/cribbage.png";
+import stageGroupsImage from "./assets/stage-groups.png";
+import activitiesOnThisDayImage from "./assets/calendar-activity.svg";
+import footerImage from "./assets/footer-example.png";
 
 // website logo used directly
-import personalWebsiteImage from "./../images/logo.svg";
+import personalWebsiteImage from "../../assets/logo.svg";
 
-// import wip from "./images/wip.png";
+// todo: move wip to component?
+// import wip from "../../assets/wip.png";
 
 //// list
 

@@ -1,15 +1,15 @@
 //// article contents
 
-import RubiksCubeBlindfolded from "./articles/001-rubiks-cube-blindfolded/rubiks-cube-blindfolded.js";
-import ReactStateManagement from "./articles/002-react-state-management/react-state-management.js";
-import TerminalCustomCommands from "./articles/003-terminal-custom-commands/terminal-custom-commands.js";
-import TestingReactHooks from "./articles/004-testing-react-hooks/testing-react-hooks.js";
+import RubiksCubeBlindfolded from "./001-rubiks-cube-blindfolded/rubiks-cube-blindfolded";
+import ReactStateManagement from "./002-react-state-management/react-state-management";
+import TerminalCustomCommands from "./003-terminal-custom-commands/terminal-custom-commands";
+import TestingReactHooks from "./004-testing-react-hooks/testing-react-hooks";
 
 //// article images
 
-import RubiksCubeBlindfoldedImage from "./articles/001-rubiks-cube-blindfolded/alt-solved-cube-physical.jpg";
-import ReactStateManagementImage from "./articles/002-react-state-management/react-logo.png";
-import TerminalCustomCommandsImage from "./articles/003-terminal-custom-commands/code-icon.png";
+import rubiksCubeBlindfoldedImage from "./001-rubiks-cube-blindfolded/alt-solved-cube-physical.jpg";
+import reactStateManagementImage from "./002-react-state-management/react-logo.png";
+import terminalCustomCommandsImage from "./003-terminal-custom-commands/code-icon.png";
 // currently using default image for TestingReactHooks
 
 //// list of articles
@@ -23,7 +23,7 @@ export const articles = [
     startDate: new Date("2021-07-31"),
     publishDate: new Date("2021-08-19"),
     // editDate: new Date(""),
-    image: RubiksCubeBlindfoldedImage,
+    image: rubiksCubeBlindfoldedImage,
     tags: ["Rubik's Cubes"],
     preview:
       "This is the first in a series of articles about solving Rubik's Cubes blindfolded. There are no prerequisites — you don't need to know how to solve a Rubik's Cube, or anything about them really.",
@@ -35,7 +35,7 @@ export const articles = [
     startDate: new Date("2021-10-09"),
     publishDate: new Date("2021-10-24"),
     editDate: new Date("2021-11-08"),
-    image: ReactStateManagementImage,
+    image: reactStateManagementImage,
     tags: ["Programming", "React"],
     preview:
       "Explaining the problems I encountered with state management while creating the game Connect 4 in React, the solutions I came up with, and why they usually were not good solutions. Not a tutorial or guide.",
@@ -47,7 +47,7 @@ export const articles = [
     startDate: new Date("2021-11-26"),
     publishDate: new Date("2022-01-03"),
     // editDate: new Date(""),
-    image: TerminalCustomCommandsImage,
+    image: terminalCustomCommandsImage,
     tags: ["Programming", "Terminal"],
     preview:
       "Overview of a relatively quick and simple way to remove some friction from project workflow and avoid forgetting steps.",

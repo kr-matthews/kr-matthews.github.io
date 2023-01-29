@@ -1,7 +1,7 @@
 import React from "react";
 import { RouterProvider } from "react-router-dom";
 import router from "./router";
-import LoadingSpinner from "./components/LoadingSpinner";
+import LoadingSpinner from "./components/common/LoadingSpinner";
 
 // css
 import "./css/index.css";

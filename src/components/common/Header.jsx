@@ -1,8 +1,8 @@
 import { useState } from "react";
 
-import { ReactComponent as Logo } from "./../images/logo.svg";
-import { ReactComponent as OpenMenu } from "./../images/menu.svg";
-import { ReactComponent as CloseMenu } from "./../images/close.svg";
+import { ReactComponent as Logo } from "../../assets/logo.svg";
+import { ReactComponent as OpenMenu } from "../../assets/menu.svg";
+import { ReactComponent as CloseMenu } from "../../assets/close.svg";
 import NavLink from "./NavLink";
 
 export default function Header() {
