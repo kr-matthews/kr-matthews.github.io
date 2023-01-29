@@ -1,10 +1,10 @@
 import { useState } from "react";
 
-import ProjectPreview from "./ProjectPreview.js";
-import CategoryFilterButtons from "../../common/CategoryFilterButtons.jsx";
-import SearchTextBox from "../../common/SearchTextBox.jsx";
+import ProjectPreview from "./ProjectPreview";
+import CategoryFilterButtons from "../../common/CategoryFilterButtons";
+import SearchTextBox from "../../common/SearchTextBox";
 
-import useCategoryFilter from "../../../hooks/useCategoryFilter.js";
+import useCategoryFilter from "../../../hooks/useCategoryFilter";
 
 import { projects } from "../../../data/portfolio";
 

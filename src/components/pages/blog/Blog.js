@@ -1,10 +1,10 @@
 import { useState } from "react";
 
-import ArticlePreview from "./ArticlePreview.js";
-import CategoryFilterButtons from "../../common/CategoryFilterButtons.js";
-import SearchTextBox from "../../common/SearchTextBox.js";
+import ArticlePreview from "./ArticlePreview";
+import CategoryFilterButtons from "../../common/CategoryFilterButtons";
+import SearchTextBox from "../../common/SearchTextBox";
 
-import useCategoryFilter from "../../../hooks/useCategoryFilter.js";
+import useCategoryFilter from "../../../hooks/useCategoryFilter";
 
 import { articles } from "../../../data/blog";
 
