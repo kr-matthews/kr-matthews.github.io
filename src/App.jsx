@@ -1,7 +1,8 @@
 import React from "react";
 import { RouterProvider } from "react-router-dom";
-import { ChakraProvider } from "@chakra-ui/react";
 import router from "./router";
+import { ChakraProvider } from "@chakra-ui/react";
+import { theme } from "./chakraTheme";
 import LoadingSpinner from "./components/common/LoadingSpinner";
 
 // css
@@ -15,7 +16,7 @@ import "./css/gallery-filter-and-search.css";
 
 export default function App() {
   return (
-    <ChakraProvider>
+    <ChakraProvider theme={theme}>
       <RouterProvider router={router} fallbackElement={<LoadingSpinner />} />
     </ChakraProvider>
   );

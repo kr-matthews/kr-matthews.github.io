@@ -1,9 +1,8 @@
 import { useState } from "react";
-
+import NavLink from "./NavLink";
 import { ReactComponent as Logo } from "../../assets/logo.svg";
 import { ReactComponent as OpenMenu } from "../../assets/menu.svg";
 import { ReactComponent as CloseMenu } from "../../assets/close.svg";
-import NavLink from "./NavLink";
 
 export default function Header() {
   // pages which exist, to appear in navigation menu
