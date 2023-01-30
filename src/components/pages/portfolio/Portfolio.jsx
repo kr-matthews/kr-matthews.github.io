@@ -7,6 +7,7 @@ import SearchTextBox from "../../common/SearchTextBox";
 import useCategoryFilter from "../../../hooks/useCategoryFilter";
 
 import { projects } from "../../../data/portfolio";
+import Link from "../../common/Link";
 
 export default function Portfolio() {
   const allTags = [...new Set(projects.map((proj) => proj.tags).flat())].sort();
@@ -25,13 +26,9 @@ export default function Portfolio() {
       <p>
         Notable (personal) projects that I've created. Most, but not all, are
         programming projects. Many have public repositories on{" "}
-        <a
-          href="https://github.com/kr-matthews"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <Link href="https://github.com/kr-matthews" isExternal>
           my GitHub
-        </a>
+        </Link>
         .
       </p>
 

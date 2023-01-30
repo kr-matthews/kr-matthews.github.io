@@ -7,6 +7,7 @@ export default function Project({
   year = "Unknown",
   description = "Project description.",
 }) {
+  // todo: make common `Link` work here
   return (
     /* target to open in new tab, rel for safety */
     <a href={url} className="item" target="_blank" rel="noopener noreferrer">

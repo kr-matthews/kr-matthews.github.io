@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import Link from "../common/Link";
 
 export default function About() {
   return (
@@ -17,38 +17,26 @@ export default function About() {
       <h3>Education and Work</h3>
       <p>
         I have a Bachelor of Mathematics from the{" "}
-        <a
-          href="https://uwaterloo.ca/math/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <Link href="https://uwaterloo.ca/math/" isExternal>
           University of Waterloo
-        </a>
+        </Link>
         , where I studied Pure Math, Applied Math, Combinatorics & Optimization,
         and Computational Math. I also have a Master of Arts from the{" "}
-        <a
-          href="https://ww3.math.ucla.edu/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <Link href="https://ww3.math.ucla.edu/" isExternal>
           University of California, Los Angeles
-        </a>
+        </Link>
         , where I studied Mathematical Logic.
       </p>
       <p>
         I recently joined{" "}
-        <a
-          href="https://ensemble.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <Link href="https://ensemble.com/" isExternal>
           Ensemble Systems
-        </a>{" "}
+        </Link>{" "}
         as a Software Developer. Before that, I worked as a Software Engineer in
         Android development at{" "}
-        <a href="https://rivian.com/" target="_blank" rel="noopener noreferrer">
+        <Link href="https://rivian.com/" isExternal>
           Rivian
-        </a>
+        </Link>
         , an electric vehicle company, where I learnt a lot of new techniques
         and skills. My main focus was on setup/pairing flows for devices via
         Bluetooth low energy, but I also assisted other teams as needed, and was
@@ -71,25 +59,20 @@ export default function About() {
         tools, designed to help with learning how to solve the cube blindfolded
         and to help practice what you know. I'm also on the World Cube
         Association's{" "}
-        <a
-          href="https://github.com/thewca"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <Link href="https://github.com/thewca" isExternal>
           software team
-        </a>{" "}
+        </Link>{" "}
         as a volunteer, where my main focus is assisting on transitioning our
         website's front-end from Rails to React.
       </p>
       <p>
         I also like playing{" "}
-        <a
+        <Link
           href="https://www.geoguessr.com/maps/6180d71598cffd00011e1e91"
-          target="_blank"
-          rel="noopener noreferrer"
+          isExternal
         >
           GeoGuessr
-        </a>
+        </Link>
         , restricted to Vancouver or subsets of Metro Vancouver with the 'no
         move' rule.
       </p>
