@@ -1,3 +1,4 @@
+import { Center } from "@chakra-ui/react";
 import React from "react";
 import { NavLink as RouterNavLink } from "react-router-dom";
 
@@ -6,11 +7,15 @@ export default function NavLink({ to, children }) {
   return (
     <RouterNavLink
       to={to}
-      style={({ isActive }) =>
-        isActive ? { backgroundColor: "DarkGrey" } : undefined
+      style={({ isActive, colorMode }) =>
+        isActive
+          ? { backgroundColor: colorMode === "dark" ? "Red" : "Green" } // not working
+          : undefined
       }
     >
-      {children}
+      <Center width="6em" height="3em">
+        {children}
+      </Center>
     </RouterNavLink>
   );
 }

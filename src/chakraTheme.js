@@ -30,6 +30,12 @@ const global = ({ colorMode }) => ({
   },
 });
 
+const config = {
+  initialColorMode: "system",
+  useSystemColorMode: false,
+};
+
 export const theme = extendTheme({
   styles: { global },
+  config,
 });

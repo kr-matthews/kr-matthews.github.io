@@ -1,7 +1,7 @@
-import React from "react";
+import React, { Fragment } from "react";
 import { RouterProvider } from "react-router-dom";
 import router from "./router";
-import { ChakraProvider } from "@chakra-ui/react";
+import { ChakraProvider, ColorModeScript } from "@chakra-ui/react";
 import { theme } from "./chakraTheme";
 import LoadingSpinner from "./components/common/LoadingSpinner";
 
@@ -16,8 +16,11 @@ import "./css/gallery-filter-and-search.css";
 
 export default function App() {
   return (
-    <ChakraProvider theme={theme}>
-      <RouterProvider router={router} fallbackElement={<LoadingSpinner />} />
-    </ChakraProvider>
+    <Fragment>
+      <ColorModeScript initialColorMode={theme.config.initialColorMode} />
+      <ChakraProvider theme={theme}>
+        <RouterProvider router={router} fallbackElement={<LoadingSpinner />} />
+      </ChakraProvider>
+    </Fragment>
   );
 }
