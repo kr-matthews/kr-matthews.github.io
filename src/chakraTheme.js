@@ -1,9 +1,25 @@
 import { extendTheme } from "@chakra-ui/react";
 
+const config = {
+  initialColorMode: "system",
+  useSystemColorMode: false,
+};
+
+const colors = {
+  txt: {
+    light: "#FFFFFF99",
+    dark: "#222",
+  },
+  bg: {
+    light: "#F1F5F8",
+    dark: "#121212",
+  },
+};
+
 const global = ({ colorMode }) => ({
   body: {
-    backgroundColor: colorMode === "dark" ? "#121212" : "#F1F5F8",
-    color: colorMode === "dark" ? "#FFFFFF99" : "#222",
+    backgroundColor: colorMode === "dark" ? colors.bg.dark : colors.bg.light,
+    color: colorMode === "dark" ? colors.txt.light : colors.txt.dark,
     fontFamily:
       '-apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif',
   },
@@ -30,12 +46,8 @@ const global = ({ colorMode }) => ({
   },
 });
 
-const config = {
-  initialColorMode: "system",
-  useSystemColorMode: false,
-};
-
 export const theme = extendTheme({
   styles: { global },
   config,
+  colors,
 });
