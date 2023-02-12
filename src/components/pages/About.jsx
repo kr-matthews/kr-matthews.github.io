@@ -1,8 +1,9 @@
 import Link from "../common/Link";
+import { NarrowContent } from "../common/Page";
 
 export default function About() {
   return (
-    <div className="page narrow-page">
+    <NarrowContent>
       <h1>About</h1>
 
       <h3>Interests</h3>
@@ -83,6 +84,6 @@ export default function About() {
         can be contacted at my email, which is 'kvn' then 'r' followed by my
         last name, at Google's mail platform.
       </p>
-    </div>
+    </NarrowContent>
   );
 }

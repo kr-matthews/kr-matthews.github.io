@@ -1,6 +1,8 @@
+import { NarrowContent } from "../common/Page";
+
 export default function Home() {
   return (
-    <div className="page narrow-page">
+    <NarrowContent>
       <h1>Kevin's Website</h1>
       <p>
         This is a project I was working on, with the primary aim of becoming
@@ -11,6 +13,6 @@ export default function Home() {
         up based on everything I'd learnt.
       </p>
       <p>Pick something to visit in the top navigation bar. If you want.</p>
-    </div>
+    </NarrowContent>
   );
 }

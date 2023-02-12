@@ -8,6 +8,7 @@ import useCategoryFilter from "../../../hooks/useCategoryFilter";
 
 import { projects } from "../../../data/portfolio";
 import Link from "../../common/Link";
+import { WideContent } from "../../common/Page";
 
 export default function Portfolio() {
   const allTags = [...new Set(projects.map((proj) => proj.tags).flat())].sort();
@@ -21,7 +22,7 @@ export default function Portfolio() {
   const [searchText, setSearchText] = useState("");
 
   return (
-    <div className="page">
+    <WideContent>
       <h1>Projects</h1>
       <p>
         Notable (personal) projects that I've created. Most, but not all, are
@@ -76,6 +77,6 @@ export default function Portfolio() {
             );
           })}
       </section>
-    </div>
+    </WideContent>
   );
 }

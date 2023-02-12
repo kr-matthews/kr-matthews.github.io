@@ -1,8 +1,9 @@
 import Link from "../common/Link";
+import { NarrowContent } from "../common/Page";
 
 export default function Vancouver() {
   return (
-    <div className="page narrow-page">
+    <NarrowContent className="page narrow-page">
       <h1>Vancouver</h1>
       <p>
         I live in Vancouver, BC, Canada. There are many odd/interesting facts
@@ -53,6 +54,6 @@ export default function Vancouver() {
           from the CBC examining the origins of all Vancouver street names
         </li>
       </ul>
-    </div>
+    </NarrowContent>
   );
 }

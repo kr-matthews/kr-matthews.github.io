@@ -7,6 +7,7 @@ import SearchTextBox from "../../common/SearchTextBox";
 import useCategoryFilter from "../../../hooks/useCategoryFilter";
 
 import { articles } from "../../../data/blog";
+import { NarrowContent } from "../../common/Page";
 
 export default function Blog() {
   const allTags = [...new Set(articles.map((art) => art.tags).flat())].sort();
@@ -15,7 +16,7 @@ export default function Blog() {
   const [searchText, setSearchText] = useState("");
 
   return (
-    <div className="page narrow-page">
+    <NarrowContent>
       <h1>Blog</h1>
       <p>Articles that I've written.</p>
 
@@ -42,7 +43,7 @@ export default function Blog() {
           .filter((article) => tags.areAnySelected(article.tags))
           .filter((art) => {
             return art.title.toLowerCase().includes(searchText.toLowerCase());
-            // !!! also search descriptions
+            // !! also search descriptions
           })
           .sort((a, b) => b.publishDate - a.publishDate)
           .map((article) => {
@@ -51,6 +52,6 @@ export default function Blog() {
             );
           })}
       </section>
-    </div>
+    </NarrowContent>
   );
 }

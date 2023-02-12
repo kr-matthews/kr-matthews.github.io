@@ -13,7 +13,7 @@ export default function Page({
       {!withoutHeader && <Header />}
       <Box
         overflowY="auto"
-        maxW="100vw"
+        w="100vw"
         maxH={`calc(100vh - ${withoutHeader ? "0em" : headerHeight} - ${
           withoutFooter ? "0em" : footerHeight
         })`}
@@ -22,5 +22,21 @@ export default function Page({
       </Box>
       {!withoutFooter && <Footer />}
     </VStack>
+  );
+}
+
+export function NarrowContent({ children: content }) {
+  return (
+    <Box paddingX="4em" maxW="1000px" marginX="auto">
+      {content}
+    </Box>
+  );
+}
+
+export function WideContent({ children: content }) {
+  return (
+    <Box paddingX="4em" w="100vw">
+      {content}
+    </Box>
   );
 }
