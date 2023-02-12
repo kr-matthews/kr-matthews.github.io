@@ -1,3 +1,5 @@
+import "../../../css/article.css";
+
 export default function Article({
   title = "Article Title",
   startDate,

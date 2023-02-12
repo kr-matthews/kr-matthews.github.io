@@ -1,11 +1,10 @@
-import React, { Fragment } from "react";
+import React from "react";
 import { createBrowserRouter, Navigate, Outlet } from "react-router-dom";
-import ArticleWrapper from "./components/pages/blog/ArticleWrapper";
+import Page from "./components/common/Page";
 import ErrorPage from "./components/pages/ErrorPage";
-import Footer from "./components/common/Footer";
-import Header from "./components/common/Header";
 import About from "./components/pages/About";
 import Blog from "./components/pages/blog/Blog";
+import ArticleWrapper from "./components/pages/blog/ArticleWrapper";
 import Cubing from "./components/pages/Cubing";
 import Home from "./components/pages/Home";
 import Portfolio from "./components/pages/portfolio/Portfolio";
@@ -16,11 +15,9 @@ const router = createBrowserRouter([
     path: "/",
     errorElement: <ErrorPage />,
     element: (
-      <Fragment>
-        <Header />
+      <Page withoutFooter>
         <Outlet />
-        <Footer />
-      </Fragment>
+      </Page>
     ),
     children: [
       { path: "", element: <Home /> },
