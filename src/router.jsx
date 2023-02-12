@@ -1,7 +1,7 @@
 import React from "react";
 import { createBrowserRouter, Navigate, Outlet } from "react-router-dom";
 import Page from "./components/common/Page";
-import ErrorPage from "./components/pages/ErrorPage";
+import ErrorPage from "./components/common/ErrorPage";
 import About from "./components/pages/About";
 import Blog from "./components/pages/blog/Blog";
 import ArticleWrapper from "./components/pages/blog/ArticleWrapper";
