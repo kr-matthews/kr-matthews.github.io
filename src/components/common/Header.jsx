@@ -1,8 +1,5 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import NavLink from "./NavLink";
-import { ReactComponent as Logo } from "../../assets/logo.svg";
-import { ReactComponent as OpenMenu } from "../../assets/menu.svg";
-import { ReactComponent as CloseMenu } from "../../assets/close.svg";
 import {
   Box,
   Center,
@@ -10,91 +7,110 @@ import {
   Image,
   Spacer,
   useColorMode,
+  useColorModeValue,
   useMediaQuery,
+  VStack,
 } from "@chakra-ui/react";
 import Toggle from "./Toggle";
+import logoIcon from "../../assets/logo.svg";
+import menuIcon from "../../assets/menu.svg";
+import closeIcon from "../../assets/close.svg";
 import sunIcon from "../../assets/sun.svg";
 import moonIcon from "../../assets/moon.svg";
-import logoIcon from "../../assets/logo.svg";
+import Link from "./Link";
+
+export const headerHeight = "3em";
 
 // assumes links are lower-case versions
 const navOptions = ["Projects", "Blog", "Cubing", "Vancouver", "About"];
 const navOptionCount = navOptions.length;
 const navOptionWidth = 6; // in em
-const sideWidths = 9; // in em
+const sideWidths = 4.5; // in em
 
 export default function Header() {
   const [isScreenWide] = useMediaQuery(
-    `(min-width: ${navOptionCount * navOptionWidth + 2 * sideWidths}em)`
+    // nav links + sides + buffer (scroll-bar, spacing, etc)
+    `(min-width: ${navOptionCount * navOptionWidth + 2 * sideWidths + 0.4}em)`
   );
 
-  //// these three are only needed on mobile (ie screen <= 600)
-  // whether the mobile menu is expanded and visible
-  const [isOpen, setIsOpen] = useState(false);
-  // toggles the state of the mobile menu
-  const toggle = () => setIsOpen((isOpen) => !isOpen);
-  // close the mobile menu, regardless of its state
-  const close = () => setIsOpen(false);
+  //// these three are only needed on small screens
 
-  // theme (light vs dark)
+  // whether the mobile menu is expanded and visible
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const toggle = () => setIsMobileMenuOpen((isOpen) => !isOpen);
+  const close = () => setIsMobileMenuOpen(false);
+  const menuDisplayIcon = isMobileMenuOpen ? closeIcon : menuIcon;
+
+  // close the menu when it's no longer part of the page
+  useEffect(() => {
+    if (!isScreenWide) close();
+  }, [isScreenWide]);
+
   const { colorMode, toggleColorMode } = useColorMode();
+  const bgColor = useColorModeValue("alt.light", "alt.dark");
+  const themeIcon = useColorModeValue(sunIcon, moonIcon);
 
   return (
-    <HStack spacing={0} height="3em" bgColor="DarkGrey">
-      <Box px="0.5em" width={`${sideWidths}em`}>
-        <Image src={logoIcon} height="2em" />
-      </Box>
-      <Spacer />
-      {isScreenWide &&
-        navOptions.map((navOption) => (
-          <NavLink key={navOption} to={navOption.toLowerCase()}>
-            {navOption}
-          </NavLink>
-        ))}
-      <Spacer />
-      <Center width={`${sideWidths}em`}>
-        <Toggle
-          isChecked={colorMode === "dark"}
-          onToggle={toggleColorMode}
-          left={<Image src={sunIcon} height="2em" />}
-          right={<Image src={moonIcon} height="2em" />}
-        />
-      </Center>
+    <Box w="100vw">
+      <HStack spacing={0} h={headerHeight} bgColor={bgColor}>
+        <Center px="0.5em" w={`${sideWidths}em`}>
+          <Image src={logoIcon} h="2em" />
+        </Center>
+
+        <Spacer />
+
+        {isScreenWide ? (
+          <WideNavOptions />
+        ) : (
+          <Link onClick={toggle}>
+            <Image src={menuDisplayIcon} h="2em" />
+          </Link>
+        )}
+
+        <Spacer />
+
+        <HStack spacing="0.1em" w={`${sideWidths}em`}>
+          <Image src={themeIcon} h="1.5em" />
+          <Toggle isChecked={colorMode === "dark"} onToggle={toggleColorMode} />
+        </HStack>
+      </HStack>
+
+      {!isScreenWide && isMobileMenuOpen && (
+        <NarrowNavOptions close={close} bgColor={bgColor} />
+      )}
+    </Box>
+  );
+}
+
+function WideNavOptions() {
+  return (
+    <HStack spacing="1px">
+      {navOptions.map((navOption) => (
+        <NavLink
+          key={navOption}
+          to={navOption.toLowerCase()}
+          w={navOptionWidth + "em"}
+        >
+          {navOption}
+        </NavLink>
+      ))}
     </HStack>
   );
+}
 
-  // todo
+function NarrowNavOptions({ close, bgColor }) {
   return (
-    <header>
-      {/* Logo to navigate to home page */}
-      <span className="icon-container home-option" onClick={close}>
-        <NavLink to="/" end>
-          <Logo className="icon" />
+    <VStack spacing="1px" position="absolute" bgColor={bgColor} w="100vw">
+      {navOptions.map((navOption) => (
+        <NavLink
+          key={navOption}
+          to={navOption.toLowerCase()}
+          onClick={close}
+          w={navOptionWidth + "em"}
+        >
+          {navOption}
         </NavLink>
-      </span>
-
-      {/* Icon to toggle mobile menu; only visible on mobile */}
-      <span className="icon-container toggle-option">
-        {isOpen ? (
-          <CloseMenu className="icon" onClick={toggle} />
-        ) : (
-          <OpenMenu className="icon" onClick={toggle} />
-        )}
-      </span>
-
-      {/* navigation link for each page */}
-      <nav>
-        <ul className={isOpen ? "nav-options" : "nav-options hidden"}>
-          {navOptions.map((page) => {
-            return (
-              <li className="option" onClick={close} key={page}>
-                {/* assumes link will be lowercase version of name */}
-                <NavLink to={`/${page.toLowerCase()}`}>{page}</NavLink>
-              </li>
-            );
-          })}
-        </ul>
-      </nav>
-    </header>
+      ))}
+    </VStack>
   );
 }

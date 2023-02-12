@@ -2,13 +2,11 @@ import { HStack, Switch } from "@chakra-ui/react";
 import React from "react";
 
 export default function Toggle({ onToggle, left, right, ...props }) {
-  function onChange(e) {
-    onToggle && onToggle(e.target.checked);
-  }
+  const onChange = onToggle ? (e) => onToggle(e.target.checked) : undefined;
   return (
     <HStack>
       {left}
-      <Switch onChange={onChange} size="lg" colorScheme="red" {...props} />
+      <Switch onChange={onChange} size="md" colorScheme="red" {...props} />
       {right}
     </HStack>
   );

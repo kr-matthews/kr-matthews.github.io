@@ -8,16 +8,21 @@ const config = {
 const colors = {
   txt: {
     light: "#FFFFFF99",
-    dark: "#222",
+    dark: "#222222",
   },
   bg: {
     light: "#F1F5F8",
     dark: "#121212",
   },
+  alt: {
+    light: "#B3B6B7",
+    dark: "#273746",
+  },
 };
 
 const global = ({ colorMode }) => ({
   body: {
+    overflow: "hidden",
     backgroundColor: colorMode === "dark" ? colors.bg.dark : colors.bg.light,
     color: colorMode === "dark" ? colors.txt.light : colors.txt.dark,
     fontFamily:
