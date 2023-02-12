@@ -4,11 +4,11 @@ import notepad from "../../../assets/notepad.png";
 export default function ArticlePreview({
   link = "",
   title = "Article",
-  startDate,
+  // startDate,
   publishDate,
-  editDate,
+  // editDate,
   image = notepad,
-  tags = [],
+  // tags = [],
   preview = "Click to read.",
 }) {
   return (
