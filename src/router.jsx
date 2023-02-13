@@ -7,7 +7,7 @@ import Blog from "./components/pages/blog/Blog";
 import ArticleWrapper from "./components/pages/blog/ArticleWrapper";
 import Cubing from "./components/pages/Cubing";
 import Home from "./components/pages/Home";
-import Portfolio from "./components/pages/portfolio/Portfolio";
+import Projects from "./components/pages/projects/Projects";
 import Vancouver from "./components/pages/Vancouver";
 
 const router = createBrowserRouter([
@@ -21,7 +21,7 @@ const router = createBrowserRouter([
     ),
     children: [
       { path: "", element: <Home /> },
-      { path: "projects", element: <Portfolio /> },
+      { path: "projects", element: <Projects /> },
       {
         path: "blog",
         children: [

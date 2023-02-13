@@ -6,7 +6,7 @@ import SearchTextBox from "../../common/SearchTextBox";
 
 import useCategoryFilter from "../../../hooks/useCategoryFilter";
 
-import { projects } from "../../../data/portfolio";
+import { projects } from "../../../data/projects";
 import Link from "../../common/Link";
 import { WideContent } from "../../common/Page";
 import Gallery, { GalleryItem } from "../../common/Gallery";
@@ -17,7 +17,7 @@ const allLanguages = [
 ].sort();
 const allTags = [...new Set(projects.flatMap((proj) => proj.tags))].sort();
 
-export default function Portfolio() {
+export default function Projects() {
   // filtering mechanisms
   const {
     areSelected: languagesAreSelected,
