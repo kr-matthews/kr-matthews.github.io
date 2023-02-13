@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useMemo, useState } from "react";
 
 import ProjectPreview from "./ProjectPreview";
 import CategoryFilterButtons from "../../common/CategoryFilterButtons";
@@ -9,24 +9,52 @@ import useCategoryFilter from "../../../hooks/useCategoryFilter";
 import { projects } from "../../../data/portfolio";
 import Link from "../../common/Link";
 import { WideContent } from "../../common/Page";
+import Gallery, { GalleryItem } from "../../common/Gallery";
+
+const sortedProjects = projects.sort((a, b) => b.id - a.id);
+const allLanguages = [
+  ...new Set(projects.flatMap((proj) => proj.languages)),
+].sort();
+const allTags = [...new Set(projects.flatMap((proj) => proj.tags))].sort();
 
 export default function Portfolio() {
-  const allTags = [...new Set(projects.map((proj) => proj.tags).flat())].sort();
-  const tags = useCategoryFilter(allTags);
-
-  const allLanguages = [
-    ...new Set(projects.map((proj) => proj.languages).flat()),
-  ].sort();
-  const languages = useCategoryFilter(allLanguages);
-
+  // filtering mechanisms
+  const {
+    areSelected: languagesAreSelected,
+    areAllOff: areAllLanguagesOff,
+    toggleOne: toggleLanguage,
+    allToSame: allLanguagesToSame,
+    areAnySelected: areAnyLanguagesSelected,
+  } = useCategoryFilter(allLanguages);
+  const {
+    areSelected: tagsAreSelected,
+    areAllOff: areAllTagsOff,
+    toggleOne: toggleTag,
+    allToSame: allTagsToSame,
+    areAnySelected: areAnyTagsSelected,
+  } = useCategoryFilter(allTags);
   const [searchText, setSearchText] = useState("");
+
+  const filteredProjects = useMemo(
+    () =>
+      sortedProjects
+        .filter(({ languages }) => areAnyLanguagesSelected(languages))
+        .filter(({ tags }) => areAnyTagsSelected(tags))
+        // !! improve filtering - use regexp
+        .filter(
+          ({ title, description }) =>
+            title.toLowerCase().includes(searchText.toLowerCase()) ||
+            description.toLowerCase().includes(searchText.toLowerCase())
+        ),
+    [areAnyLanguagesSelected, areAnyTagsSelected, searchText]
+  );
 
   return (
     <WideContent>
       <h1>Projects</h1>
       <p>
-        Notable (personal) projects that I've created. Most, but not all, are
-        programming projects. Many have public repositories on{" "}
+        Notable projects that I've created. Most, but not all, are programming
+        projects. Many have public repositories on{" "}
         <Link href="https://github.com/kr-matthews" isExternal>
           my GitHub
         </Link>
@@ -34,24 +62,23 @@ export default function Portfolio() {
       </p>
 
       <CategoryFilterButtons
-        title={"Languages"}
+        title="Languages"
         categories={allLanguages}
-        areSelected={languages.areSelected}
-        clickACategoryHandler={languages.toggleOne}
-        isAllSelected={languages.areAllOff}
-        clickAllHandler={languages.allToSame}
+        areSelected={languagesAreSelected}
+        clickACategoryHandler={toggleLanguage}
+        isAllSelected={areAllLanguagesOff}
+        clickAllHandler={allLanguagesToSame}
       />
 
       <CategoryFilterButtons
-        title={"Tags"}
+        title="Tags"
         categories={allTags}
-        areSelected={tags.areSelected}
-        clickACategoryHandler={tags.toggleOne}
-        isAllSelected={tags.areAllOff}
-        clickAllHandler={tags.allToSame}
+        areSelected={tagsAreSelected}
+        clickACategoryHandler={toggleTag}
+        isAllSelected={areAllTagsOff}
+        clickAllHandler={allTagsToSame}
       />
 
-      {/* form for searching titles and descriptions */}
       <SearchTextBox
         placeholder="Search titles and descriptions..."
         label="Search projects"
@@ -59,24 +86,13 @@ export default function Portfolio() {
         setSearchText={setSearchText}
       />
 
-      <section className="gallery portfolio-gallery">
-        {projects
-          .filter((project) => tags.areAnySelected(project.tags))
-          .filter((project) => languages.areAnySelected(project.languages))
-          .filter((proj) => {
-            return (
-              proj.title.toLowerCase().includes(searchText.toLowerCase()) ||
-              proj.description.toLowerCase().includes(searchText.toLowerCase())
-            );
-          })
-          .sort((a, b) => b.id - a.id) /* reverse chron. order */
-          .map((project) => {
-            /* display the panel in the gallery */
-            return (
-              <ProjectPreview key={project.id} {...project}></ProjectPreview>
-            );
-          })}
-      </section>
+      <Gallery>
+        {filteredProjects.map((project) => (
+          <GalleryItem key={project.id}>
+            <ProjectPreview {...project} />
+          </GalleryItem>
+        ))}
+      </Gallery>
     </WideContent>
   );
 }

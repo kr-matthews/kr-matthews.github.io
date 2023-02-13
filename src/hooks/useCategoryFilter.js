@@ -1,4 +1,4 @@
-import { useReducer } from "react";
+import { useCallback, useReducer } from "react";
 
 function reducer(state, action) {
   let newState = [...state];
@@ -9,11 +9,12 @@ function reducer(state, action) {
     case "toggleAll":
       return Array(state.length).fill(action.boolean);
     default:
-      console.error("useCategoryFilter: areSlected reducer no match", action);
+      console.error("useCategoryFilter: areSelected reducer no match", action);
   }
   return newState;
 }
 
+/** Ensure `categories` prop doesn't change unnecessarily. */
 export default function useCategoryFilter(categories = []) {
   const size = categories.length;
   const [areSelected, dispatch] = useReducer(reducer, Array(size).fill(false));
@@ -27,10 +28,12 @@ export default function useCategoryFilter(categories = []) {
     dispatch({ type: "toggleAll", boolean: areAllOff });
   }
 
-  function areAnySelected(subset) {
-    if (areAllOff) return true;
-    return subset.some((category) => areSelected[categories.indexOf(category)]);
-  }
+  const areAnySelected = useCallback(
+    (subset) =>
+      areAllOff ||
+      subset.some((category) => areSelected[categories.indexOf(category)]),
+    [areAllOff, areSelected, categories]
+  );
 
   return { areSelected, areAllOff, toggleOne, allToSame, areAnySelected };
 }

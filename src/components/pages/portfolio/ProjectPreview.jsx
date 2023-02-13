@@ -1,4 +1,4 @@
-export default function Project({
+export default function ProjectPreview({
   title = "Project",
   url = "/",
   image,

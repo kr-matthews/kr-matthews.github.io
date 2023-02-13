@@ -20,7 +20,7 @@ export default function Gallery({
 
 export function GalleryItem({ w = "400px", children: content, ...props }) {
   return (
-    <Box alignItems="center" w={w} textAlign="center" {...props}>
+    <Box w={w} textAlign="center" {...props}>
       {content}
     </Box>
   );
