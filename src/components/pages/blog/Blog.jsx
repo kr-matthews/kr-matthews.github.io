@@ -1,36 +1,53 @@
-import { useState } from "react";
+import { useMemo, useState } from "react";
 
+import { NarrowContent } from "../../common/Page";
 import ArticlePreview from "./ArticlePreview";
 import CategoryFilterButtons from "../../common/CategoryFilterButtons";
 import SearchTextBox from "../../common/SearchTextBox";
+import Gallery, { GalleryItem } from "../../common/Gallery";
 
 import useCategoryFilter from "../../../hooks/useCategoryFilter";
 
 import { articles } from "../../../data/blog";
-import { NarrowContent } from "../../common/Page";
+
+const sortedArticles = articles.sort((a, b) => b.publishDate - a.publishDate);
+const allTags = [...new Set(articles.flatMap(({ tags }) => tags))].sort();
 
 export default function Blog() {
-  const allTags = [...new Set(articles.map((art) => art.tags).flat())].sort();
-  const tags = useCategoryFilter(allTags);
-
+  // filtering mechanisms
+  const {
+    areSelected: tagsAreSelected,
+    areAllOff: areAllTagsOff,
+    toggleOne: toggleTag,
+    allToSame: allTagsToSame,
+    areAnySelected: areAnyTagsSelected,
+  } = useCategoryFilter(allTags);
   const [searchText, setSearchText] = useState("");
+
+  const filteredArticles = useMemo(
+    () =>
+      sortedArticles
+        .filter(({ tags }) => areAnyTagsSelected(tags))
+        .filter(({ title }) =>
+          // !! also search descriptions
+          title.toLowerCase().includes(searchText.toLowerCase())
+        ),
+    [areAnyTagsSelected, searchText]
+  );
 
   return (
     <NarrowContent>
       <h1>Blog</h1>
-      <p>Articles that I've written.</p>
 
-      {/* buttons for each Language (plus 'all') */}
       <CategoryFilterButtons
-        title={"Tags"}
+        title="Tags"
         categories={allTags}
-        areSelected={tags.areSelected}
-        clickACategoryHandler={tags.toggleOne}
-        isAllSelected={tags.areAllOff}
-        clickAllHandler={tags.allToSame}
+        areSelected={tagsAreSelected}
+        clickACategoryHandler={toggleTag}
+        isAllSelected={areAllTagsOff}
+        clickAllHandler={allTagsToSame}
       />
 
-      {/* form for searching titles (but not contents) */}
       <SearchTextBox
         placeholder="Search titles..."
         label="Search articles"
@@ -38,20 +55,13 @@ export default function Blog() {
         setSearchText={setSearchText}
       />
 
-      <section className="gallery blog-gallery">
-        {articles
-          .filter((article) => tags.areAnySelected(article.tags))
-          .filter((art) => {
-            return art.title.toLowerCase().includes(searchText.toLowerCase());
-            // !! also search descriptions
-          })
-          .sort((a, b) => b.publishDate - a.publishDate)
-          .map((article) => {
-            return (
-              <ArticlePreview key={article.link} {...article}></ArticlePreview>
-            );
-          })}
-      </section>
+      <Gallery>
+        {filteredArticles.map((article) => (
+          <GalleryItem key={article.link}>
+            <ArticlePreview {...article} />
+          </GalleryItem>
+        ))}
+      </Gallery>
     </NarrowContent>
   );
 }

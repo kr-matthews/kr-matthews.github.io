@@ -1,21 +1,21 @@
 import { useMemo, useState } from "react";
 
+import { WideContent } from "../../common/Page";
 import ProjectPreview from "./ProjectPreview";
 import CategoryFilterButtons from "../../common/CategoryFilterButtons";
 import SearchTextBox from "../../common/SearchTextBox";
+import Gallery, { GalleryItem } from "../../common/Gallery";
 
 import useCategoryFilter from "../../../hooks/useCategoryFilter";
 
 import { projects } from "../../../data/projects";
 import Link from "../../common/Link";
-import { WideContent } from "../../common/Page";
-import Gallery, { GalleryItem } from "../../common/Gallery";
 
 const sortedProjects = projects.sort((a, b) => b.id - a.id);
 const allLanguages = [
-  ...new Set(projects.flatMap((proj) => proj.languages)),
+  ...new Set(projects.flatMap(({ languages }) => languages)),
 ].sort();
-const allTags = [...new Set(projects.flatMap((proj) => proj.tags))].sort();
+const allTags = [...new Set(projects.flatMap(({ tags }) => tags))].sort();
 
 export default function Projects() {
   // filtering mechanisms
