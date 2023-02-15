@@ -55,11 +55,9 @@ export default function Blog() {
         setSearchText={setSearchText}
       />
 
-      <Gallery>
+      <Gallery childW="900px">
         {filteredArticles.map((article) => (
-          <GalleryItem key={article.link}>
-            <ArticlePreview {...article} />
-          </GalleryItem>
+          <ArticlePreview key={article.link} {...article} />
         ))}
       </Gallery>
     </NarrowContent>

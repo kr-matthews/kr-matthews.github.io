@@ -86,11 +86,9 @@ export default function Projects() {
         setSearchText={setSearchText}
       />
 
-      <Gallery>
+      <Gallery childW="400px">
         {filteredProjects.map((project) => (
-          <GalleryItem key={project.id}>
-            <ProjectPreview {...project} />
-          </GalleryItem>
+          <ProjectPreview key={project.id} {...project} />
         ))}
       </Gallery>
     </WideContent>
