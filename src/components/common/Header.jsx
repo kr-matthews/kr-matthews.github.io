@@ -48,10 +48,11 @@ export default function Header() {
 
   const { colorMode, toggleColorMode } = useColorMode();
   const bgColor = useColorModeValue("alt.light", "alt.dark");
+  const borderColor = useColorModeValue("alt.dark", "alt.light");
   const themeIcon = useColorModeValue(sunIcon, moonIcon);
 
   return (
-    <Box w="100vw">
+    <Box w="100vw" borderBottom="1px" borderColor={borderColor}>
       <HStack spacing={0} h={headerHeight} bgColor={bgColor}>
         <Center px="0.5em" w={`${sideWidths}em`}>
           <Image src={logoIcon} h="2em" />
@@ -76,7 +77,11 @@ export default function Header() {
       </HStack>
 
       {!isScreenWide && isMobileMenuOpen && (
-        <NarrowNavOptions close={close} bgColor={bgColor} />
+        <NarrowNavOptions
+          close={close}
+          bgColor={bgColor}
+          borderColor={borderColor}
+        />
       )}
     </Box>
   );
@@ -98,9 +103,16 @@ function WideNavOptions() {
   );
 }
 
-function NarrowNavOptions({ close, bgColor }) {
+function NarrowNavOptions({ close, bgColor, borderColor }) {
   return (
-    <VStack spacing="1px" position="absolute" bgColor={bgColor} w="100vw">
+    <VStack
+      spacing="1px"
+      position="absolute"
+      bgColor={bgColor}
+      w="100vw"
+      borderBottom="1px"
+      borderColor={borderColor}
+    >
       {navOptions.map((navOption) => (
         <NavLink
           key={navOption}
