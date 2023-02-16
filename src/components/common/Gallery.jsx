@@ -22,9 +22,7 @@ export default function Gallery({
   );
 }
 
-// !!! horizontal scroll bar sometimes shows up
-
-export function GalleryItem({ w = "400px", children: content, ...props }) {
+function GalleryItem({ w = "400px", children: content, ...props }) {
   const bgColor = useColorModeValue("alt.light", "alt.dark");
   const borderColor = useColorModeValue("alt.dark", "alt.light");
 

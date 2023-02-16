@@ -4,7 +4,7 @@ import { NarrowContent } from "../../common/Page";
 import ArticlePreview from "./ArticlePreview";
 import CategoryFilterButtons from "../../common/CategoryFilterButtons";
 import SearchTextBox from "../../common/SearchTextBox";
-import Gallery, { GalleryItem } from "../../common/Gallery";
+import Gallery from "../../common/Gallery";
 
 import useCategoryFilter from "../../../hooks/useCategoryFilter";
 

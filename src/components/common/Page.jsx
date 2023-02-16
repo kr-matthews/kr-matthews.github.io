@@ -27,7 +27,7 @@ export default function Page({
 
 export function NarrowContent({ children: content }) {
   return (
-    <Box paddingX="4em" maxW="1000px" marginX="auto">
+    <Box px="4em" pb="3em" maxW="1000px" mx="auto">
       {content}
     </Box>
   );
@@ -35,7 +35,7 @@ export function NarrowContent({ children: content }) {
 
 export function WideContent({ children: content }) {
   return (
-    <Box paddingX="4em" w="100vw">
+    <Box px="4em" pb="3em" w="100%">
       {content}
     </Box>
   );
