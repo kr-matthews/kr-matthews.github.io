@@ -57,7 +57,7 @@ export default function Blog() {
 
       <Gallery childW="900px">
         {filteredArticles.map((article) => (
-          <ArticlePreview key={article.link} {...article} />
+          <ArticlePreview key={article.id} {...article} />
         ))}
       </Gallery>
     </NarrowContent>

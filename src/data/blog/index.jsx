@@ -14,9 +14,9 @@ import terminalCustomCommandsImage from "./003-terminal-custom-commands/code-ico
 
 //// list of articles
 
-// this will be sorted by publishDate, so can be in any order
 export const articles = [
   {
+    id: 0,
     title:
       "Understanding how someone else might be able to solve a Rubik's Cube blindfolded",
     link: "rubiks-cube-blindfolded",
@@ -30,6 +30,7 @@ export const articles = [
     content: <RubiksCubeBlindfolded />,
   },
   {
+    id: 1,
     title: "State Management in React",
     link: "react-state-management",
     startDate: new Date("2021-10-09"),
@@ -42,6 +43,7 @@ export const articles = [
     content: <ReactStateManagement />,
   },
   {
+    id: 2,
     title: "Terminal Custom Commands",
     link: "terminal-custom-commands",
     startDate: new Date("2021-11-26"),
@@ -54,6 +56,7 @@ export const articles = [
     content: <TerminalCustomCommands />,
   },
   {
+    id: 3,
     title: "Testing React Hooks - Actions, Effects, & Mocking",
     link: "testing-react-hooks",
     startDate: new Date("2022-04-23"),
@@ -67,6 +70,7 @@ export const articles = [
   },
   /*
   {
+    id: ,
     title: "",
     link: "",
     startDate: new Date(""),
