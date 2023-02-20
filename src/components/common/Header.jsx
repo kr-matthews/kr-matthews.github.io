@@ -17,7 +17,6 @@ import menuIcon from "../../assets/menu.svg";
 import closeIcon from "../../assets/close.svg";
 import sunIcon from "../../assets/sun.svg";
 import moonIcon from "../../assets/moon.svg";
-import Link from "./Link";
 
 export const headerHeight = "3em";
 

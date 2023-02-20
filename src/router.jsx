@@ -25,7 +25,7 @@ const router = createBrowserRouter([
         path: "blog",
         children: [
           { path: "", element: <Blog /> },
-          { path: ":articleId", element: <ArticleWrapper /> },
+          { path: ":articleShortName", element: <ArticleWrapper /> },
         ],
       },
       { path: "cubing", element: <Cubing /> },

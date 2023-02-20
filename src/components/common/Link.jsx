@@ -14,12 +14,10 @@ export default function Link({
   children: content,
   ...props
 }) {
-  if (!isExternal && !to) throw "Improper link usage";
-
   return (
     <ChakraLink
       as={isExternal ? "a" : ReactRouterLink}
-      to={to}
+      to={to ?? ""}
       href={isExternal && !isDisabled ? href : undefined}
       onClick={isDisabled ? undefined : onClick}
       isExternal={isExternal}

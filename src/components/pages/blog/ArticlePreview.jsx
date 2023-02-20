@@ -4,6 +4,7 @@ import Link from "../../common/Link";
 
 export default function ArticlePreview({
   link,
+  shortName,
   title = "Untitled",
   publishDate,
   editDate,
@@ -11,11 +12,14 @@ export default function ArticlePreview({
   tags = [],
   preview = "Click to read.",
 }) {
+  // if there's a link, use that (external); else use shortName (internal)
   return (
     <Link
-      to={link}
+      isExternal={!!link}
+      url={link}
+      to={shortName}
       withoutUnderline
-      isDisabled={!link}
+      isDisabled={!link && !shortName}
       disabledTitle="Currently unavailable"
     >
       <HStack spacing="2em" h="16em" p="2em">

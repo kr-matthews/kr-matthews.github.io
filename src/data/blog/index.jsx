@@ -19,7 +19,7 @@ export const articles = [
     id: 0,
     title:
       "Understanding how someone else might be able to solve a Rubik's Cube blindfolded",
-    link: "rubiks-cube-blindfolded",
+    shortName: "rubiks-cube-blindfolded",
     startDate: new Date("2021-07-31"),
     publishDate: new Date("2021-08-19"),
     // editDate: new Date(""),
@@ -32,7 +32,7 @@ export const articles = [
   {
     id: 1,
     title: "State Management in React",
-    link: "react-state-management",
+    shortName: "react-state-management",
     startDate: new Date("2021-10-09"),
     publishDate: new Date("2021-10-24"),
     editDate: new Date("2021-11-08"),
@@ -45,7 +45,7 @@ export const articles = [
   {
     id: 2,
     title: "Terminal Custom Commands",
-    link: "terminal-custom-commands",
+    shortName: "terminal-custom-commands",
     startDate: new Date("2021-11-26"),
     publishDate: new Date("2022-01-03"),
     // editDate: new Date(""),
@@ -58,7 +58,7 @@ export const articles = [
   {
     id: 3,
     title: "Testing React Hooks - Actions, Effects, & Mocking",
-    link: "testing-react-hooks",
+    shortName: "testing-react-hooks",
     startDate: new Date("2022-04-23"),
     publishDate: new Date("2022-05-27"),
     // editDate: new Date(""),
@@ -72,7 +72,7 @@ export const articles = [
   {
     id: ,
     title: "",
-    link: "",
+    shortName: "",
     startDate: new Date(""),
     publishDate: new Date(""),
     // editDate: new Date(""),
