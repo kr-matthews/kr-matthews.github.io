@@ -47,7 +47,7 @@ export default function ProjectPreview({
         <Image src={image || wipImage} maxW="100%" maxH="100%" />
       </Center>
       <HStack spacing="2em">
-        <Center h="3em" w="3em">
+        <Center h="2.5em" w="2.5em">
           {(icon || url) && (
             <Link
               href={url}
@@ -63,10 +63,10 @@ export default function ProjectPreview({
           )}
         </Center>
         <VStack spacing={0}>
-          <Box>{year}</Box>
-          <Box>{type}</Box>
+          <Box textStyle="specs">{year}</Box>
+          <Box textStyle="specs">{type}</Box>
         </VStack>
-        <Center h="3em" w="3em">
+        <Center h="2.5em" w="2.5em">
           {codeUrl && (
             <Link
               href={codeUrl}
@@ -81,9 +81,9 @@ export default function ProjectPreview({
           )}
         </Center>
       </HStack>
-      {tags.length > 0 && <Box>{tags.join(", ")}</Box>}
+      {tags.length > 0 && <Box textStyle="specs">{tags.join(", ")}</Box>}
       {languages.length > 0 && (
-        <HStack>
+        <HStack textStyle="specs">
           {languages.map((lang, ind, arr) => (
             <Language key={lang} lang={lang} isLast={ind === arr.length - 1} />
           ))}
