@@ -63,9 +63,9 @@ export default function Header() {
         {isScreenWide ? (
           <WideNavOptions />
         ) : (
-          <Link onClick={toggle}>
+          <Box onClick={toggle} _hover={{ cursor: "pointer" }}>
             <Image src={menuDisplayIcon} h="2em" />
-          </Link>
+          </Box>
         )}
 
         <Spacer />
