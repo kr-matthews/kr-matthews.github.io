@@ -6,7 +6,6 @@ import About from "./components/pages/About";
 import Blog from "./components/pages/blog/Blog";
 import ArticleWrapper from "./components/pages/blog/ArticleWrapper";
 import Cubing from "./components/pages/Cubing";
-import Home from "./components/pages/Home";
 import Projects from "./components/pages/projects/Projects";
 import Vancouver from "./components/pages/Vancouver";
 
@@ -20,7 +19,7 @@ const router = createBrowserRouter([
       </Page>
     ),
     children: [
-      { path: "", element: <Home /> },
+      { path: "", element: <Navigate to="/projects" replace /> },
       { path: "projects", element: <Projects /> },
       {
         path: "blog",
