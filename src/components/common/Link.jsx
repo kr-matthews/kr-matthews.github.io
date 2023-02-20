@@ -6,6 +6,9 @@ export default function Link({
   isExternal = false,
   onClick,
   isDisabled = false,
+  withoutUnderline = false,
+  title,
+  disabledTitle,
   children: content,
   ...props
 }) {
@@ -14,9 +17,13 @@ export default function Link({
       as={isExternal ? "a" : undefined}
       href={isDisabled ? undefined : href}
       onClick={isDisabled ? undefined : onClick}
-      pointerEvents={isDisabled ? "none" : "auto"}
       isExternal={isExternal}
-      textDecoration="underline"
+      textDecoration={withoutUnderline ? undefined : "underline"}
+      _hover={{
+        textDecoration: withoutUnderline ? undefined : "underline",
+        cursor: isDisabled ? "not-allowed" : undefined,
+      }}
+      title={isDisabled ? disabledTitle : title}
       {...props}
     >
       {content}
