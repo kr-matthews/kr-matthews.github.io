@@ -13,11 +13,15 @@ export default function Gallery({
       gap="2em"
       {...props}
     >
-      {tiles.map((tile) => (
-        <GalleryItem key={tile.key} w={childW}>
-          {tile}
-        </GalleryItem>
-      ))}
+      {tiles.length > 0 ? (
+        tiles.map((tile) => (
+          <GalleryItem key={tile.key} w={childW}>
+            {tile}
+          </GalleryItem>
+        ))
+      ) : (
+        <Box p="1em">No results</Box>
+      )}
     </SimpleGrid>
   );
 }
@@ -34,7 +38,6 @@ function GalleryItem({ w = "400px", children: content, ...props }) {
       border="solid 0.5em"
       borderColor={borderColor}
       bgColor={bgColor}
-      p="2em"
       {...props}
     >
       {content}
