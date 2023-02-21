@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "../../common/Link";
-import wipImage from "../../../assets/wip.png"; // !!! replace this
+import wipImage from "../../../assets/wip.svg";
 import altLinkLightIcon from "../../../assets/link.svg";
 import altLinkDarkIcon from "../../../assets/link-white.svg";
 import altCodeLightIcon from "../../../assets/code.svg";

@@ -17,9 +17,13 @@ import stageGroupsImage from "./assets/stage-groups.png";
 import activitiesOnThisDayImage from "./assets/activities-on-this-day.png";
 import footerImage from "./assets/footer-example.png";
 
-// import theUltimatePuzzleSolverIcon from "./assets/the-ultimate-puzzle-pieces.png";
-import heartsIcon from "./assets/heart-card.svg";
 import personalWebsiteIcon from "../../assets/logo.svg";
+import puzzleIcon from "./assets/puzzle-piece.svg";
+import heartsIcon from "./assets/heart-card.svg";
+import ticTacToeIcon from "./assets/tic-tac-toe-icon.png";
+import minesweeperIcon from "./assets/minesweeper-icon.png";
+import connectFourIcon from "./assets/connect-four-icon.png";
+import cribbageIcon from "./assets/cribbage-icon.jpeg";
 import activitiesOnThisDayIcon from "./assets/calendar-activity.svg";
 
 //// project list
@@ -67,7 +71,7 @@ export const projects = [
     title: '"The Ultimate Puzzle" Solver',
     image: theUltimatePuzzleSolverImage,
     type: "Personal",
-    // icon: theUltimatePuzzleSolverIcon, // !!!
+    icon: puzzleIcon,
     codeHost: "GitHub",
     codeUrl: "https://github.com/kr-matthews/the-ultimate-puzzle-solver",
     tags: ["Puzzle", "Puzzle Solver"],
@@ -95,7 +99,7 @@ export const projects = [
     title: "Blindfolded Cubing System",
     image: blindfoldedSystemImage,
     type: "Personal",
-    // icon: , // !!!
+    // icon: , // todo: a blindfold?
     url: "https://docs.google.com/spreadsheets/d/1Ml7Jl5Yeb9HeE14xO7j1Nc99sw08oiBjLbi_nYJk9rU/edit?usp=sharing",
     tags: ["System", "Rubik's Cubes"],
     languages: [],
@@ -108,7 +112,6 @@ export const projects = [
     title: "3-Style Corner Alg Generator",
     image: threeStyleCornerAlgGeneratorImage,
     type: "Personal",
-    // icon: , // !!!
     url: "https://csclub.uwaterloo.ca/~krmatthe/3-style-corners.cgi",
     tags: ["Web App", "Rubik's Cubes"],
     languages: ["Racket"],
@@ -121,7 +124,6 @@ export const projects = [
     title: "Corner Twist Alg Generator",
     image: cornerTwistAlgGeneratorImage,
     type: "Personal",
-    // icon: , // !!!
     url: "https://csclub.uwaterloo.ca/~krmatthe/corner-twist.cgi",
     tags: ["Web App", "Rubik's Cubes"],
     languages: ["Racket"],
@@ -149,7 +151,7 @@ export const projects = [
     title: "Tic Tac Toe",
     image: ticTacToeImage,
     type: "Personal",
-    // icon: , // !!!
+    icon: ticTacToeIcon,
     url: "https://kr-matthews.github.io/tic-tac-toe",
     codeHost: "GitHub",
     codeUrl: "https://github.com/kr-matthews/tic-tac-toe",
@@ -164,7 +166,7 @@ export const projects = [
     title: "Minesweeper",
     image: minesweeperImage,
     type: "Personal",
-    // icon: , // !!!
+    icon: minesweeperIcon,
     url: "https://kr-matthews.github.io/minesweeper",
     codeHost: "GitHub",
     codeUrl: "https://github.com/kr-matthews/minesweeper",
@@ -179,7 +181,7 @@ export const projects = [
     title: "Connect 4",
     image: connectFourImage,
     type: "Personal",
-    // icon: , // !!!
+    icon: connectFourIcon,
     url: "https://kr-matthews.github.io/connect-4",
     codeHost: "GitHub",
     codeUrl: "https://github.com/kr-matthews/connect-4",
@@ -194,7 +196,7 @@ export const projects = [
     title: "Cribbage",
     image: cribbageImage,
     type: "Personal",
-    // icon: , // !!!
+    icon: cribbageIcon,
     url: "https://kr-matthews.github.io/cribbage",
     codeHost: "GitHub",
     codeUrl: "https://github.com/kr-matthews/cribbage",
@@ -209,7 +211,6 @@ export const projects = [
     title: "Competition Groups Display",
     image: stageGroupsImage,
     type: "Volunteer",
-    // icon: "", // !!!
     url: "https://kr-matthews.github.io/stage-groups",
     codeHost: "GitHub",
     codeUrl: "https://github.com/kr-matthews/stage-groups",
@@ -239,7 +240,6 @@ export const projects = [
     title: "Heavy Footer with Links",
     image: footerImage,
     type: "Personal",
-    icon: personalWebsiteIcon,
     codeHost: "GitHub",
     codeUrl: "https://github.com/kr-matthews/footer-dependency",
     tags: ["Dependency"],
@@ -281,4 +281,4 @@ export const projects = [
   */
 ];
 
-// !!! figure out ids, and sorting
+// !!! figure out ids and sorting
