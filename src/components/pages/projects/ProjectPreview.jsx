@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Link from "../../common/Link";
 import wipImage from "../../../assets/wip.svg";
 import altLinkLightIcon from "../../../assets/link.svg";
@@ -17,6 +17,7 @@ import {
   VStack,
 } from "@chakra-ui/react";
 import { getLanguageIcon } from "../../../utils/projects";
+import Modal from "../../common/Modal";
 
 export default function ProjectPreview({
   title = "TBD",
@@ -36,15 +37,33 @@ export default function ProjectPreview({
   const altCodeIcon = useColorModeValue(altCodeLightIcon, altCodeDarkIcon);
   const codeIcon = codeHost === "GitHub" ? gitHubIcon : altCodeIcon;
 
-  // !! modal on image hover (then decrease image height)
+  // modal
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <VStack spacing="0.75em" p="2em" h="100%">
       <Text as="h3" noOfLines="1" m={0} maxW="200%">
         {title}
       </Text>
-      <Center w="100%" h="15em">
-        <Image src={image || wipImage} maxW="100%" maxH="100%" />
+      <Center w="100%" h="12em">
+        <Image
+          src={image || wipImage}
+          maxW="100%"
+          maxH="100%"
+          _hover={{ cursor: image ? "help" : "auto" }}
+          onClick={() => setIsOpen(!!image)}
+        />
+        <Modal isOpen={isOpen} onClose={() => setIsOpen(false)}>
+          <Center>
+            <Image
+              src={image}
+              alt="Preview"
+              maxW="80vw"
+              maxH="80vh"
+              paddingY="1em"
+            />
+          </Center>
+        </Modal>
       </Center>
       <HStack spacing="2em">
         <Center h="2.5em" w="2.5em">
