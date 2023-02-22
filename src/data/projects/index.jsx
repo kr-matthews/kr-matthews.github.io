@@ -38,6 +38,7 @@ export const projects = [
     tags: ["Web App", "Rubik's Cubes"],
     languages: ["Racket"],
     year: 2015,
+    yearOrder: 0,
     description:
       "Produces or checks memorization sequence for blindfolded solving of a scrambled Rubik's cube, given custom user settings.",
   },
@@ -50,6 +51,7 @@ export const projects = [
     tags: ["Web App", "Rubik's Cubes"],
     languages: ["Racket"],
     year: 2015,
+    yearOrder: 1,
     description:
       "Major expansion of prior project to include more puzzle sizes, visual display of cube state, new training tool, and much more.",
   },
@@ -63,6 +65,7 @@ export const projects = [
     tags: ["Method", "Rubik's Cubes"],
     languages: [],
     year: 2018,
+    yearOrder: 0,
     description:
       "An optimization for dealing with cycle breaks in blindfolded solving of Rubik's cubes, applicable when both memorizing and solving edges first. Joint work with Graham Siggins.",
   },
@@ -77,6 +80,7 @@ export const projects = [
     tags: ["Puzzle", "Puzzle Solver"],
     languages: ["Racket"],
     year: 2019,
+    yearOrder: 0,
     description:
       "A simple back-tracking program to find all solutions to a jigsaw-like puzzle. Can allow or disallow flipping pieces over from their natural face-up orientation.",
   },
@@ -91,6 +95,7 @@ export const projects = [
     tags: ["Game", "Cards"],
     languages: ["Java"],
     year: 2019,
+    yearOrder: 1,
     description:
       "The card game Hearts, with all standard rules, for 1 up to 52 human and/or computer players. One computer player programmed. Text-based interface, only setup for 1 human player and any number of computer players.",
   },
@@ -104,6 +109,7 @@ export const projects = [
     tags: ["System", "Rubik's Cubes"],
     languages: [],
     year: 2019,
+    yearOrder: 2,
     description:
       "My personal system, both memorization and execution, for solving various sizes of Rubik's cubes blindfolded. Also extended for memory sports, including memorization of numbers and decks of cards.",
   },
@@ -116,6 +122,7 @@ export const projects = [
     tags: ["Web App", "Rubik's Cubes"],
     languages: ["Racket"],
     year: 2019,
+    yearOrder: 3,
     description:
       "Given 3 cyclicly-permuted corners of a Rubik's cube, finds (intuitive) commutators which solve the case and sorts them by estimated speed (based on move-count, finger-friendliness).",
   },
@@ -128,6 +135,7 @@ export const projects = [
     tags: ["Web App", "Rubik's Cubes"],
     languages: ["Racket"],
     year: 2020,
+    yearOrder: 0,
     description:
       "Given 2 or 3 twisted corners of a Rubik's cube, finds pairs of (intuitive) commutators which solve the case and sorts them by estimated speed (based on move-count, finger-friendliness).",
   },
@@ -143,6 +151,7 @@ export const projects = [
     tags: ["Web App", "Website"],
     languages: ["React"],
     year: 2021,
+    yearOrder: 0,
     description:
       "Custom-built website using React and CSS, including project gallery, blog, and more.",
   },
@@ -158,6 +167,7 @@ export const projects = [
     tags: ["Web App", "Game"],
     languages: ["React"],
     year: 2021,
+    yearOrder: 1,
     description:
       "There are two players playing against each other on a common interface (screen). Each player can be human-controlled or one of several built-in computer players (of varying difficulty).",
   },
@@ -173,6 +183,7 @@ export const projects = [
     tags: ["Web App", "Game"],
     languages: ["React"],
     year: 2021,
+    yearOrder: 2,
     description:
       "The standard minesweeper game for one human player. Select from standard difficulties, or specify custom parameters. Times and tracks high-scores.",
   },
@@ -188,6 +199,7 @@ export const projects = [
     tags: ["Web App", "Game"],
     languages: ["React"],
     year: 2021,
+    yearOrder: 3,
     description:
       "Play against the computer or a friend locally, or play remotely in a virtual room (via PubNub). Includes custom name and colour, and optional sound effects.",
   },
@@ -203,6 +215,7 @@ export const projects = [
     tags: ["Web App", "Game", "Cards"],
     languages: ["React"],
     year: 2022,
+    yearOrder: 0,
     description:
       "A game of Cribbage for 2 or 3 players, with remote play. Includes score board, match log, sounds effects, automatic scoring, computer players, and more.",
   },
@@ -217,6 +230,7 @@ export const projects = [
     tags: ["Web App", "Rubik's Cubes"],
     languages: ["React"],
     year: 2022,
+    yearOrder: 1,
     description:
       "A quick and simple web app to project in the main room at the North American Championships 2022 Rubik's Cube competition.",
   },
@@ -232,6 +246,7 @@ export const projects = [
     tags: ["Web App", "Strava", "API"],
     languages: ["React"],
     year: 2022,
+    yearOrder: 2,
     description:
       "An app to display all your Strava activities from this day in history, using Netlify 'serverless functions' and the Strava API.",
   },
@@ -245,12 +260,13 @@ export const projects = [
     tags: ["Dependency"],
     languages: ["React"],
     year: 2023,
+    yearOrder: 0,
     description:
       "Essentially an unpublished npm package with a custom footer component (plus links) to reuse across all my web apps.",
   },
   {
     id: 16,
-    title: "Website Refactor",
+    title: "Personal Website Refactor",
     image: "", // !!
     type: "Personal",
     icon: personalWebsiteIcon,
@@ -260,6 +276,7 @@ export const projects = [
     tags: ["Web App", "Website"],
     languages: ["React"],
     year: 2023,
+    yearOrder: 1,
     description:
       "Update to React 18 and React Router 6. Add Chakra UI and replace all styling. Improve project structure and best practices, including separation of concerns and reusability.",
   },
@@ -276,9 +293,8 @@ export const projects = [
     tags: [],
     languages: [],
     year: 2023,
+    yearOrder: 9,
     description: "",
   }
   */
 ];
-
-// !!! figure out ids and sorting

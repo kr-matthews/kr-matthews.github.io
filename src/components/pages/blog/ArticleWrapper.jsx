@@ -7,7 +7,7 @@ function getArticle(shortName) {
   return articles.find((article) => article.shortName === shortName);
 }
 
-// !!! does not land at top of page
+// !! does not land at top of page
 
 export default function ArticleWrapper() {
   const params = useParams();

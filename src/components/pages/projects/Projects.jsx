@@ -11,7 +11,9 @@ import useCategoryFilter from "../../../hooks/useCategoryFilter";
 import { projects } from "../../../data/projects";
 import Link from "../../common/Link";
 
-const sortedProjects = projects.sort((a, b) => b.id - a.id);
+const sortedProjects = projects.sort(
+  (a, b) => b.year - a.year || b.yearOrder - a.yearOrder
+);
 const allLanguages = [
   ...new Set(projects.flatMap(({ languages }) => languages)),
 ].sort();
