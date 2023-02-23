@@ -1,28 +1,32 @@
 import { Box, SimpleGrid, useColorModeValue } from "@chakra-ui/react";
-import React from "react";
+import React, { Fragment } from "react";
 
 export default function Gallery({
   childW = "400px",
   children: tiles,
   ...props
 }) {
+  // !!! results count styling
   return (
-    <SimpleGrid
-      templateColumns={`repeat(auto-fill, ${childW})`}
-      justifyContent="center"
-      gap="2em"
-      {...props}
-    >
-      {tiles.length > 0 ? (
-        tiles.map((tile) => (
-          <GalleryItem key={tile.key} w={childW}>
-            {tile}
-          </GalleryItem>
-        ))
-      ) : (
-        <Box p="1em">No results</Box>
-      )}
-    </SimpleGrid>
+    <Fragment>
+      <Box>Results: {tiles.length}</Box>
+      <SimpleGrid
+        templateColumns={`repeat(auto-fill, ${childW})`}
+        justifyContent="center"
+        gap="2em"
+        {...props}
+      >
+        {tiles.length > 0 ? (
+          tiles.map((tile) => (
+            <GalleryItem key={tile.key} w={childW}>
+              {tile}
+            </GalleryItem>
+          ))
+        ) : (
+          <Box p="1em">No results</Box>
+        )}
+      </SimpleGrid>
+    </Fragment>
   );
 }
 

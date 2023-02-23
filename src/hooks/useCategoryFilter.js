@@ -1,4 +1,4 @@
-import { useCallback, useReducer } from "react";
+import { useCallback, useMemo, useReducer } from "react";
 
 function reducer(state, action) {
   let newState = [...state];
@@ -14,11 +14,19 @@ function reducer(state, action) {
   return newState;
 }
 
-/** Ensure `categories` prop doesn't change unnecessarily. */
-export default function useCategoryFilter(categories = []) {
+/** Ensure props don't change unnecessarily. */
+export default function useCategoryFilter(categories = [], usages = []) {
   const size = categories.length;
   const [areSelected, dispatch] = useReducer(reducer, Array(size).fill(false));
   const areAllOff = !areSelected.includes(true);
+  const counts = useMemo(
+    () =>
+      categories.map(
+        (category) =>
+          usages.filter((categories) => categories.includes(category)).length
+      ),
+    [categories, usages]
+  );
 
   function toggleOne(index) {
     dispatch({ type: "toggleOne", index });
@@ -35,5 +43,12 @@ export default function useCategoryFilter(categories = []) {
     [areAllOff, areSelected, categories]
   );
 
-  return { areSelected, areAllOff, toggleOne, allToSame, areAnySelected };
+  return {
+    areSelected,
+    areAllOff,
+    counts,
+    toggleOne,
+    allToSame,
+    areAnySelected,
+  };
 }

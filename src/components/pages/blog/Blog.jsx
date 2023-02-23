@@ -12,16 +12,18 @@ import { articles } from "../../../data/blog";
 
 const sortedArticles = articles.sort((a, b) => b.publishDate - a.publishDate);
 const allTags = [...new Set(articles.flatMap(({ tags }) => tags))].sort();
+const tagUsages = articles.map(({ tags }) => tags);
 
 export default function Blog() {
   // filtering mechanisms
   const {
     areSelected: tagsAreSelected,
     areAllOff: areAllTagsOff,
+    counts: tagCounts,
     toggleOne: toggleTag,
     allToSame: allTagsToSame,
     areAnySelected: areAnyTagsSelected,
-  } = useCategoryFilter(allTags);
+  } = useCategoryFilter(allTags, tagUsages);
   const [searchText, setSearchText] = useState("");
 
   const filteredArticles = useMemo(
@@ -43,9 +45,10 @@ export default function Blog() {
         title="Tags"
         categories={allTags}
         areSelected={tagsAreSelected}
-        clickACategoryHandler={toggleTag}
+        counts={tagCounts}
+        toggleOne={toggleTag}
         isAllSelected={areAllTagsOff}
-        clickAllHandler={allTagsToSame}
+        toggleAll={allTagsToSame}
       />
 
       <SearchTextBox

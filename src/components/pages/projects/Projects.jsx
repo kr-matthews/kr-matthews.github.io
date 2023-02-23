@@ -17,24 +17,28 @@ const sortedProjects = projects.sort(
 const allLanguages = [
   ...new Set(projects.flatMap(({ languages }) => languages)),
 ].sort();
+const languageUsages = projects.map(({ languages }) => languages);
 const allTags = [...new Set(projects.flatMap(({ tags }) => tags))].sort();
+const tagUsages = projects.map(({ tags }) => tags);
 
 export default function Projects() {
   // filtering mechanisms
   const {
     areSelected: languagesAreSelected,
     areAllOff: areAllLanguagesOff,
+    counts: languageCounts,
     toggleOne: toggleLanguage,
     allToSame: allLanguagesToSame,
     areAnySelected: areAnyLanguagesSelected,
-  } = useCategoryFilter(allLanguages);
+  } = useCategoryFilter(allLanguages, languageUsages);
   const {
     areSelected: tagsAreSelected,
     areAllOff: areAllTagsOff,
+    counts: tagCounts,
     toggleOne: toggleTag,
     allToSame: allTagsToSame,
     areAnySelected: areAnyTagsSelected,
-  } = useCategoryFilter(allTags);
+  } = useCategoryFilter(allTags, tagUsages);
   const [searchText, setSearchText] = useState("");
 
   const filteredProjects = useMemo(
@@ -42,7 +46,7 @@ export default function Projects() {
       sortedProjects
         .filter(({ languages }) => areAnyLanguagesSelected(languages))
         .filter(({ tags }) => areAnyTagsSelected(tags))
-        // !! improve filtering - use regexp
+        // !!! improve filtering - use regexp
         .filter(
           ({ title, description }) =>
             title.toLowerCase().includes(searchText.toLowerCase()) ||
@@ -67,18 +71,20 @@ export default function Projects() {
         title="Languages"
         categories={allLanguages}
         areSelected={languagesAreSelected}
-        clickACategoryHandler={toggleLanguage}
+        counts={languageCounts}
+        toggleOne={toggleLanguage}
         isAllSelected={areAllLanguagesOff}
-        clickAllHandler={allLanguagesToSame}
+        toggleAll={allLanguagesToSame}
       />
 
       <CategoryFilterButtons
         title="Tags"
         categories={allTags}
         areSelected={tagsAreSelected}
-        clickACategoryHandler={toggleTag}
+        counts={tagCounts}
+        toggleOne={toggleTag}
         isAllSelected={areAllTagsOff}
-        clickAllHandler={allTagsToSame}
+        toggleAll={allTagsToSame}
       />
 
       <SearchTextBox
