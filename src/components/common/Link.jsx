@@ -1,22 +1,32 @@
-import { Link as ChakraLink } from "@chakra-ui/react";
 import React from "react";
+import { Link as ChakraLink } from "@chakra-ui/react";
+import { Link as ReactRouterLink } from "react-router-dom";
 
 export default function Link({
+  to,
   href,
   isExternal = false,
   onClick,
   isDisabled = false,
+  withoutUnderline = false,
+  title,
+  disabledTitle,
   children: content,
   ...props
 }) {
   return (
     <ChakraLink
-      as={isExternal ? "a" : undefined}
-      href={isDisabled ? undefined : href}
+      as={isExternal ? "a" : ReactRouterLink}
+      to={to ?? ""}
+      href={isExternal && !isDisabled ? href : undefined}
       onClick={isDisabled ? undefined : onClick}
-      pointerEvents={isDisabled ? "none" : "auto"}
       isExternal={isExternal}
-      textDecoration="underline"
+      textDecoration={withoutUnderline ? undefined : "underline"}
+      _hover={{
+        textDecoration: withoutUnderline ? undefined : "underline",
+        cursor: isDisabled ? "not-allowed" : undefined,
+      }}
+      title={isDisabled ? disabledTitle : title}
       {...props}
     >
       {content}

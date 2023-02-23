@@ -3,16 +3,21 @@ import { useParams } from "react-router-dom";
 import Article from "./Article";
 import { articles } from "../../../data/blog";
 
-function getArticle(id) {
-  // todo: replace `link` property with `id` property
-  return articles.find((article) => article.link === id);
+function getArticle(shortName) {
+  return articles.find((article) => article.shortName === shortName);
 }
+
+// !! does not land at top of page
 
 export default function ArticleWrapper() {
   const params = useParams();
-  const articleId = params.articleId ?? "";
-  // todo: get it via a 'fake' query
-  const article = getArticle(articleId);
+  const shortName = params.articleShortName ?? "";
+  const article = getArticle(shortName);
+
+  // !! not found UI
+  if (!article) {
+    return "article not found";
+  }
 
   return <Article {...article} />;
 }

@@ -1,8 +1,9 @@
 import Link from "../common/Link";
+import { NarrowContent } from "../common/Page";
 
 export default function Cubing() {
   return (
-    <div className="page narrow-page">
+    <NarrowContent>
       <h1>Cubing</h1>
       <p>
         I know how to solve a Rubik's Cube (blindfolded), and since 2010{" "}
@@ -176,6 +177,6 @@ export default function Cubing() {
         </Link>
         . I intend to eventually write a blog post about it.
       </p>
-    </div>
+    </NarrowContent>
   );
 }

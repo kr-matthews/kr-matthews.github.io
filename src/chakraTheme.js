@@ -5,6 +5,15 @@ const config = {
   useSystemColorMode: false,
 };
 
+const textStyles = {
+  specs: {
+    fontFamily:
+      'source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace',
+    fontSize: "90%",
+    fontWeight: "semibold",
+  },
+};
+
 const colors = {
   txt: {
     light: "#FFFFFF99",
@@ -53,6 +62,7 @@ const global = ({ colorMode }) => ({
 
 export const theme = extendTheme({
   styles: { global },
+  textStyles,
   config,
   colors,
 });

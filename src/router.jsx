@@ -1,13 +1,12 @@
 import React from "react";
 import { createBrowserRouter, Navigate, Outlet } from "react-router-dom";
 import Page from "./components/common/Page";
-import ErrorPage from "./components/pages/ErrorPage";
+import ErrorPage from "./components/common/ErrorPage";
 import About from "./components/pages/About";
 import Blog from "./components/pages/blog/Blog";
 import ArticleWrapper from "./components/pages/blog/ArticleWrapper";
 import Cubing from "./components/pages/Cubing";
-import Home from "./components/pages/Home";
-import Portfolio from "./components/pages/portfolio/Portfolio";
+import Projects from "./components/pages/projects/Projects";
 import Vancouver from "./components/pages/Vancouver";
 
 const router = createBrowserRouter([
@@ -20,13 +19,13 @@ const router = createBrowserRouter([
       </Page>
     ),
     children: [
-      { path: "", element: <Home /> },
-      { path: "projects", element: <Portfolio /> },
+      { path: "", element: <Navigate to="/projects" replace /> },
+      { path: "projects", element: <Projects /> },
       {
         path: "blog",
         children: [
           { path: "", element: <Blog /> },
-          { path: ":articleId", element: <ArticleWrapper /> },
+          { path: ":articleShortName", element: <ArticleWrapper /> },
         ],
       },
       { path: "cubing", element: <Cubing /> },
