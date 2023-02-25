@@ -18,6 +18,7 @@ const tagUsages = articles.map(({ tags }) => tags);
 export default function Blog() {
   // filtering mechanisms
   const {
+    sortedCategories: sortedTags,
     areSelected: tagsAreSelected,
     areAllOff: areAllTagsOff,
     counts: tagCounts,
@@ -57,9 +58,10 @@ export default function Blog() {
 
       <CategoryFilterButtons
         title="Tags"
-        categories={allTags}
+        categories={sortedTags}
         areSelected={tagsAreSelected}
         counts={tagCounts}
+        totalItems={tagUsages.length}
         toggleOne={toggleTag}
         isAllSelected={areAllTagsOff}
         toggleAll={allTagsToSame}

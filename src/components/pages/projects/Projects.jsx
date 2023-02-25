@@ -24,6 +24,7 @@ const tagUsages = projects.map(({ tags }) => tags);
 export default function Projects() {
   // filtering mechanisms
   const {
+    sortedCategories: sortedLanguages,
     areSelected: languagesAreSelected,
     areAllOff: areAllLanguagesOff,
     counts: languageCounts,
@@ -32,6 +33,7 @@ export default function Projects() {
     areAnySelected: areAnyLanguagesSelected,
   } = useCategoryFilter(allLanguages, languageUsages);
   const {
+    sortedCategories: sortedTags,
     areSelected: tagsAreSelected,
     areAllOff: areAllTagsOff,
     counts: tagCounts,
@@ -69,9 +71,10 @@ export default function Projects() {
 
       <CategoryFilterButtons
         title="Languages"
-        categories={allLanguages}
+        categories={sortedLanguages}
         areSelected={languagesAreSelected}
         counts={languageCounts}
+        totalItems={languageUsages.length}
         toggleOne={toggleLanguage}
         isAllSelected={areAllLanguagesOff}
         toggleAll={allLanguagesToSame}
@@ -79,9 +82,10 @@ export default function Projects() {
 
       <CategoryFilterButtons
         title="Tags"
-        categories={allTags}
+        categories={sortedTags}
         areSelected={tagsAreSelected}
         counts={tagCounts}
+        totalItems={tagUsages.length}
         toggleOne={toggleTag}
         isAllSelected={areAllTagsOff}
         toggleAll={allTagsToSame}

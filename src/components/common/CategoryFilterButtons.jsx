@@ -5,6 +5,7 @@ export default function CategoryFilterButtons({
   categories = [],
   areSelected,
   counts,
+  totalItems,
   toggleOne,
   isAllSelected,
   toggleAll,
@@ -15,7 +16,7 @@ export default function CategoryFilterButtons({
       <Box>
         <CategoryButton
           type="reset"
-          name="All"
+          name={totalItems ? `All (${totalItems})` : "All"}
           isSelected={isAllSelected}
           onClick={toggleAll}
         />
@@ -41,10 +42,13 @@ function CategoryButton({ name, isSelected, onClick, type = "button" }) {
   return (
     <Button
       m="2px"
+      h="2.2em"
+      px="0.75em"
       type={type}
       onClick={onClick}
       bgColor={bgColor}
       color={color}
+      borderRadius="2em"
       _hover={{ bgColor, color }}
     >
       {name}

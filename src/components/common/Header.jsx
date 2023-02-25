@@ -111,6 +111,7 @@ function NarrowNavOptions({ close, bgColor, borderColor }) {
       w="100vw"
       borderBottom="1px"
       borderColor={borderColor}
+      zIndex={1}
     >
       {navOptions.map((navOption) => (
         <NavLink
