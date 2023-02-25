@@ -94,7 +94,7 @@ export default function Projects() {
         setSearchText={setSearchText}
       />
 
-      <Gallery childW="400px">
+      <Gallery childW="390px">
         {filteredProjects.map((project) => (
           <ProjectPreview key={project.id} {...project} />
         ))}

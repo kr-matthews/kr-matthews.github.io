@@ -9,6 +9,7 @@ import Gallery from "../../common/Gallery";
 import useCategoryFilter from "../../../hooks/useCategoryFilter";
 
 import { articles } from "../../../data/blog";
+import { useMediaQuery } from "@chakra-ui/react";
 
 const sortedArticles = articles.sort((a, b) => b.publishDate - a.publishDate);
 const allTags = [...new Set(articles.flatMap(({ tags }) => tags))].sort();
@@ -37,6 +38,19 @@ export default function Blog() {
     [areAnyTagsSelected, searchText]
   );
 
+  const [isNarrow, isNarrower, isNarrowest] = useMediaQuery([
+    "(max-width: 1040px)",
+    "(max-width: 940px)",
+    "(max-width: 840px)",
+  ]);
+  const childW = isNarrowest
+    ? "600px"
+    : isNarrower
+    ? "700px"
+    : isNarrow
+    ? "800px"
+    : "900px";
+
   return (
     <NarrowContent withAlwaysScroll>
       <h1>Blog</h1>
@@ -58,7 +72,7 @@ export default function Blog() {
         setSearchText={setSearchText}
       />
 
-      <Gallery childW="900px">
+      <Gallery childW={childW}>
         {filteredArticles.map((article) => (
           <ArticlePreview key={article.id} {...article} />
         ))}
