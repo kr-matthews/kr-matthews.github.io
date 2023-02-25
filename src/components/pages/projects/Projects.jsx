@@ -56,7 +56,7 @@ export default function Projects() {
   );
 
   return (
-    <WideContent>
+    <WideContent withAlwaysScroll>
       <h1>Projects</h1>
       <p>
         Notable projects that I've created. Most, but not all, are programming

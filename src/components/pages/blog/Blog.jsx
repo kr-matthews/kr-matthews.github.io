@@ -38,7 +38,7 @@ export default function Blog() {
   );
 
   return (
-    <NarrowContent>
+    <NarrowContent withAlwaysScroll>
       <h1>Blog</h1>
 
       <CategoryFilterButtons
