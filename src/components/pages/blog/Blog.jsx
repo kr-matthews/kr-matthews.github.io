@@ -1,4 +1,5 @@
 import { useMemo, useState } from "react";
+import Fuse from "fuse.js";
 
 import { NarrowContent } from "../../common/Page";
 import ArticlePreview from "./ArticlePreview";
@@ -25,6 +26,16 @@ const yearUsages = sortedArticles.map(({ publishDate }) => [
 const allTags = [...new Set(sortedArticles.flatMap(({ tags }) => tags))].sort();
 const tagUsages = sortedArticles.map(({ tags }) => tags);
 
+const fuseOptions = {
+  keys: ["title", "shortName", "preview"],
+  ignoreLocation: true,
+  threshold: 0.4,
+  shouldSort: false,
+  // includeScore: true,
+};
+
+const fuse = new Fuse(sortedArticles, fuseOptions);
+
 export default function Blog() {
   // filtering mechanisms
   const {
@@ -49,16 +60,14 @@ export default function Blog() {
 
   const filteredArticles = useMemo(
     () =>
-      sortedArticles
+      (searchText
+        ? fuse.search(searchText).map(({ item }) => item)
+        : sortedArticles
+      )
         .filter(({ publishDate }) =>
           areAnyYearsSelected([publishDate.getFullYear()])
         )
-        .filter(({ tags }) => areAnyTagsSelected(tags))
-        .filter(
-          ({ title, preview }) =>
-            title.toLowerCase().includes(searchText.toLowerCase()) ||
-            preview.toLowerCase().includes(searchText.toLowerCase())
-        ),
+        .filter(({ tags }) => areAnyTagsSelected(tags)),
     [areAnyYearsSelected, areAnyTagsSelected, searchText]
   );
 

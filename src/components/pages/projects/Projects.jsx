@@ -1,4 +1,5 @@
 import { useMemo, useState } from "react";
+import Fuse from "fuse.js";
 
 import { WideContent } from "../../common/Page";
 import ProjectPreview from "./ProjectPreview";
@@ -23,6 +24,16 @@ const allLanguages = [
 const languageUsages = sortedProjects.map(({ languages }) => languages);
 const allTags = [...new Set(sortedProjects.flatMap(({ tags }) => tags))].sort();
 const tagUsages = sortedProjects.map(({ tags }) => tags);
+
+const fuseOptions = {
+  keys: ["title", "type", "description"],
+  ignoreLocation: true,
+  threshold: 0.4,
+  shouldSort: false,
+  // includeScore: true,
+};
+
+const fuse = new Fuse(sortedProjects, fuseOptions);
 
 export default function Projects() {
   // filtering mechanisms
@@ -57,16 +68,13 @@ export default function Projects() {
 
   const filteredProjects = useMemo(
     () =>
-      sortedProjects
+      (searchText
+        ? fuse.search(searchText).map(({ item }) => item)
+        : sortedProjects
+      )
         .filter(({ year }) => areAnyYearsSelected([year]))
         .filter(({ languages }) => areAnyLanguagesSelected(languages))
-        .filter(({ tags }) => areAnyTagsSelected(tags))
-        // !!! improve filtering - use regexp
-        .filter(
-          ({ title, description }) =>
-            title.toLowerCase().includes(searchText.toLowerCase()) ||
-            description.toLowerCase().includes(searchText.toLowerCase())
-        ),
+        .filter(({ tags }) => areAnyTagsSelected(tags)),
     [
       areAnyYearsSelected,
       areAnyLanguagesSelected,
