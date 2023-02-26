@@ -2,8 +2,8 @@ import { useMemo, useState } from "react";
 
 import { NarrowContent } from "../../common/Page";
 import ArticlePreview from "./ArticlePreview";
-import CategoryFilterButtons from "../../common/CategoryFilterButtons";
-import SearchTextBox from "../../common/SearchTextBox";
+import GalleryCategoryFilter from "../../common/GalleryCategoryFilter";
+import GalleryTextFilter from "../../common/GalleryTextFilter";
 import Gallery from "../../common/Gallery";
 
 import useCategoryFilter from "../../../hooks/useCategoryFilter";
@@ -56,7 +56,7 @@ export default function Blog() {
     <NarrowContent withAlwaysScroll>
       <h1>Blog</h1>
 
-      <CategoryFilterButtons
+      <GalleryCategoryFilter
         title="Tags"
         categories={sortedTags}
         areSelected={tagsAreSelected}
@@ -67,7 +67,7 @@ export default function Blog() {
         toggleAll={allTagsToSame}
       />
 
-      <SearchTextBox
+      <GalleryTextFilter
         placeholder="Search titles..."
         label="Search articles"
         searchText={searchText}

@@ -1,4 +1,4 @@
-export default function SearchTextBox({
+export default function GalleryTextFilter({
   placeholder = "Enter search text...",
   label = "Search",
   searchText,

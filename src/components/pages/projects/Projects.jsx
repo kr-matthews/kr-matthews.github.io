@@ -2,8 +2,8 @@ import { useMemo, useState } from "react";
 
 import { WideContent } from "../../common/Page";
 import ProjectPreview from "./ProjectPreview";
-import CategoryFilterButtons from "../../common/CategoryFilterButtons";
-import SearchTextBox from "../../common/SearchTextBox";
+import GalleryCategoryFilter from "../../common/GalleryCategoryFilter";
+import GalleryTextFilter from "../../common/GalleryTextFilter";
 import Gallery from "../../common/Gallery";
 
 import useCategoryFilter from "../../../hooks/useCategoryFilter";
@@ -69,7 +69,7 @@ export default function Projects() {
         .
       </p>
 
-      <CategoryFilterButtons
+      <GalleryCategoryFilter
         title="Languages"
         categories={sortedLanguages}
         areSelected={languagesAreSelected}
@@ -80,7 +80,7 @@ export default function Projects() {
         toggleAll={allLanguagesToSame}
       />
 
-      <CategoryFilterButtons
+      <GalleryCategoryFilter
         title="Tags"
         categories={sortedTags}
         areSelected={tagsAreSelected}
@@ -91,7 +91,7 @@ export default function Projects() {
         toggleAll={allTagsToSame}
       />
 
-      <SearchTextBox
+      <GalleryTextFilter
         placeholder="Search titles and descriptions..."
         label="Search projects"
         searchText={searchText}

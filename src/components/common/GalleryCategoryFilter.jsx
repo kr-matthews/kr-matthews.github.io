@@ -1,6 +1,6 @@
 import { Box, Button, HStack, useColorModeValue } from "@chakra-ui/react";
 
-export default function CategoryFilterButtons({
+export default function GalleryCategoryFilter({
   title = "Categories",
   categories = [],
   areSelected,
