@@ -11,33 +11,55 @@ import useCategoryFilter from "../../../hooks/useCategoryFilter";
 import { articles } from "../../../data/blog";
 import { useMediaQuery } from "@chakra-ui/react";
 
-const sortedArticles = articles.sort((a, b) => b.publishDate - a.publishDate);
-const allTags = [...new Set(articles.flatMap(({ tags }) => tags))].sort();
-const tagUsages = articles.map(({ tags }) => tags);
+const sortedArticles = [...articles].sort(
+  (a, b) => b.publishDate - a.publishDate
+);
+const allYears = [
+  ...new Set(
+    sortedArticles.flatMap(({ publishDate }) => publishDate.getFullYear())
+  ),
+].sort();
+const yearUsages = sortedArticles.map(({ publishDate }) => [
+  publishDate.getFullYear(),
+]);
+const allTags = [...new Set(sortedArticles.flatMap(({ tags }) => tags))].sort();
+const tagUsages = sortedArticles.map(({ tags }) => tags);
 
 export default function Blog() {
   // filtering mechanisms
   const {
-    sortedCategories: sortedTags,
+    orderedCategories: orderedYears,
+    orderedCounts: yearCounts,
+    areSelected: yearsAreSelected,
+    areAllOff: areAllYearsOff,
+    toggleOne: toggleYear,
+    allToSame: allYearsToSame,
+    areAnySelected: areAnyYearsSelected,
+  } = useCategoryFilter(allYears, yearUsages, false);
+  const {
+    orderedCategories: orderedTags,
+    orderedCounts: tagCounts,
     areSelected: tagsAreSelected,
     areAllOff: areAllTagsOff,
-    counts: tagCounts,
     toggleOne: toggleTag,
     allToSame: allTagsToSame,
     areAnySelected: areAnyTagsSelected,
-  } = useCategoryFilter(allTags, tagUsages);
+  } = useCategoryFilter(allTags, tagUsages, true);
   const [searchText, setSearchText] = useState("");
 
   const filteredArticles = useMemo(
     () =>
       sortedArticles
+        .filter(({ publishDate }) =>
+          areAnyYearsSelected([publishDate.getFullYear()])
+        )
         .filter(({ tags }) => areAnyTagsSelected(tags))
         .filter(
           ({ title, preview }) =>
             title.toLowerCase().includes(searchText.toLowerCase()) ||
             preview.toLowerCase().includes(searchText.toLowerCase())
         ),
-    [areAnyTagsSelected, searchText]
+    [areAnyYearsSelected, areAnyTagsSelected, searchText]
   );
 
   const [isNarrow, isNarrower, isNarrowest] = useMediaQuery([
@@ -58,8 +80,19 @@ export default function Blog() {
       <h1>Blog</h1>
 
       <GalleryCategoryFilter
+        title="Years"
+        categories={orderedYears}
+        areSelected={yearsAreSelected}
+        counts={yearCounts}
+        totalItems={yearUsages.length}
+        toggleOne={toggleYear}
+        isAllSelected={areAllYearsOff}
+        toggleAll={allYearsToSame}
+      />
+
+      <GalleryCategoryFilter
         title="Tags"
-        categories={sortedTags}
+        categories={orderedTags}
         areSelected={tagsAreSelected}
         counts={tagCounts}
         totalItems={tagUsages.length}

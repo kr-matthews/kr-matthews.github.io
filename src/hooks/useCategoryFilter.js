@@ -16,7 +16,11 @@ function reducer(state, action) {
 }
 
 /** Sorts by usage. Ensure props don't change unnecessarily. */
-export default function useCategoryFilter(categories = [], usages = []) {
+export default function useCategoryFilter(
+  categories = [],
+  usages = [],
+  sortByCount = true
+) {
   // get counts, then use that to sort initial array
   const counts = useMemo(
     () =>
@@ -31,9 +35,12 @@ export default function useCategoryFilter(categories = [], usages = []) {
       _.sortBy(categories, (category) => -counts[categories.indexOf(category)]),
     [categories, counts]
   );
-  const sortedCounts = counts.sort((a, b) => b - a);
+  const sortedCounts = _.sortBy(counts, (n) => -n);
 
-  const size = sortedCategories.length;
+  const orderedCategories = sortByCount ? sortedCategories : categories;
+  const orderedCounts = sortByCount ? sortedCounts : counts;
+
+  const size = orderedCategories.length;
   const [areSelected, dispatch] = useReducer(reducer, Array(size).fill(false));
   const areAllOff = !areSelected.includes(true);
 
@@ -49,16 +56,16 @@ export default function useCategoryFilter(categories = [], usages = []) {
     (subset) =>
       areAllOff ||
       subset.some(
-        (category) => areSelected[sortedCategories.indexOf(category)]
+        (category) => areSelected[orderedCategories.indexOf(category)]
       ),
-    [areAllOff, areSelected, sortedCategories]
+    [areAllOff, areSelected, orderedCategories]
   );
 
   return {
-    sortedCategories,
+    orderedCategories,
+    orderedCounts,
     areSelected,
     areAllOff,
-    counts: sortedCounts,
     toggleOne,
     allToSame,
     areAnySelected,

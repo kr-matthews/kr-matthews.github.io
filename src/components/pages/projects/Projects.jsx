@@ -10,41 +10,55 @@ import useCategoryFilter from "../../../hooks/useCategoryFilter";
 
 import { projects } from "../../../data/projects";
 
-const sortedProjects = projects.sort(
+const sortedProjects = [...projects].sort(
   (a, b) => b.year - a.year || b.yearOrder - a.yearOrder
 );
-const allLanguages = [
-  ...new Set(projects.flatMap(({ languages }) => languages)),
+const allYears = [
+  ...new Set(sortedProjects.flatMap(({ year }) => year)),
 ].sort();
-const languageUsages = projects.map(({ languages }) => languages);
-const allTags = [...new Set(projects.flatMap(({ tags }) => tags))].sort();
-const tagUsages = projects.map(({ tags }) => tags);
+const yearUsages = sortedProjects.map(({ year }) => [year]);
+const allLanguages = [
+  ...new Set(sortedProjects.flatMap(({ languages }) => languages)),
+].sort();
+const languageUsages = sortedProjects.map(({ languages }) => languages);
+const allTags = [...new Set(sortedProjects.flatMap(({ tags }) => tags))].sort();
+const tagUsages = sortedProjects.map(({ tags }) => tags);
 
 export default function Projects() {
   // filtering mechanisms
   const {
-    sortedCategories: sortedLanguages,
+    orderedCategories: orderedYears,
+    orderedCounts: yearCounts,
+    areSelected: yearsAreSelected,
+    areAllOff: areAllYearsOff,
+    toggleOne: toggleYear,
+    allToSame: allYearsToSame,
+    areAnySelected: areAnyYearsSelected,
+  } = useCategoryFilter(allYears, yearUsages, false);
+  const {
+    orderedCategories: orderedLanguages,
+    orderedCounts: languageCounts,
     areSelected: languagesAreSelected,
     areAllOff: areAllLanguagesOff,
-    counts: languageCounts,
     toggleOne: toggleLanguage,
     allToSame: allLanguagesToSame,
     areAnySelected: areAnyLanguagesSelected,
-  } = useCategoryFilter(allLanguages, languageUsages);
+  } = useCategoryFilter(allLanguages, languageUsages, true);
   const {
-    sortedCategories: sortedTags,
+    orderedCategories: orderedTags,
+    orderedCounts: tagCounts,
     areSelected: tagsAreSelected,
     areAllOff: areAllTagsOff,
-    counts: tagCounts,
     toggleOne: toggleTag,
     allToSame: allTagsToSame,
     areAnySelected: areAnyTagsSelected,
-  } = useCategoryFilter(allTags, tagUsages);
+  } = useCategoryFilter(allTags, tagUsages, true);
   const [searchText, setSearchText] = useState("");
 
   const filteredProjects = useMemo(
     () =>
       sortedProjects
+        .filter(({ year }) => areAnyYearsSelected([year]))
         .filter(({ languages }) => areAnyLanguagesSelected(languages))
         .filter(({ tags }) => areAnyTagsSelected(tags))
         // !!! improve filtering - use regexp
@@ -53,7 +67,12 @@ export default function Projects() {
             title.toLowerCase().includes(searchText.toLowerCase()) ||
             description.toLowerCase().includes(searchText.toLowerCase())
         ),
-    [areAnyLanguagesSelected, areAnyTagsSelected, searchText]
+    [
+      areAnyYearsSelected,
+      areAnyLanguagesSelected,
+      areAnyTagsSelected,
+      searchText,
+    ]
   );
 
   return (
@@ -61,8 +80,19 @@ export default function Projects() {
       <h1>Projects</h1>
 
       <GalleryCategoryFilter
+        title="Years"
+        categories={orderedYears}
+        areSelected={yearsAreSelected}
+        counts={yearCounts}
+        totalItems={yearUsages.length}
+        toggleOne={toggleYear}
+        isAllSelected={areAllYearsOff}
+        toggleAll={allYearsToSame}
+      />
+
+      <GalleryCategoryFilter
         title="Languages"
-        categories={sortedLanguages}
+        categories={orderedLanguages}
         areSelected={languagesAreSelected}
         counts={languageCounts}
         totalItems={languageUsages.length}
@@ -73,7 +103,7 @@ export default function Projects() {
 
       <GalleryCategoryFilter
         title="Tags"
-        categories={sortedTags}
+        categories={orderedTags}
         areSelected={tagsAreSelected}
         counts={tagCounts}
         totalItems={tagUsages.length}
