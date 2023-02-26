@@ -12,9 +12,8 @@ export default function Page({
     <VStack spacing={0} overflow="hidden">
       {!withoutHeader && <Header />}
       <Box
-        overflowY="auto"
         w="100vw"
-        maxH={`calc(100vh - ${withoutHeader ? "0em" : headerHeight} - ${
+        h={`calc(100vh - ${withoutHeader ? "0em" : headerHeight} - ${
           withoutFooter ? "0em" : footerHeight
         })`}
       >
@@ -25,17 +24,31 @@ export default function Page({
   );
 }
 
-export function NarrowContent({ children: content }) {
+export function NarrowContent({ withAlwaysScroll = false, children: content }) {
   return (
-    <Box px="4em" pb="3em" maxW="1000px" mx="auto">
-      {content}
+    <Box
+      px="4em"
+      pb="3em"
+      w="100%"
+      h="100%"
+      overflowY={withAlwaysScroll ? "scroll" : "auto"}
+    >
+      <Box maxW="950px" mx="auto">
+        {content}
+      </Box>
     </Box>
   );
 }
 
-export function WideContent({ children: content }) {
+export function WideContent({ withAlwaysScroll = false, children: content }) {
   return (
-    <Box px="4em" pb="3em" w="100%">
+    <Box
+      px="4em"
+      pb="3em"
+      w="100%"
+      h="100%"
+      overflowY={withAlwaysScroll ? "scroll" : "auto"}
+    >
       {content}
     </Box>
   );
