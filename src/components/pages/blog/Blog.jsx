@@ -32,9 +32,10 @@ export default function Blog() {
     () =>
       sortedArticles
         .filter(({ tags }) => areAnyTagsSelected(tags))
-        .filter(({ title }) =>
-          // !! also search descriptions
-          title.toLowerCase().includes(searchText.toLowerCase())
+        .filter(
+          ({ title, preview }) =>
+            title.toLowerCase().includes(searchText.toLowerCase()) ||
+            preview.toLowerCase().includes(searchText.toLowerCase())
         ),
     [areAnyTagsSelected, searchText]
   );
@@ -68,7 +69,7 @@ export default function Blog() {
       />
 
       <GalleryTextFilter
-        placeholder="Search titles..."
+        placeholder="Search titles and descriptions..."
         label="Search articles"
         searchText={searchText}
         setSearchText={setSearchText}
