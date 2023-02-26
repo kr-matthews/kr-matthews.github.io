@@ -12,7 +12,9 @@ export default function GalleryCategoryFilter({
 }) {
   return (
     <HStack pb="1em">
-      <Box minW="6em">{title}:</Box>
+      <Box minW="6em" fontWeight="semibold">
+        {title}:
+      </Box>
       <Box>
         <CategoryButton
           type="reset"

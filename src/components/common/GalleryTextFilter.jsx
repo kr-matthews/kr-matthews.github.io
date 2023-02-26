@@ -1,21 +1,36 @@
+import {
+  FormControl,
+  FormLabel,
+  HStack,
+  Input,
+  useColorModeValue,
+} from "@chakra-ui/react";
+
 export default function GalleryTextFilter({
-  placeholder = "Enter search text...",
-  label = "Search",
+  placeholder = "Type to search...",
   searchText,
   setSearchText,
 }) {
+  const mainColour = useColorModeValue("alt.dark", "alt.light");
+
   return (
-    <div>
-      Search:
-      <form onSubmit={(e) => e.preventDefault()}>
-        <input
+    <FormControl>
+      <HStack pb="1em">
+        <FormLabel mr="0" minW="6em" fontWeight="semibold">
+          Search:
+        </FormLabel>
+        <Input
           type="search"
           placeholder={placeholder}
-          aria-label={label}
           value={searchText}
           onChange={(e) => setSearchText(e.target.value)}
+          minW="275px"
+          maxW="550px"
+          ml="0"
+          borderWidth="2px"
+          _focus={{ borderColor: mainColour }}
         />
-      </form>
-    </div>
+      </HStack>
+    </FormControl>
   );
 }

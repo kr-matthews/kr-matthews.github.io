@@ -1,4 +1,4 @@
-import { Box, SimpleGrid, useColorModeValue } from "@chakra-ui/react";
+import { Box, HStack, SimpleGrid, useColorModeValue } from "@chakra-ui/react";
 import React, { Fragment } from "react";
 
 export default function Gallery({
@@ -6,12 +6,17 @@ export default function Gallery({
   children: tiles,
   ...props
 }) {
-  // !!! results count styling
   const minW = `calc(${childW} )`;
 
   return (
     <Fragment>
-      <Box>Results: {tiles.length}</Box>
+      <HStack pb="1em">
+        <Box minW="6em" fontWeight="semibold">
+          Results:
+        </Box>
+        <Box>{tiles.length}</Box>
+      </HStack>
+
       <Box minW={minW}>
         <SimpleGrid
           templateColumns={`repeat(auto-fill, ${childW})`}

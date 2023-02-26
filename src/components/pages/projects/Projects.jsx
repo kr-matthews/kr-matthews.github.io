@@ -9,7 +9,6 @@ import Gallery from "../../common/Gallery";
 import useCategoryFilter from "../../../hooks/useCategoryFilter";
 
 import { projects } from "../../../data/projects";
-import Link from "../../common/Link";
 
 const sortedProjects = projects.sort(
   (a, b) => b.year - a.year || b.yearOrder - a.yearOrder
@@ -60,14 +59,6 @@ export default function Projects() {
   return (
     <WideContent withAlwaysScroll>
       <h1>Projects</h1>
-      <p>
-        Notable projects that I've created. Most, but not all, are programming
-        projects. Many have public repositories on{" "}
-        <Link href="https://github.com/kr-matthews" isExternal>
-          my GitHub
-        </Link>
-        .
-      </p>
 
       <GalleryCategoryFilter
         title="Languages"
