@@ -2,33 +2,33 @@ import "./rubiks-cube-blindfolded.css";
 
 // import images
 
-import sA from "./Ace.svg";
-import s2 from "./Two.svg";
-import s3 from "./Three.svg";
-import s4 from "./Four.svg";
-import s5 from "./Five.svg";
-import s6 from "./Six.svg";
+import sA from "./assets/Ace.svg";
+import s2 from "./assets/Two.svg";
+import s3 from "./assets/Three.svg";
+import s4 from "./assets/Four.svg";
+import s5 from "./assets/Five.svg";
+import s6 from "./assets/Six.svg";
 
-import seq2 from "./seq-2-virtual.png";
-import seq3 from "./seq-3-virtual.png";
-import seq8 from "./seq-8-virtual-see-buffer.png";
+import seq2 from "./assets/seq-2-virtual.png";
+import seq3 from "./assets/seq-3-virtual.png";
+import seq8 from "./assets/seq-8-virtual-see-buffer.png";
 
-import scrambledVirtual from "./scrambled-virtual.png";
-import inPlaceEdge from "./in-place-edge-virtual.png";
-import solvedPhysical from "./solved-cube-physical.jpg";
-import solvedVirtual from "./solved-cube-virtual.png";
-import somePieces from "./two-pieces-physical.jpg";
-import allPieces from "./all-pieces-physical.jpg";
-import core from "./core-physical.jpg";
-import solvedEdge from "./solved-edge-physical.jpg";
-import unsolvedEdge from "./misplaced-edge-physical.jpg";
-import flippedEdge from "./flipped-edge-physical.jpg";
-import preSwap from "./2-edges-pre-swap.png";
-import postSwap1 from "./2-edges-swap-v1.png";
-import postSwap2 from "./2-edges-swap-v2.png";
-import correctSwap from "./correct-first-swap.png";
-import incorrectSwap from "./incorrect-first-swap.png";
-import solvedEdges from "./edges-solved-2-corners-swapped.png";
+import scrambledVirtual from "./assets/scrambled-virtual.png";
+import inPlaceEdge from "./assets/in-place-edge-virtual.png";
+import solvedPhysical from "./assets/solved-cube-physical.jpg";
+import solvedVirtual from "./assets/solved-cube-virtual.png";
+import somePieces from "./assets/two-pieces-physical.jpg";
+import allPieces from "./assets/all-pieces-physical.jpg";
+import core from "./assets/core-physical.jpg";
+import solvedEdge from "./assets/solved-edge-physical.jpg";
+import unsolvedEdge from "./assets/misplaced-edge-physical.jpg";
+import flippedEdge from "./assets/flipped-edge-physical.jpg";
+import preSwap from "./assets/2-edges-pre-swap.png";
+import postSwap1 from "./assets/2-edges-swap-v1.png";
+import postSwap2 from "./assets/2-edges-swap-v2.png";
+import correctSwap from "./assets/correct-first-swap.png";
+import incorrectSwap from "./assets/incorrect-first-swap.png";
+import solvedEdges from "./assets/edges-solved-2-corners-swapped.png";
 
 // helper
 
