@@ -1,30 +1,32 @@
-//// project images & icons
+//// project images
 
 import bldMemoToolImage from "./assets/bld-memo-tool.png";
 import bldMemoToolsImage from "./assets/bld-memo-tools.png";
-import threeStyleCornerAlgGeneratorImage from "./assets/three-style-corners-alg-generator.png";
-import cornerTwistAlgGeneratorImage from "./assets/corner-twist-alg-generator.png";
-import blindfoldedSystemImage from "./assets/blindfolded-system.png";
-import theUltimatePuzzleSolverImage from "./assets/the-ultimate-puzzle-pieces.png";
-import heartsImage from "./assets/hearts-console.png";
 import weakSwapImage from "./assets/weak-swap.png";
+import theUltimatePuzzleSolverImage from "./assets/the-ultimate-puzzle.png";
+import heartsImage from "./assets/hearts-console.png";
+import blindfoldedSystemImage from "./assets/blindfolded-system.png";
+import threeStyleCornerAlgGeneratorImage from "./assets/three-style-corner-alg-generator.png";
+import cornerTwistAlgGeneratorImage from "./assets/corner-twist-alg-generator.png";
 import personalWebsiteImage from "./assets/website.png";
 import ticTacToeImage from "./assets/tic-tac-toe.png";
 import minesweeperImage from "./assets/minesweeper.png";
 import connectFourImage from "./assets/connect-four.png";
 import cribbageImage from "./assets/cribbage.png";
-import stageGroupsImage from "./assets/stage-groups.png";
+import competitionGroupsDisplayImage from "./assets/competition-groups-display.png";
 import activitiesOnThisDayImage from "./assets/activities-on-this-day.png";
-import footerImage from "./assets/footer-example.png";
+import heavyFooterWithLinksImage from "./assets/heavy-footer-with-links.png";
 
-import personalWebsiteIcon from "../../assets/logo.svg";
-import puzzleIcon from "./assets/puzzle-piece.svg";
+//// project icons
+
+import puzzleIcon from "./assets/puzzle-piece-icon.svg";
 import heartsIcon from "./assets/heart-card.svg";
+import personalWebsiteIcon from "../../assets/logo.svg";
 import ticTacToeIcon from "./assets/tic-tac-toe-icon.png";
-import minesweeperIcon from "./assets/minesweeper-icon.png";
+import minesweeperIcon from "./assets/minesweeper-flag-icon.png";
 import connectFourIcon from "./assets/connect-four-icon.png";
-import cribbageIcon from "./assets/cribbage-icon.jpeg";
-import activitiesOnThisDayIcon from "./assets/calendar-activity.svg";
+import cribbageIcon from "./assets/cribbage-pegs-icon.jpeg";
+import activitiesOnThisDayIcon from "./assets/calendar-activity-icon.svg";
 
 //// project list
 
@@ -222,7 +224,7 @@ export const projects = [
   {
     id: 13,
     title: "Competition Groups Display",
-    image: stageGroupsImage,
+    image: competitionGroupsDisplayImage,
     type: "Volunteer",
     url: "https://kr-matthews.github.io/stage-groups",
     codeHost: "GitHub",
@@ -253,7 +255,7 @@ export const projects = [
   {
     id: 15,
     title: "Heavy Footer with Links",
-    image: footerImage,
+    image: heavyFooterWithLinksImage,
     type: "Personal",
     codeHost: "GitHub",
     codeUrl: "https://github.com/kr-matthews/footer-dependency",
