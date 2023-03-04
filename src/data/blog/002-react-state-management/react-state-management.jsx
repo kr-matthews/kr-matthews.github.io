@@ -1,7 +1,3 @@
-import "../css/code.css";
-
-// content
-
 function Content() {
   return (
     <>
