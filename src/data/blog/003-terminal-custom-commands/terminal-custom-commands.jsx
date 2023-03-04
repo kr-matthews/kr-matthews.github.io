@@ -152,7 +152,7 @@ export default function Content() {
         rather, I would often forget to do certain things. For instance, I
         frequently deal with a TODO item, then commit and push the changes, only
         to sit down to work the next time and realize the TODO comment is still
-        there and was part of the previous commit. (Yes, you can ammend commits,
+        there and was part of the previous commit. (Yes, you can amend commits,
         but this is a bad idea if you've already pushed to another repository.)
         This isn't a big deal, but it's potentially confusing to look back at
         previous commits and see TODOs which are already done, especially if
