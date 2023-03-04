@@ -47,7 +47,7 @@ function CardSeq({ indices, caption }) {
 
 // content
 
-function Content() {
+function RubiksCubeBlindfolded() {
   return (
     <>
       <h2>What we will (and won't) be discussing</h2>
@@ -818,4 +818,4 @@ function Content() {
   );
 }
 
-export default Content;
+export default RubiksCubeBlindfolded;

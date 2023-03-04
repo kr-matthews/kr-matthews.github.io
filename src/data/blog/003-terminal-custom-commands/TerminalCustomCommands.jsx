@@ -1,4 +1,4 @@
-export default function Content() {
+export default function TerminalCustomCommands() {
   return (
     <>
       <h2>Introduction</h2>

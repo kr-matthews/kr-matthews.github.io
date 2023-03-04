@@ -1,4 +1,4 @@
-function Content() {
+function ReactStateManagement() {
   return (
     <>
       <h2>Introduction</h2>
@@ -1284,4 +1284,4 @@ function Content() {
   );
 }
 
-export default Content;
+export default ReactStateManagement;

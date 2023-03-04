@@ -1,4 +1,4 @@
-export default function Content() {
+export default function TestingReactHooks() {
   return (
     <>
       <h2>Introduction</h2>

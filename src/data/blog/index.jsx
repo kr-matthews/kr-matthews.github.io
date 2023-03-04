@@ -1,9 +1,9 @@
 //// article contents
 
-import RubiksCubeBlindfolded from "./001-rubiks-cube-blindfolded/rubiks-cube-blindfolded";
-import ReactStateManagement from "./002-react-state-management/react-state-management";
-import TerminalCustomCommands from "./003-terminal-custom-commands/terminal-custom-commands";
-import TestingReactHooks from "./004-testing-react-hooks/testing-react-hooks";
+import RubiksCubeBlindfolded from "./001-rubiks-cube-blindfolded/RubiksCubeBlindfolded";
+import ReactStateManagement from "./002-react-state-management/ReactStateManagement";
+import TerminalCustomCommands from "./003-terminal-custom-commands/TerminalCustomCommands";
+import TestingReactHooks from "./004-testing-react-hooks/TestingReactHooks";
 
 //// article images
 
