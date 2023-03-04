@@ -1,4 +1,4 @@
-import "../../../css/code.css";
+import "../css/code.css";
 
 // content
 

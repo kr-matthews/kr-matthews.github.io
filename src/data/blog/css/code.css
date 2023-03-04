@@ -1,6 +1,7 @@
 pre code {
   display: block;
-  background: LightGrey;
+  /* compromise which works ok on both colour themes */
+  background: rgb(141, 140, 140);
   border-radius: 0.75em;
   white-space: pre;
   max-width: 100%;
@@ -10,7 +11,7 @@ pre code {
   margin-bottom: 0.5em;
 }
 
-@media screen and (max-width: 875px) {
+@media screen and (max-width: 900px) {
   pre code {
     -webkit-overflow-scrolling: touch;
     overflow-x: scroll;

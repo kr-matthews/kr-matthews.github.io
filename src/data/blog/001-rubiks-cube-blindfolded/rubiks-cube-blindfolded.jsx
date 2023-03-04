@@ -525,7 +525,9 @@ function Content() {
         spot between the red center and the green center). Which edge is in the
         that spot?
       </p>
-      <img className="large-img" src={seq2} alt="Red-green spot" />
+      <div className="image-row">
+        <img className="large-img" src={seq2} alt="Red-green spot" />
+      </div>
       <p>
         The white-blue edge is there. So we write down the white-blue edge, and
         move on to looking at the white-blue spot. So far we have:
@@ -543,7 +545,9 @@ function Content() {
         Continuing, we look at the white-blue spot (between the white center and
         blue center).
       </p>
-      <img className="large-img" src={seq3} alt="Red-green spot" />
+      <div className="image-row">
+        <img className="large-img" src={seq3} alt="Red-green spot" />
+      </div>
       <p>
         We find the white-orange piece, which we write down, then continue on to
         look at the spot between the white center and orange center. And so on.
@@ -552,7 +556,9 @@ function Content() {
         point we see the white-green piece. The white-green piece leads us to
         the white-green spot, which is the buffer — we're back where we started.
       </p>
-      <img className="large-img" src={seq8} alt="Red-green spot" />
+      <div className="image-row">
+        <img className="large-img" src={seq8} alt="Red-green spot" />
+      </div>
       <p>
         Note that we don't want to write down the white-green piece at this
         point. That's likely confusing the first time you see it — if so, go
