@@ -6,8 +6,6 @@ export default function Gallery({
   children: tiles,
   ...props
 }) {
-  const minW = `calc(${childW} )`;
-
   return (
     <Fragment>
       <HStack pb="1em">
@@ -17,7 +15,7 @@ export default function Gallery({
         <Box>{tiles.length}</Box>
       </HStack>
 
-      <Box minW={minW}>
+      <Box minW={childW}>
         <SimpleGrid
           templateColumns={`repeat(auto-fill, ${childW})`}
           justifyContent="center"

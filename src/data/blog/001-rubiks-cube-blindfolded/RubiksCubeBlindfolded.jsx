@@ -2,42 +2,42 @@ import "./rubiks-cube-blindfolded.css";
 
 // import images
 
-import sA from "./Ace.svg";
-import s2 from "./Two.svg";
-import s3 from "./Three.svg";
-import s4 from "./Four.svg";
-import s5 from "./Five.svg";
-import s6 from "./Six.svg";
+import sA from "./assets/Ace.svg";
+import s2 from "./assets/Two.svg";
+import s3 from "./assets/Three.svg";
+import s4 from "./assets/Four.svg";
+import s5 from "./assets/Five.svg";
+import s6 from "./assets/Six.svg";
 
-import seq2 from "./seq-2-virtual.png";
-import seq3 from "./seq-3-virtual.png";
-import seq8 from "./seq-8-virtual-see-buffer.png";
+import seq2 from "./assets/seq-2-virtual.png";
+import seq3 from "./assets/seq-3-virtual.png";
+import seq8 from "./assets/seq-8-virtual-see-buffer.png";
 
-import scrambledVirtual from "./scrambled-virtual.png";
-import inPlaceEdge from "./in-place-edge-virtual.png";
-import solvedPhysical from "./solved-cube-physical.jpg";
-import solvedVirtual from "./solved-cube-virtual.png";
-import somePieces from "./two-pieces-physical.jpg";
-import allPieces from "./all-pieces-physical.jpg";
-import core from "./core-physical.jpg";
-import solvedEdge from "./solved-edge-physical.jpg";
-import unsolvedEdge from "./misplaced-edge-physical.jpg";
-import flippedEdge from "./flipped-edge-physical.jpg";
-import preSwap from "./2-edges-pre-swap.png";
-import postSwap1 from "./2-edges-swap-v1.png";
-import postSwap2 from "./2-edges-swap-v2.png";
-import correctSwap from "./correct-first-swap.png";
-import incorrectSwap from "./incorrect-first-swap.png";
-import solvedEdges from "./edges-solved-2-corners-swapped.png";
+import scrambledVirtual from "./assets/scrambled-virtual.png";
+import inPlaceEdge from "./assets/in-place-edge-virtual.png";
+import solvedPhysical from "./assets/solved-cube-physical.jpg";
+import solvedVirtual from "./assets/solved-cube-virtual.png";
+import somePieces from "./assets/two-pieces-physical.jpg";
+import allPieces from "./assets/all-pieces-physical.jpg";
+import core from "./assets/core-physical.jpg";
+import solvedEdge from "./assets/solved-edge-physical.jpg";
+import unsolvedEdge from "./assets/misplaced-edge-physical.jpg";
+import flippedEdge from "./assets/flipped-edge-physical.jpg";
+import preSwap from "./assets/2-edges-pre-swap.png";
+import postSwap1 from "./assets/2-edges-swap-v1.png";
+import postSwap2 from "./assets/2-edges-swap-v2.png";
+import correctSwap from "./assets/correct-first-swap.png";
+import incorrectSwap from "./assets/incorrect-first-swap.png";
+import solvedEdges from "./assets/edges-solved-2-corners-swapped.png";
 
 // helper
 
 const cards = [null, sA, s2, s3, s4, s5, s6];
 
-function CardSeq({ inds, caption }) {
+function CardSeq({ indices, caption }) {
   return (
     <div className="cards">
-      {inds.map((ind) => {
+      {indices.map((ind) => {
         return <img src={cards[ind]} alt={"Card " + ind} key={ind} />;
       })}
       <div className="caption">{caption}</div>
@@ -47,7 +47,7 @@ function CardSeq({ inds, caption }) {
 
 // content
 
-function Content() {
+export default function RubiksCubeBlindfolded() {
   return (
     <>
       <h2>What we will (and won't) be discussing</h2>
@@ -109,7 +109,7 @@ function Content() {
         through below.
       </p>
       <CardSeq
-        inds={[1, 2, 3, 4, 5, 6]}
+        indices={[1, 2, 3, 4, 5, 6]}
         caption="Ace through six of spades, laid out in a row."
       />
       <p>
@@ -127,7 +127,7 @@ function Content() {
         at this point.
       </p>
       <CardSeq
-        inds={[3, 2, 6, 5, 1, 4]}
+        indices={[3, 2, 6, 5, 1, 4]}
         caption="A random arrangement of the cards."
       />
       <p>
@@ -168,23 +168,23 @@ function Content() {
         cards correctly placed, we get the last one for free.)
       </p>
       <CardSeq
-        inds={[3, 2, 6, 5, 1, 4]}
+        indices={[3, 2, 6, 5, 1, 4]}
         caption="The random arrangement from above."
       />
       <CardSeq
-        inds={[1, 2, 6, 5, 3, 4]}
+        indices={[1, 2, 6, 5, 3, 4]}
         caption="Finding the ace and swapping it into the correct position."
       />
       <CardSeq
-        inds={[1, 2, 3, 5, 6, 4]}
+        indices={[1, 2, 3, 5, 6, 4]}
         caption="The two is already correctly placed, so we find the three and swap it into the correct position."
       />
       <CardSeq
-        inds={[1, 2, 3, 4, 6, 5]}
+        indices={[1, 2, 3, 4, 6, 5]}
         caption="Finding the four and swapping it into the correct position."
       />
       <CardSeq
-        inds={[1, 2, 3, 4, 5, 6]}
+        indices={[1, 2, 3, 4, 5, 6]}
         caption="Finding the five and swapping it into the correct position. The six comes for free."
       />
       <p>If you came up with a different idea, that's great!</p>
@@ -208,23 +208,23 @@ function Content() {
         we can just keep going with the ace's spot until everything is solved.
       </p>
       <CardSeq
-        inds={[3, 2, 6, 5, 1, 4]}
+        indices={[3, 2, 6, 5, 1, 4]}
         caption="The same random arrangement as above."
       />
       <CardSeq
-        inds={[6, 2, 3, 5, 1, 4]}
+        indices={[6, 2, 3, 5, 1, 4]}
         caption="Seeing the three in the ace's spot and swapping it into the correct position."
       />
       <CardSeq
-        inds={[4, 2, 3, 5, 1, 6]}
+        indices={[4, 2, 3, 5, 1, 6]}
         caption="Seeing the six in the ace's spot and swapping it into the correct position."
       />
       <CardSeq
-        inds={[5, 2, 3, 4, 1, 6]}
+        indices={[5, 2, 3, 4, 1, 6]}
         caption="Seeing the four in the ace's spot and swapping it into the correct position."
       />
       <CardSeq
-        inds={[1, 2, 3, 4, 5, 6]}
+        indices={[1, 2, 3, 4, 5, 6]}
         caption="Seeing the five in the ace's spot and swapping it into the correct position. The ace comes for free."
       />
       <p>
@@ -235,13 +235,16 @@ function Content() {
         happen to be correctly positioned already then that's great, we're done.
         But what if they aren't?
       </p>
-      <CardSeq inds={[5, 1, 3, 6, 2, 4]} caption="A new random arrangement." />
       <CardSeq
-        inds={[2, 1, 3, 6, 5, 4]}
+        indices={[5, 1, 3, 6, 2, 4]}
+        caption="A new random arrangement."
+      />
+      <CardSeq
+        indices={[2, 1, 3, 6, 5, 4]}
         caption="Swapping the five into position."
       />
       <CardSeq
-        inds={[1, 2, 3, 6, 5, 4]}
+        indices={[1, 2, 3, 6, 5, 4]}
         caption="Swapping the two into position, which results in the ace being correctly placed before we're done."
       />
       <p>
@@ -252,9 +255,9 @@ function Content() {
         this works just fine and is actually quite efficient just like the
         previous method we were looking at.
       </p>
-      <CardSeq inds={[1, 2, 3, 6, 5, 4]} caption="Repeated from above." />
+      <CardSeq indices={[1, 2, 3, 6, 5, 4]} caption="Repeated from above." />
       <CardSeq
-        inds={[1, 2, 3, 4, 5, 6]}
+        indices={[1, 2, 3, 4, 5, 6]}
         caption="Using the four's spot instead of the ace's spot: swap the six into position and get the four for free."
       />
       <p>
@@ -271,46 +274,46 @@ function Content() {
         incorrectly placed card and swap the ace with that.
       </p>
       <CardSeq
-        inds={[5, 1, 3, 6, 2, 4]}
+        indices={[5, 1, 3, 6, 2, 4]}
         caption="The same random arrangement as above."
       />
       <CardSeq
-        inds={[2, 1, 3, 6, 5, 4]}
+        indices={[2, 1, 3, 6, 5, 4]}
         caption="Swapping the five into position."
       />
       <CardSeq
-        inds={[1, 2, 3, 6, 5, 4]}
+        indices={[1, 2, 3, 6, 5, 4]}
         caption="Swapping the two into position, which results in the ace being correctly placed before we're done."
       />
       <CardSeq
-        inds={[6, 2, 3, 1, 5, 4]}
+        indices={[6, 2, 3, 1, 5, 4]}
         caption="Swapping the ace with any incorrectly placed card: the six, in the four's spot."
       />
       <CardSeq
-        inds={[4, 2, 3, 1, 5, 6]}
+        indices={[4, 2, 3, 1, 5, 6]}
         caption="Swapping the six into position as normal."
       />
       <CardSeq
-        inds={[1, 2, 3, 4, 5, 6]}
+        indices={[1, 2, 3, 4, 5, 6]}
         caption="Swapping the four into position as normal, which returns the ace to the ace's spot."
       />
       <p>
         Alternatively, we could finish off by picking the four instead of the
         six. Both are equally valid options.
       </p>
-      <CardSeq inds={[5, 1, 3, 6, 2, 4]} caption="The same." />
-      <CardSeq inds={[2, 1, 3, 6, 5, 4]} caption="The same." />
-      <CardSeq inds={[1, 2, 3, 6, 5, 4]} caption="The same." />
+      <CardSeq indices={[5, 1, 3, 6, 2, 4]} caption="The same." />
+      <CardSeq indices={[2, 1, 3, 6, 5, 4]} caption="The same." />
+      <CardSeq indices={[1, 2, 3, 6, 5, 4]} caption="The same." />
       <CardSeq
-        inds={[4, 2, 3, 6, 5, 1]}
+        indices={[4, 2, 3, 6, 5, 1]}
         caption="Swapping the ace with any incorrectly placed card: the four, in the six's spot."
       />
       <CardSeq
-        inds={[6, 2, 3, 4, 5, 1]}
+        indices={[6, 2, 3, 4, 5, 1]}
         caption="Swapping the four into position as normal."
       />
       <CardSeq
-        inds={[1, 2, 3, 4, 5, 6]}
+        indices={[1, 2, 3, 4, 5, 6]}
         caption="Swapping the six into position as normal, which returns the ace to the ace's spot."
       />
       <p>
@@ -328,7 +331,7 @@ function Content() {
         without physically performing any swaps?
       </p>
       <CardSeq
-        inds={[5, 1, 3, 6, 2, 4]}
+        indices={[5, 1, 3, 6, 2, 4]}
         caption="The same random arrangement as above."
       />
       <p>
@@ -522,7 +525,9 @@ function Content() {
         spot between the red center and the green center). Which edge is in the
         that spot?
       </p>
-      <img className="large-img" src={seq2} alt="Red-green spot" />
+      <div className="image-row">
+        <img className="large-img" src={seq2} alt="Red-green spot" />
+      </div>
       <p>
         The white-blue edge is there. So we write down the white-blue edge, and
         move on to looking at the white-blue spot. So far we have:
@@ -540,7 +545,9 @@ function Content() {
         Continuing, we look at the white-blue spot (between the white center and
         blue center).
       </p>
-      <img className="large-img" src={seq3} alt="Red-green spot" />
+      <div className="image-row">
+        <img className="large-img" src={seq3} alt="Red-green spot" />
+      </div>
       <p>
         We find the white-orange piece, which we write down, then continue on to
         look at the spot between the white center and orange center. And so on.
@@ -549,7 +556,9 @@ function Content() {
         point we see the white-green piece. The white-green piece leads us to
         the white-green spot, which is the buffer — we're back where we started.
       </p>
-      <img className="large-img" src={seq8} alt="Red-green spot" />
+      <div className="image-row">
+        <img className="large-img" src={seq8} alt="Red-green spot" />
+      </div>
       <p>
         Note that we don't want to write down the white-green piece at this
         point. That's likely confusing the first time you see it — if so, go
@@ -606,7 +615,7 @@ function Content() {
         where one can do it comfortably and consistently without making
         mistakes.
       </p>
-      <h2>Revsiting what it means to swap two pieces</h2>
+      <h2>Revisiting what it means to swap two pieces</h2>
       <p>
         There is a small catch here, one thing which we glossed over about the
         cube and which wasn't an issue with the playing cards. No, it's nothing
@@ -808,5 +817,3 @@ function Content() {
     </>
   );
 }
-
-export default Content;

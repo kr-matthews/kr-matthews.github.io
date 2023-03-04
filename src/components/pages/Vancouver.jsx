@@ -3,7 +3,7 @@ import { NarrowContent } from "../common/Page";
 
 export default function Vancouver() {
   return (
-    <NarrowContent className="page narrow-page">
+    <NarrowContent>
       <h1>Vancouver</h1>
       <p>
         I live in Vancouver, BC, Canada. There are many odd/interesting facts

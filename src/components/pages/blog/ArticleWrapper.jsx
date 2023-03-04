@@ -2,22 +2,21 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import Article from "./Article";
 import { articles } from "../../../data/blog";
+import { NarrowContent } from "../../common/Page";
+import ArticleNotFound from "./ArticleNotFound";
 
-function getArticle(shortName) {
+function getArticleByShortName(shortName) {
   return articles.find((article) => article.shortName === shortName);
 }
-
-// !! does not land at top of page
 
 export default function ArticleWrapper() {
   const params = useParams();
   const shortName = params.articleShortName ?? "";
-  const article = getArticle(shortName);
+  const article = getArticleByShortName(shortName);
 
-  // !! not found UI
-  if (!article) {
-    return "article not found";
-  }
-
-  return <Article {...article} />;
+  return (
+    <NarrowContent>
+      {article ? <Article {...article} /> : <ArticleNotFound />}
+    </NarrowContent>
+  );
 }

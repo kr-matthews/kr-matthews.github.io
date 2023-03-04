@@ -1,31 +1,38 @@
-import "../../../css/article.css";
+import React, { Fragment } from "react";
+import { Center, Image, Text } from "@chakra-ui/react";
+import BackToBlog from "./BackToBlog";
 
 export default function Article({
-  title = "Article Title",
-  // startDate,
+  title = "Untitled",
   publishDate,
   editDate,
   image,
-  // tags = [],
-  content = "Sorry, no content found.",
+  content = "Sorry, content not found.",
 }) {
   return (
-    <article className="page narrow-page">
-      <div className="top">
-        <h1>{title}</h1>
-        {image && <img src={image} alt={title} />}
-        <div className="date">
-          {`Published: ${
-            publishDate ? publishDate.toISOString().split("T")[0] : "Unknown"
-          }`}
-        </div>
-        {editDate && (
-          <div className="date">
-            {`Last Updated: ${editDate.toISOString().split("T")[0]}`}
-          </div>
-        )}
-      </div>
+    <Fragment>
+      <Text as="h1" textAlign="center">
+        {title}
+      </Text>
+      {image && (
+        <Center mb="1em">
+          <Image src={image} maxW="min(800px, 100%)" />
+        </Center>
+      )}
+
+      <Center>
+        {`Published: ${
+          publishDate ? publishDate.toISOString().split("T")[0] : "Unknown"
+        }`}
+      </Center>
+      {editDate && (
+        <Center>
+          {`Last Updated: ${editDate.toISOString().split("T")[0]}`}
+        </Center>
+      )}
+      <BackToBlog />
       {content}
-    </article>
+      <BackToBlog />
+    </Fragment>
   );
 }

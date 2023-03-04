@@ -6,7 +6,7 @@ export default function Toggle({ onToggle, left, right, ...props }) {
   return (
     <HStack>
       {left}
-      <Switch onChange={onChange} size="md" colorScheme="red" {...props} />
+      <Switch onChange={onChange} size="md" {...props} />
       {right}
     </HStack>
   );

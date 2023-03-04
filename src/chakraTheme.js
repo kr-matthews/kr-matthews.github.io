@@ -1,4 +1,4 @@
-import { extendTheme } from "@chakra-ui/react";
+import { extendTheme, withDefaultColorScheme } from "@chakra-ui/react";
 
 const config = {
   initialColorMode: "system",
@@ -58,11 +58,31 @@ const global = ({ colorMode }) => ({
   p: {
     marginBottom: "0.5em",
   },
+  pre: {
+    code: {
+      display: "block",
+      backgroundColor:
+        colorMode === "dark" ? colors.alt.dark : colors.alt.light,
+      borderRadius: "0.75em",
+      whiteSpace: "pre",
+      maxWidth: "100%",
+      minWidth: "100px",
+      padding: "15px 20px 12px 22px",
+      lineHeight: 1.75,
+      marginBottom: "0.5em",
+      overflowX: "auto",
+    },
+  },
 });
 
-export const theme = extendTheme({
-  styles: { global },
-  textStyles,
-  config,
-  colors,
-});
+const colorScheme = "red";
+
+export const theme = extendTheme(
+  {
+    styles: { global },
+    textStyles,
+    config,
+    colors,
+  },
+  withDefaultColorScheme({ colorScheme })
+);

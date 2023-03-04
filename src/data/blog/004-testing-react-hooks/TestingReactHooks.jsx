@@ -1,6 +1,4 @@
-import "../../../css/code.css";
-
-export default function Content() {
+export default function TestingReactHooks() {
   return (
     <>
       <h2>Introduction</h2>
@@ -107,8 +105,8 @@ export default function Content() {
         of the data.
       </p>
       <p>
-        Still on the returned data, we also need to know whos turn it is to play
-        next -- call that <code>nextToPlay</code>. Technically, this can be
+        Still on the returned data, we also need to know whose turn it is to
+        play next -- call that <code>nextToPlay</code>. Technically, this can be
         calculated from the board together with who went first, so the hook
         doesn't <em>need</em> to explicitly return it. But the point of creating
         a custom hook is to make it easy and simple for other code to use it. So
@@ -354,7 +352,7 @@ export default function Content() {
       <p>
         But this actually <em>still</em> wouldn't pass even if the hook were
         functioning properly. This is because when you use <code>act</code> and
-        change the state inside the hook, it re-redners itself and returns a{" "}
+        change the state inside the hook, it re-renders itself and returns a{" "}
         <em>new</em> <code>result</code> property, while the above is still
         using the <em>original</em> rendering's <code>result</code> property.
         The fix here is to define <code>game</code> to be the whole object
@@ -457,7 +455,7 @@ export default function Content() {
       <p>
         Indeed, along with the result, the rendered hook also returns a
         re-render function. This function re-renders the hook with the new
-        parameters you pass it. To make use of this, we'll have to modifiy the
+        parameters you pass it. To make use of this, we'll have to modify the
         initial call to <code>renderHook</code> to make it more explicit.
       </p>
       <pre>
@@ -534,15 +532,15 @@ export default function Content() {
         If we write some tests for this game, similar to what we did above,
         there would be two ways that the game hook tests could fail: either
         there's a mistake in our implementation of the game hook; or there's a
-        mistake in our implmentation of the deck hook. We only want the test for
-        the game hook to fail if we're in the former case. To achieve this, we
-        can mock the deck hook. In fact, as discussed earlier, you can't call a
-        hook directly in a test, so it's not possible to just call the deck hook
-        and pass it in as a parameter. You can try using <code>renderHook</code>{" "}
-        to get an instance of the deck hook, but things get a bit messy as the{" "}
-        <code>result</code> property is changed every re-render -- but in any
-        case, we just said we don't want to pass the real hook in as a
-        parameter, we want to mock it.
+        mistake in our implementation of the deck hook. We only want the test
+        for the game hook to fail if we're in the former case. To achieve this,
+        we can mock the deck hook. In fact, as discussed earlier, you can't call
+        a hook directly in a test, so it's not possible to just call the deck
+        hook and pass it in as a parameter. You can try using{" "}
+        <code>renderHook</code> to get an instance of the deck hook, but things
+        get a bit messy as the <code>result</code> property is changed every
+        re-render -- but in any case, we just said we don't want to pass the
+        real hook in as a parameter, we want to mock it.
       </p>
       <p>
         When mocking something, you can't use any state -- for the same reason
@@ -719,9 +717,9 @@ export default function Content() {
       <h2>Dependency Injection</h2>
       <p>
         In fact, the second situation above, where we mocked a dependency (
-        <code>helperFunction</code>) being imported, could instead be tranformed
-        into the first situation above, where we mocked a parameter (
-        <code>deck</code>). This can be done simply by making{" "}
+        <code>helperFunction</code>) being imported, could instead be
+        transformed into the first situation above, where we mocked a parameter
+        (<code>deck</code>). This can be done simply by making{" "}
         <code>helperFunction</code> into an explicit parameter of the hook.
       </p>
       <pre>

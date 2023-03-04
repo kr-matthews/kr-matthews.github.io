@@ -1,14 +1,10 @@
-import "../../../css/code.css";
-
-// content
-
-function Content() {
+export default function ReactStateManagement() {
   return (
     <>
       <h2>Introduction</h2>
 
       <p>
-        Managing state in React can be extremely smooth and straightfoward, if
+        Managing state in React can be extremely smooth and straightforward, if
         you do it right. But it can also be quite difficult to do it right,
         especially if you're new to React. It's one thing to watch a video or
         read a tutorial which explains how to do something, but it's another
@@ -22,7 +18,7 @@ function Content() {
       <p>
         This piece is not intended to be a tutorial or guide; there are many
         resources out there on React and state management if that's what you're
-        looking for. While we will (briefly) discuss state from sratch, there
+        looking for. While we will (briefly) discuss state from scratch, there
         are lots of important things about state (and hooks) which we won't
         mention at all. This post will probably be most useful to you if you've
         already learnt the basics of React state management and have tried to
@@ -100,7 +96,7 @@ function Content() {
       <p>
         The classic example here is a value which tracks how many times a user
         has clicked a button. If the page displays that value, and the button
-        updates that value (inreases it by one) then the page will not reflect
+        updates that value (increases it by one) then the page will not reflect
         the update because it hasn't re-rendered. And if the page is later
         re-rendered, that updated value will be lost. So the number of clicks
         will always display as 0 (the initial value in your code).
@@ -165,11 +161,11 @@ function Content() {
         </code>
       </pre>
       <p>
-        We also need to know whos turn it is. And the status of the game -- is
+        We also need to know whose turn it is. And the status of the game -- is
         it ongoing, has somebody won (if so, who), or is it a draw? These three
-        values -- the board, the status of the game, and whos turn it is -- seem
-        to be enough to make things work. If a player wants to make a move, we
-        can check that the game is ongoing and that it's their turn, then add
+        values -- the board, the status of the game, and whose turn it is --
+        seem to be enough to make things work. If a player wants to make a move,
+        we can check that the game is ongoing and that it's their turn, then add
         their piece to the board (assuming the column they picked isn't full).
         Otherwise, if somebody has won, we can display a message to that effect.
       </p>
@@ -177,7 +173,7 @@ function Content() {
         <code>
           {"// a possible game status\n"}
           {'"ongoing";\n'}
-          {"// a possible whos turn is next\n"}
+          {"// a possible whose turn is next\n"}
           {"1;\n"}
         </code>
       </pre>
@@ -189,7 +185,7 @@ function Content() {
         but doesn't increase functionality. Second, we could store a list
         (stack) of all the moves made in the game, in order. This would be
         necessary if we wanted to add an undo feature; with just the board, game
-        status, and whos turn it is, we don't know which was the most recent
+        status, and whose turn it is, we don't know which was the most recent
         piece to be dropped in. So this doesn't impact the user experience
         directly, but it does open the door to additional functionality.
       </p>
@@ -207,7 +203,7 @@ function Content() {
       </p>
       <p>
         To do this, we import <code>useState</code> and make our three values --
-        the board, the game status, and whos turn it is -- stateful. Note that
+        the board, the game status, and whose turn it is -- stateful. Note that
         these values are constants (denoted by <code>const</code>), which means
         we can't change their values. But we can make sure they start with
         different values on re-renders, by passing that new value to the setter
@@ -389,7 +385,7 @@ function Content() {
         Our <code>placePiece</code> function, which would be called when a
         player makes a move, so far only adds that piece to the appropriate spot
         on the board. It still needs to update the everything else: the game
-        status, whos playing next, and the move history.
+        status, who's playing next, and the move history.
       </p>
       <p>
         Since we also switched the move history from a setter to a dispatcher in
@@ -407,14 +403,14 @@ function Content() {
         </code>
       </pre>
       <p>
-        Whos turn is next seems like it should be easy, as we just flip it to
+        Whose turn is next seems like it should be easy, as we just flip it to
         the opposite player, but it's actually not that simple because the game
         might be over. If the game is over, there is no next turn, so the value
         should be null. (We don't have to do this I suppose, but it seems like
         the best practice in this case.)
       </p>
       <p>
-        So we'd better update the game status first, since whos turn is next
+        So we'd better update the game status first, since whose turn is next
         depends on that. It's easy but tedious to write a some helper functions
         -- which, like the earlier helper to find the empty row, implicitly
         depend on the board constant -- to help decide what the new game status
@@ -546,17 +542,17 @@ function Content() {
         Recall where we are at this point. When a user clicks a column to place
         a piece, <code>placePiece</code> is called. This function dispatches
         updates to the board and move history. These trigger the side effect we
-        just added, which updates the game status. We still need to update whos
+        just added, which updates the game status. We still need to update whose
         turn is next.
       </p>
       <p>
-        For updating whos turn is next, recall that usually we just want to flip
-        the value to the opposite player. However in the event that the game has
-        ended we want to set it to null (again, this is not strictly speaking
-        necessary, but it is the most logical). Since this update does depend on
-        the stateful values we've just updated, we can't just do this change
-        after in the <code>placePiece</code> function -- that doesn't have
-        access to the updated game status value. So let's put it in a side
+        For updating whose turn is next, recall that usually we just want to
+        flip the value to the opposite player. However in the event that the
+        game has ended we want to set it to null (again, this is not strictly
+        speaking necessary, but it is the most logical). Since this update does
+        depend on the stateful values we've just updated, we can't just do this
+        change after in the <code>placePiece</code> function -- that doesn't
+        have access to the updated game status value. So let's put it in a side
         effect.
       </p>
       <pre>
@@ -602,7 +598,7 @@ function Content() {
         The problem now is that if a player makes a move and the game isn't over
         (they didn't win or draw on that move), then the game status doesn't
         change (it's still ongoing), so this side effect won't be called. It
-        needs to happen every time the <code>palcePiece</code> function is
+        needs to happen every time the <code>placePiece</code> function is
         called, and only happen once each time. If we add the board to the
         dependency array, then this side effect will happen after we update the
         board. (It will run again if the game status changes because of that
@@ -656,7 +652,7 @@ function Content() {
         are now stored in the board, this side effect may be triggered again if
         the highlights are updated separately from the piece being placed into
         the board. If this were to happen, then the side effect would toggle
-        whos turn is next too frequently, meaning that in fact this isn't going
+        whose turn is next too frequently, meaning that in fact this isn't going
         to work as is.
       </p>
 
@@ -664,10 +660,10 @@ function Content() {
 
       <p>
         As always, there are multiple ways to go about fixing things. Maybe
-        combining the game status and whos turn is next into one value would be
-        best -- instead of "ongoing" as a status, we could indicate whos turn is
-        next, and when the game isn't ongoing we don't need to know whos turn is
-        next.
+        combining the game status and whose turn is next into one value would be
+        best -- instead of "ongoing" as a status, we could indicate whose turn
+        is next, and when the game isn't ongoing we don't need to know whose
+        turn is next.
       </p>
       <p>
         That would likely help. And there are other similar approaches. But
@@ -689,7 +685,7 @@ function Content() {
         the history, dropping pieces into the columns (basically simulating the
         game from the beginning). The game status can be calculated from this
         board directly, defined as a stateless constant -- there's no need to
-        make it stateful. Whos turn is next can be directly calculated from the
+        make it stateful. Whose turn is next can be directly calculated from the
         game status and the last move in the move history.
       </p>
       <pre>
@@ -732,8 +728,8 @@ function Content() {
         simplifies a lot. Looking at the definitions (above) of these constants,
         we can easily understand what they are: we don't have to go looking for
         setters or dispatchers or side effects to figure out when they update;
-        we just look at the defintion (and any helper functions used in the
-        definition). The <code>placePiece</code> function also becames extremely
+        we just look at the definition (and any helper functions used in the
+        definition). The <code>placePiece</code> function also becomes extremely
         simple. Just update the move history, and everything else is calculated
         correctly on re-render -- no side-effects necessary.
       </p>
@@ -801,7 +797,7 @@ function Content() {
         If the value cannot be calculated from other values, or is significantly
         easier to calculate using its old value, then make is stateful. This is
         annoying because we need to make sure it stays up-to-date via a side
-        effect, or via dispatchs within other functions. And that itself is not
+        effect, or via dispatches within other functions. And that itself is not
         ideal because we don't automatically know where to find those side
         effects and dispatches if we just look at the definition. But it may be
         necessary and/or more efficient.
@@ -815,7 +811,7 @@ function Content() {
         calculated from the board (especially if we also use the move history to
         only check the most recently placed piece for the win condition), and
         having the old game status doesn't help calculate the new one, so make
-        that stateless. Whos turn is next is easy to calculate from the move
+        that stateless. Whose turn is next is easy to calculate from the move
         history (except if the move history is empty, in which case we need to
         be told, likely via a parameter supplied when the whole setup was
         instantiated -- but that's not a problem) so that can be stateless.
@@ -887,7 +883,7 @@ function Content() {
         discussed the trade-offs between these two options in the previous
         section.) Now the view still has access to the single board constant.
         And in our chain of updates after a user makes a move, we can update the
-        pieces, then the game status (and whos turn is next), then the
+        pieces, then the game status (and whose turn is next), then the
         highlights (if necessary), and finally combine the pieces and highlights
         into the board -- all without any issues or circular reasoning.
       </p>
@@ -929,9 +925,10 @@ function Content() {
       <p>
         The solution, which again may seem natural if you're familiar with
         functional programming, is to indeed put them all in a separate file,
-        but then wrap them into a single function which returns all the constans
-        and functions which we need. We can then import that function in the
-        main file, and supply it with the global parameters when we call it.
+        but then wrap them into a single function which returns all the
+        constants and functions which we need. We can then import that function
+        in the main file, and supply it with the global parameters when we call
+        it.
       </p>
       <p>
         This, it turns out, is called a custom hook, and the name should start
@@ -1033,7 +1030,7 @@ function Content() {
       <p>
         Given our initial intended return values (constants and functions), we
         can decide how to track the constants internally in the hook -- some
-        will be stateless, some statefull; the stateful ones may be updated via
+        will be stateless, some stateful; the stateful ones may be updated via
         side effects or via dispatches; some, like board, may be broken up
         internally into pieces and highlights then combined together at the end.
         Then we can define the functions, keeping any helpers hidden away in the
@@ -1286,5 +1283,3 @@ function Content() {
     </>
   );
 }
-
-export default Content;

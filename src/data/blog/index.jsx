@@ -1,15 +1,15 @@
 //// article contents
 
-import RubiksCubeBlindfolded from "./001-rubiks-cube-blindfolded/rubiks-cube-blindfolded";
-import ReactStateManagement from "./002-react-state-management/react-state-management";
-import TerminalCustomCommands from "./003-terminal-custom-commands/terminal-custom-commands";
-import TestingReactHooks from "./004-testing-react-hooks/testing-react-hooks";
+import RubiksCubeBlindfolded from "./001-rubiks-cube-blindfolded/RubiksCubeBlindfolded";
+import ReactStateManagement from "./002-react-state-management/ReactStateManagement";
+import TerminalCustomCommands from "./003-terminal-custom-commands/TerminalCustomCommands";
+import TestingReactHooks from "./004-testing-react-hooks/TestingReactHooks";
 
 //// article images
 
-import rubiksCubeBlindfoldedImage from "./001-rubiks-cube-blindfolded/alt-solved-cube-physical.jpg";
-import reactStateManagementImage from "./002-react-state-management/react-logo.png";
-import terminalCustomCommandsImage from "./003-terminal-custom-commands/code-icon.png";
+import rubiksCubeBlindfoldedImage from "./assets/real-solved-cube.jpg";
+import reactStateManagementImage from "./assets/react-logo.png";
+import terminalCustomCommandsImage from "./assets/code-icon.png";
 // currently using default image for TestingReactHooks
 
 //// list of articles
