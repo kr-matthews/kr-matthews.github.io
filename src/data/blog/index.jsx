@@ -7,9 +7,9 @@ import TestingReactHooks from "./004-testing-react-hooks/testing-react-hooks";
 
 //// article images
 
-import rubiksCubeBlindfoldedImage from "./001-rubiks-cube-blindfolded/assets/alt-solved-cube-physical.jpg";
-import reactStateManagementImage from "./002-react-state-management/assets/react-logo.png";
-import terminalCustomCommandsImage from "./003-terminal-custom-commands/assets/code-icon.png";
+import rubiksCubeBlindfoldedImage from "./assets/real-solved-cube.jpg";
+import reactStateManagementImage from "./assets/react-logo.png";
+import terminalCustomCommandsImage from "./assets/code-icon.png";
 // currently using default image for TestingReactHooks
 
 //// list of articles
