@@ -1,15 +1,16 @@
+import React, { Fragment } from "react";
 import { Center, Image, Text } from "@chakra-ui/react";
-import { NarrowContent } from "../../common/Page";
+import BackToBlog from "./BackToBlog";
 
 export default function Article({
-  title = "Article Title",
+  title = "Untitled",
   publishDate,
   editDate,
   image,
-  content = "Sorry, no content found.",
+  content = "Sorry, content not found.",
 }) {
   return (
-    <NarrowContent>
+    <Fragment>
       <Text as="h1" textAlign="center">
         {title}
       </Text>
@@ -18,6 +19,7 @@ export default function Article({
           <Image src={image} maxW="min(800px, 100%)" />
         </Center>
       )}
+
       <Center>
         {`Published: ${
           publishDate ? publishDate.toISOString().split("T")[0] : "Unknown"
@@ -28,7 +30,9 @@ export default function Article({
           {`Last Updated: ${editDate.toISOString().split("T")[0]}`}
         </Center>
       )}
+      <BackToBlog />
       {content}
-    </NarrowContent>
+      <BackToBlog />
+    </Fragment>
   );
 }
