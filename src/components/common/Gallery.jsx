@@ -23,7 +23,7 @@ export default function Gallery({
           {...props}
         >
           {tiles.map((tile) => (
-            <GalleryItem key={tile.key} w={childW}>
+            <GalleryItem key={tile.key} w={childW} data-testid="item">
               {tile}
             </GalleryItem>
           ))}
