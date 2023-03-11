@@ -17,6 +17,7 @@ describe("components/common/Gallery", () => {
       </BrowserRouter>
     )
   );
+
   describe("renders", () => {
     it("text", () => {
       expect(screen.getByText("Results:")).toBeInTheDocument();
