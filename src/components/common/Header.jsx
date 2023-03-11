@@ -21,7 +21,7 @@ import moonIcon from "../../assets/moon.svg";
 export const headerHeight = "3em";
 
 // assumes links are lower-case versions
-const navOptions = ["Projects", "Blog", "Cubing", "Vancouver", "About"];
+export const navOptions = ["Projects", "Blog", "Cubing", "Vancouver", "About"];
 const navOptionCount = navOptions.length;
 const navOptionWidth = 6; // in em
 const sideWidths = 4.5; // in em
@@ -54,7 +54,7 @@ export default function Header() {
     <Box w="100vw" borderBottom="1px" borderColor={borderColor}>
       <HStack spacing={0} h={headerHeight} bgColor={bgColor}>
         <Center px="0.5em" w={`${sideWidths}em`}>
-          <Image src={logoIcon} h="2em" />
+          <Image src={logoIcon} h="2em" data-testid="logo" />
         </Center>
 
         <Spacer />
@@ -62,7 +62,7 @@ export default function Header() {
         {isScreenWide ? (
           <WideNavOptions />
         ) : (
-          <Box onClick={toggle} _hover={{ cursor: "pointer" }}>
+          <Box as="button" onClick={toggle} _hover={{ cursor: "pointer" }}>
             <Image src={menuDisplayIcon} h="2em" />
           </Box>
         )}
