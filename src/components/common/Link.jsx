@@ -6,7 +6,6 @@ export default function Link({
   to,
   href,
   isExternal = false,
-  onClick,
   isDisabled = false,
   withoutUnderline = false,
   title,
@@ -14,12 +13,15 @@ export default function Link({
   children: content,
   ...props
 }) {
+  function onClick(e) {
+    e.preventDefault();
+  }
   return (
     <ChakraLink
       as={isExternal ? "a" : ReactRouterLink}
-      to={to ?? ""}
+      to={isDisabled ? "" : to ?? ""}
       href={isExternal && !isDisabled ? href : undefined}
-      onClick={isDisabled ? undefined : onClick}
+      onClick={isDisabled ? onClick : undefined}
       isExternal={isExternal}
       textDecoration={withoutUnderline ? undefined : "underline"}
       _hover={{
