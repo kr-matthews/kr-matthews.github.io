@@ -5,6 +5,6 @@ import LoadingSpinner from "../LoadingSpinner";
 describe("components/common/LoadingSpinner", () => {
   it("renders", () => {
     render(<LoadingSpinner />);
-    expect(screen.getByTestId("loading")).toBeVisible();
+    expect(screen.getByRole("progressbar")).toBeVisible();
   });
 });
