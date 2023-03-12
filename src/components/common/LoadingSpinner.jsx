@@ -1,6 +1,10 @@
-import React, { Fragment } from "react";
+import { Center, Spinner } from "@chakra-ui/react";
+import React from "react";
 
-// todo: loading spinner UI
-export default function LoadingSpinner() {
-  return <Fragment>Loading...</Fragment>;
+export default function LoadingSpinner({ width, height }) {
+  return (
+    <Center w={width} h={height}>
+      <Spinner size="xl" data-testid="loading" />
+    </Center>
+  );
 }
