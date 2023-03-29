@@ -9,6 +9,8 @@ const usages = [
   ["Fruit"],
   ["Dairy"],
 ];
+const justFruit = ["Fruit"];
+const justDairy = ["Dairy"];
 
 let filter;
 
@@ -70,6 +72,9 @@ describe("hooks/useCategoryFilter", () => {
       expect(filter.current.orderedCounts).toEqual([3, 2, 1, 0]);
       expect(filter.current.areSelected).toEqual([false, true, false, false]);
       expect(filter.current.areAllOff).toEqual(false);
+      expect(filter.current.areAnySelected(categories)).toBe(true);
+      expect(filter.current.areAnySelected(justFruit)).toBe(false);
+      expect(filter.current.areAnySelected(justDairy)).toBe(true);
     });
 
     test("toggle two on", () => {
@@ -84,6 +89,9 @@ describe("hooks/useCategoryFilter", () => {
       expect(filter.current.orderedCounts).toEqual([3, 2, 1, 0]);
       expect(filter.current.areSelected).toEqual([false, true, false, true]);
       expect(filter.current.areAllOff).toEqual(false);
+      expect(filter.current.areAnySelected(categories)).toBe(true);
+      expect(filter.current.areAnySelected(justFruit)).toBe(false);
+      expect(filter.current.areAnySelected(justDairy)).toBe(true);
     });
 
     test("toggle one on and off", () => {
@@ -98,6 +106,9 @@ describe("hooks/useCategoryFilter", () => {
       expect(filter.current.orderedCounts).toEqual([3, 2, 1, 0]);
       expect(filter.current.areSelected).toEqual([false, false, false, false]);
       expect(filter.current.areAllOff).toEqual(true);
+      expect(filter.current.areAnySelected(categories)).toBe(true);
+      expect(filter.current.areAnySelected(justFruit)).toBe(true);
+      expect(filter.current.areAnySelected(justDairy)).toBe(true);
     });
 
     test("toggle all", () => {
@@ -111,6 +122,9 @@ describe("hooks/useCategoryFilter", () => {
       expect(filter.current.orderedCounts).toEqual([3, 2, 1, 0]);
       expect(filter.current.areSelected).toEqual([true, true, true, true]);
       expect(filter.current.areAllOff).toEqual(false);
+      expect(filter.current.areAnySelected(categories)).toBe(true);
+      expect(filter.current.areAnySelected(justFruit)).toBe(true);
+      expect(filter.current.areAnySelected(justDairy)).toBe(true);
     });
 
     test("toggle all twice", () => {
@@ -125,6 +139,9 @@ describe("hooks/useCategoryFilter", () => {
       expect(filter.current.orderedCounts).toEqual([3, 2, 1, 0]);
       expect(filter.current.areSelected).toEqual([false, false, false, false]);
       expect(filter.current.areAllOff).toEqual(true);
+      expect(filter.current.areAnySelected(categories)).toBe(true);
+      expect(filter.current.areAnySelected(justFruit)).toBe(true);
+      expect(filter.current.areAnySelected(justDairy)).toBe(true);
     });
 
     test("toggle one on then toggle all", () => {
@@ -139,6 +156,9 @@ describe("hooks/useCategoryFilter", () => {
       expect(filter.current.orderedCounts).toEqual([3, 2, 1, 0]);
       expect(filter.current.areSelected).toEqual([false, false, false, false]);
       expect(filter.current.areAllOff).toEqual(true);
+      expect(filter.current.areAnySelected(categories)).toBe(true);
+      expect(filter.current.areAnySelected(justFruit)).toBe(true);
+      expect(filter.current.areAnySelected(justDairy)).toBe(true);
     });
 
     test("toggle all then toggle each off", () => {
@@ -156,6 +176,9 @@ describe("hooks/useCategoryFilter", () => {
       expect(filter.current.orderedCounts).toEqual([3, 2, 1, 0]);
       expect(filter.current.areSelected).toEqual([false, false, false, false]);
       expect(filter.current.areAllOff).toEqual(true);
+      expect(filter.current.areAnySelected(categories)).toBe(true);
+      expect(filter.current.areAnySelected(justFruit)).toBe(true);
+      expect(filter.current.areAnySelected(justDairy)).toBe(true);
     });
 
     test("toggle each on", () => {
@@ -172,6 +195,9 @@ describe("hooks/useCategoryFilter", () => {
       expect(filter.current.orderedCounts).toEqual([3, 2, 1, 0]);
       expect(filter.current.areSelected).toEqual([true, true, true, true]);
       expect(filter.current.areAllOff).toEqual(false);
+      expect(filter.current.areAnySelected(categories)).toBe(true);
+      expect(filter.current.areAnySelected(justFruit)).toBe(true);
+      expect(filter.current.areAnySelected(justDairy)).toBe(true);
     });
   });
 });
