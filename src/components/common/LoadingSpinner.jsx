@@ -1,6 +1,10 @@
-import React, { Fragment } from "react";
+import { Center, CircularProgress } from "@chakra-ui/react";
+import React from "react";
 
-// todo: loading spinner UI
-export default function LoadingSpinner() {
-  return <Fragment>Loading...</Fragment>;
+export default function LoadingSpinner({ width, height }) {
+  return (
+    <Center w={width} h={height}>
+      <CircularProgress isIndeterminate size="90px" color="orange" />
+    </Center>
+  );
 }

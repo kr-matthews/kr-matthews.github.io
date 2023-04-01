@@ -16,7 +16,7 @@ import {
   useColorModeValue,
   VStack,
 } from "@chakra-ui/react";
-import { getLanguageIcon } from "../../../utils/projects";
+import { getLanguageIcon } from "../../../utils";
 import Modal from "../../common/Modal";
 
 export default function ProjectPreview({

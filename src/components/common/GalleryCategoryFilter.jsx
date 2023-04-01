@@ -52,6 +52,7 @@ function CategoryButton({ name, isSelected, onClick, type = "button" }) {
       color={color}
       borderRadius="2em"
       _hover={{ bgColor, color }}
+      data-testid={isSelected ? "selected" : "unselected"}
     >
       {name}
     </Button>

@@ -10,7 +10,10 @@ export default function App() {
     <Fragment>
       <ColorModeScript initialColorMode={theme.config.initialColorMode} />
       <ChakraProvider theme={theme}>
-        <RouterProvider router={router} fallbackElement={<LoadingSpinner />} />
+        <RouterProvider
+          router={router}
+          fallbackElement={<LoadingSpinner width="100vw" height="100vh" />}
+        />
       </ChakraProvider>
     </Fragment>
   );
