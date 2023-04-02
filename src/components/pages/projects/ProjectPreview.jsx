@@ -37,8 +37,7 @@ export default function ProjectPreview({
   const altCodeIcon = useColorModeValue(altCodeLightIcon, altCodeDarkIcon);
   const codeIcon = codeHost === "GitHub" ? gitHubIcon : altCodeIcon;
 
-  // modal
-  const [isOpen, setIsOpen] = useState(false);
+  const [isPreviewOpen, setIsPreviewOpen] = useState(false);
 
   return (
     <VStack spacing="0.75em" p="2em" h="100%">
@@ -51,9 +50,9 @@ export default function ProjectPreview({
           maxW="100%"
           maxH="100%"
           _hover={{ cursor: image ? "help" : "auto" }}
-          onClick={() => setIsOpen(!!image)}
+          onClick={() => setIsPreviewOpen(!!image)}
         />
-        <Modal isOpen={isOpen} onClose={() => setIsOpen(false)}>
+        <Modal isOpen={isPreviewOpen} onClose={() => setIsPreviewOpen(false)}>
           <Center>
             <Image
               src={image}
