@@ -1,17 +1,33 @@
 # Personal Website
 
-This is a personal website I was working on, with the primary aim of becoming more familiar with websites, and in particular, React.js and CSS.
+This is my personal website, which highlights some key information about myself and contains my projects and writings.
 
-It was my first project in React.js (and first time using CSS), so the quality and organization may be poor. However, I have done several additional projects since then (all visible here on GitHub) and have improved a lot.
-
-### Update
-
-After learning a lot by doing several other React.js projects, I came back and cleaned this up. It's still far from perfect of course.
-
-### View
+## View
 
 On GitHub Pages at [https://kr-matthews.github.io/](https://kr-matthews.github.io/).
 
-### Features
+## Initial Version
 
-It started as a project gallery (portfolio) and a simple blog. Since then, I've added a page about Rubik's Cubes and a page about Vancouver. I may add more later.
+This was my first project in React, and my second time doing web development (the first being a terrible website made with Racket and extremely basic HTML - no CSS), so the quality and organization was quite poor.
+I was mainly trying to learn stuff and get more familiar with React.
+
+## Refactor I
+
+After deploying the first version of my website, I moved on to several additional projects (all listed on GitHub, and on this website itself) and improved my skills and techniques a lot.
+I decided to come back and improve the code based on what I had learnt, since I could clearer see a lot of bugs and flaws.
+It was still far from perfect of course.
+
+## Refactor II
+
+After the first refactor, I continued on to a few other React projects, and eventually got a new job where I was working with React on a daily basis.
+Around the same time, I read [Clean Code](https://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882).
+Based on all this, I once again looked back at this project and identified a lot of major issues, so decided to do another refactor.
+
+## Features
+
+There isn't much end-user functionality to explore or use.
+The main feature is the ability to navigate around to various pages.
+
+The main pages are the projects page, which lists all of my coding projects (and a few other non-coding projects of note), and the blog page, which contains a few articles I've written (mostly for myself).
+
+More features may be added later.

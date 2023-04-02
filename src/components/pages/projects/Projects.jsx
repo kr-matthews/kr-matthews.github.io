@@ -1,19 +1,17 @@
 import { useMemo, useState } from "react";
 import Fuse from "fuse.js";
-
 import { WideContent } from "../../common/Page";
 import ProjectPreview from "./ProjectPreview";
 import GalleryCategoryFilter from "../../common/GalleryCategoryFilter";
 import GalleryTextFilter from "../../common/GalleryTextFilter";
 import Gallery from "../../common/Gallery";
-
 import useCategoryFilter from "../../../hooks/useCategoryFilter";
-
 import { projects } from "../../../data/projects";
 
 const sortedProjects = [...projects].sort(
   (a, b) => b.year - a.year || b.yearOrder - a.yearOrder
 );
+
 const allYears = [
   ...new Set(sortedProjects.flatMap(({ year }) => year)),
 ].sort();

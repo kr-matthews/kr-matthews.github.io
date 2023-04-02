@@ -36,13 +36,13 @@ export default function Header() {
 
   // whether the mobile menu is expanded and visible
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const toggle = () => setIsMobileMenuOpen((isOpen) => !isOpen);
-  const close = () => setIsMobileMenuOpen(false);
+  const toggleMenu = () => setIsMobileMenuOpen((isOpen) => !isOpen);
+  const closeMenu = () => setIsMobileMenuOpen(false);
   const menuDisplayIcon = isMobileMenuOpen ? closeIcon : menuIcon;
 
   // close the menu when it's no longer part of the page
   useEffect(() => {
-    if (!isScreenWide) close();
+    if (!isScreenWide) setIsMobileMenuOpen(false);
   }, [isScreenWide]);
 
   const { colorMode, toggleColorMode } = useColorMode();
@@ -62,7 +62,7 @@ export default function Header() {
         {isScreenWide ? (
           <WideNavOptions />
         ) : (
-          <Box as="button" onClick={toggle} _hover={{ cursor: "pointer" }}>
+          <Box as="button" onClick={toggleMenu} _hover={{ cursor: "pointer" }}>
             <Image src={menuDisplayIcon} h="2em" />
           </Box>
         )}
@@ -77,7 +77,7 @@ export default function Header() {
 
       {!isScreenWide && isMobileMenuOpen && (
         <NarrowNavOptions
-          close={close}
+          onClose={closeMenu}
           bgColor={bgColor}
           borderColor={borderColor}
         />
@@ -102,7 +102,7 @@ function WideNavOptions() {
   );
 }
 
-function NarrowNavOptions({ close, bgColor, borderColor }) {
+function NarrowNavOptions({ onClose, bgColor, borderColor }) {
   return (
     <VStack
       spacing="1px"
@@ -117,7 +117,7 @@ function NarrowNavOptions({ close, bgColor, borderColor }) {
         <NavLink
           key={navOption}
           to={navOption.toLowerCase()}
-          onClick={close}
+          onClick={onClose}
           w={navOptionWidth + "em"}
         >
           {navOption}

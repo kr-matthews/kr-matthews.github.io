@@ -1,20 +1,18 @@
 import { useMemo, useState } from "react";
 import Fuse from "fuse.js";
-
 import { NarrowContent } from "../../common/Page";
 import ArticlePreview from "./ArticlePreview";
 import GalleryCategoryFilter from "../../common/GalleryCategoryFilter";
 import GalleryTextFilter from "../../common/GalleryTextFilter";
 import Gallery from "../../common/Gallery";
-
 import useCategoryFilter from "../../../hooks/useCategoryFilter";
-
 import { articles } from "../../../data/blog";
 import { useMediaQuery } from "@chakra-ui/react";
 
 const sortedArticles = [...articles].sort(
   (a, b) => b.publishDate - a.publishDate
 );
+
 const allYears = [
   ...new Set(
     sortedArticles.flatMap(({ publishDate }) => publishDate.getFullYear())

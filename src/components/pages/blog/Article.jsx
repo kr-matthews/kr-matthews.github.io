@@ -14,6 +14,7 @@ export default function Article({
       <Text as="h1" textAlign="center">
         {title}
       </Text>
+
       {image && (
         <Center mb="1em">
           <Image src={image} maxW="min(800px, 100%)" />
@@ -25,11 +26,13 @@ export default function Article({
           publishDate ? publishDate.toISOString().split("T")[0] : "Unknown"
         }`}
       </Center>
+
       {editDate && (
         <Center>
           {`Last Updated: ${editDate.toISOString().split("T")[0]}`}
         </Center>
       )}
+
       <BackToBlog />
       {content}
       <BackToBlog />
