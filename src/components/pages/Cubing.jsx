@@ -1,11 +1,13 @@
+import { Fragment } from "react";
 import Link from "../common/Link";
 import { NarrowContent } from "../common/Page";
+import Tabs from "../common/Tabs";
 
 export default function Cubing() {
   return (
     <NarrowContent>
       <h1>Cubing</h1>
-      <p>
+      <p style={{ marginBottom: "2em" }}>
         I know how to solve a Rubik's Cube (blindfolded), and since 2010{" "}
         <Link
           href="https://www.worldcubeassociation.org/persons/2010MATT02"
@@ -22,40 +24,25 @@ export default function Cubing() {
         Canadian records in the multiple-blindfolded event and the fewest moves
         event.
       </p>
-      <p>
-        I've been a volunteer member of the World Cube Association's{" "}
-        <Link href="https://github.com/thewca" isExternal>
-          software team
-        </Link>{" "}
-        for over a year now, where my focus is on transitioning the front-end of
-        the website from Rails to React. If you can code, consider volunteering,
-        as they always need more help. The website is run mainly with Ruby on
-        Rails and React.
-      </p>
-      <p>
-        Reconstructions of some of my notable solves can be found{" "}
-        <Link
-          href="https://docs.google.com/spreadsheets/d/1PJ1k_EXqv_mafcMDRbrD5OAyBHie2z5PH5OkHLs8BtE/edit#gid=1878622909"
-          isExternal
-        >
-          here
-        </Link>
-        , including both regular and blindfolded solving for several different
-        events. Note that you can apply existing filters to filter by event. For
-        my fewest moves solves, see{" "}
-        <Link
-          href="https://csclub.uwaterloo.ca/~krmatthe/FMC/old-index"
-          isExternal
-        >
-          here
-        </Link>
-        , but note that this is not currently up-to-date and I have plans for
-        creating a more comprehensive spreadsheet in the future (which I may or
-        may not ever finish).
-      </p>
 
-      <h3>Competitions, World Cube Association, and Speedcubing Canada</h3>
+      <Tabs
+        data={[
+          { name: "World Cube Association", content: <Wca /> },
+          { name: "Software", content: <Software /> },
+          { name: "My Reconstructions", content: <Reconstructions /> },
+          { name: "My Blindfolded System", content: <Blindfolded /> },
+          { name: "Weak Swap", content: <WeakSwap /> },
+        ]}
+      />
+    </NarrowContent>
+  );
+}
 
+// !!! review and update all content
+
+function Wca() {
+  return (
+    <Fragment>
       <p>
         If you're interested in attending a competition,{" "}
         <Link
@@ -98,11 +85,24 @@ export default function Cubing() {
         thoroughly reading through the template to make sure the expectations
         and workload are clear.
       </p>
+    </Fragment>
+  );
+}
 
-      <h3>Software and Tools</h3>
-
+function Software() {
+  return (
+    <Fragment>
       <p>
-        {" "}
+        I've been a volunteer member of the World Cube Association's{" "}
+        <Link href="https://github.com/thewca" isExternal>
+          software team
+        </Link>{" "}
+        since 2021, where my focus is on transitioning the front-end of the
+        website from Rails to React. If you can code, consider volunteering, as
+        they always need more help. The website is run mainly with Ruby on Rails
+        and React.
+      </p>
+      <p>
         I have several <Link to="/projects">web apps</Link> based on cubes,
         primarily designed to help with learning and practising blindfolded
         solving -- and I intend to create more in the future. If you've recently
@@ -113,9 +113,41 @@ export default function Cubing() {
         There are plenty of other tools out there, made by other people. I don't
         have a comprehensive list handy, but you can search for them.
       </p>
+    </Fragment>
+  );
+}
 
-      <h3>Personal Blindfolded-Solving System</h3>
+function Reconstructions() {
+  return (
+    <Fragment>
+      <p>
+        Reconstructions of some of my notable solves can be found{" "}
+        <Link
+          href="https://docs.google.com/spreadsheets/d/1PJ1k_EXqv_mafcMDRbrD5OAyBHie2z5PH5OkHLs8BtE/edit#gid=1878622909"
+          isExternal
+        >
+          here
+        </Link>
+        , including both regular and blindfolded solving for several different
+        events. Note that you can apply existing filters to filter by event. For
+        my fewest moves solves, see{" "}
+        <Link
+          href="https://csclub.uwaterloo.ca/~krmatthe/FMC/old-index"
+          isExternal
+        >
+          here
+        </Link>
+        , but note that this is not currently up-to-date and I have plans for
+        creating a more comprehensive spreadsheet in the future (which I may or
+        may not ever finish).
+      </p>
+    </Fragment>
+  );
+}
 
+function Blindfolded() {
+  return (
+    <Fragment>
       <p>
         I have{" "}
         <Link
@@ -148,35 +180,37 @@ export default function Cubing() {
         understand, though I came up with the idea independently. It took
         literally years of experimenting to get it to where it is today.
       </p>
+    </Fragment>
+  );
+}
 
-      <h3>Method Development: Weak Swap</h3>
-
-      <p>
-        Together with{" "}
-        <Link
-          href="https://www.worldcubeassociation.org/persons/2016SIGG01"
-          isExternal
-        >
-          Graham Siggins
-        </Link>{" "}
-        I developed a slight optimization for blindfolded solving called Weak
-        Swap. Graham pointed out a special case to me one day where he was able
-        to reduce his algorithm count by one. I played around and realized that
-        it could be generalized to apply to a large portion of scrambles, and
-        together we nailed down what turned out to be a relatively simple method
-        to incorporate it into every solve when applicable. Graham has a{" "}
-        <Link
-          href="https://www.youtube.com/watch?v=MyeQkcsAzUE&ab_channel=GrahamSiggins"
-          isExternal
-        >
-          sequence of videos
-        </Link>{" "}
-        on the topic, and the calculations I did can be found on{" "}
-        <Link href="https://github.com/kr-matthews/weak-swap" isExternal>
-          GitHub
-        </Link>
-        . I intend to eventually write a blog post about it.
-      </p>
-    </NarrowContent>
+function WeakSwap() {
+  return (
+    <p>
+      Together with{" "}
+      <Link
+        href="https://www.worldcubeassociation.org/persons/2016SIGG01"
+        isExternal
+      >
+        Graham Siggins
+      </Link>{" "}
+      I developed a slight optimization for blindfolded solving called Weak
+      Swap. Graham pointed out a special case to me one day where he was able to
+      reduce his algorithm count by one. I played around and realized that it
+      could be generalized to apply to a large portion of scrambles, and
+      together we nailed down what turned out to be a relatively simple method
+      to incorporate it into every solve when applicable. Graham has a{" "}
+      <Link
+        href="https://www.youtube.com/watch?v=MyeQkcsAzUE&ab_channel=GrahamSiggins"
+        isExternal
+      >
+        sequence of videos
+      </Link>{" "}
+      on the topic, and the calculations I did can be found on{" "}
+      <Link href="https://github.com/kr-matthews/weak-swap" isExternal>
+        GitHub
+      </Link>
+      . I intend to eventually write a blog post about it.
+    </p>
   );
 }
