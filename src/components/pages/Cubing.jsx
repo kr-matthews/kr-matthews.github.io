@@ -2,7 +2,7 @@ import { Fragment } from "react";
 import Link from "../common/Link";
 import { NarrowContent } from "../common/Page";
 import Tabs from "../common/Tabs";
-import { List, ListItem } from "@chakra-ui/react";
+import { ListItem, UnorderedList } from "@chakra-ui/react";
 
 const tabData = [
   { name: "Competitions", content: <Competitions /> },
@@ -113,14 +113,27 @@ function Software() {
       <p>
         There are plenty of other tools out there made by other people. I don't
         have a comprehensive list handy, but here are a few notable sites:
-        <List>
-          <ListItem>cubing js library</ListItem>
-          <ListItem>alg.cubing</ListItem>
-          <ListItem>csTimer</ListItem>
-          <ListItem></ListItem>
-        </List>
-        {/* !!! add links and styling */}
       </p>
+      <UnorderedList>
+        <ListItem>
+          <Link isExternal href="https://github.com/cubing/cubing.js/">
+            cubing.js
+          </Link>
+          : a collection of javascript libraries
+        </ListItem>
+        <ListItem>
+          <Link isExternal href="https://alg.cubing.net/">
+            alg.cubing
+          </Link>
+          : a 3-D cube simulator
+        </ListItem>
+        <ListItem>
+          <Link isExternal href="https://cstimer.net/">
+            csTimer
+          </Link>
+          : a timer for timing solves
+        </ListItem>
+      </UnorderedList>
     </Fragment>
   );
 }
@@ -142,7 +155,7 @@ function Reconstructions() {
       <p>
         Reconstructions of all my fewest moves attempts can be found here{" "}
         <Link
-          href="https://csclub.uwaterloo.ca/~krmatthe/FMC/old-index"
+          href="https://docs.google.com/spreadsheets/d/1Ecdjl4S4IZD6x60x3U5rHXlfV8HIDMEbk2SEaiZruaE"
           isExternal
         >
           here
@@ -158,18 +171,25 @@ function Reconstructions() {
         .
       </p>
       <p>
-        To make your own reconstructions, use
-        {/* !!! link to alg.cubing */}
+        To make your own reconstructions, use{" "}
+        <Link isExternal href="https://alg.cubing.net/">
+          alg.cubing
+        </Link>
+        .
       </p>
     </Fragment>
   );
 }
 
-// !!! review and update below content
-
 function Blindfolded() {
   return (
     <Fragment>
+      <p>
+        I have <Link to="/blog">an article</Link> explaining the core concepts
+        behind blindfolded solving. Essentially, you memorize a sequence of
+        letters where each letter is an instruction for what to do next, and you
+        convert these letters to images/sentences/stories to remember them.
+      </p>
       <p>
         I have{" "}
         <Link
@@ -178,29 +198,36 @@ function Blindfolded() {
         >
           a spreadsheet
         </Link>{" "}
-        which lists the images I use for memorizing cubes and the move sequences
-        (also known as algorithms in the community) which I use to solve each
-        pair of pieces. (I also use the images for memory sports, including
-        memorizing numbers and playing cards.) There are many online resources
-        for these in general, including{" "}
-        <Link href="https://bestsiteever.ru/tables/" isExternal>
-          this list of algorithm lists
-        </Link>{" "}
-        and{" "}
-        <Link
-          href="https://docs.google.com/spreadsheets/d/1Fi4xgUz5b23UXMlHq7Tt5C8Ak8-U3XdbeQ9Anw68BQc/edit#gid=0"
-          isExternal
-        >
-          this collection of letter pair images
-        </Link>
-        .
+        which lists the images I use for this, and the move sequences (also
+        known as algorithms in the community) which I use to solve each pair of
+        pieces. (I also use the images for memory sports, including memorizing
+        numbers and playing cards.)
       </p>
       <p>
         My system is relatively unique in the blindfolded solving community in
         that it is based on phonemes and pronunciation rather than letters and
         spelling. Memory sports athletes usually use phonemes, as far as I
         understand, though I came up with the idea independently. It took
-        literally years of experimenting to get it to where it is today.
+        literally years of experimenting to get my system to where it is today.
+      </p>
+      <p>
+        There are many online resources for blindfolded solving in general,
+        including{" "}
+        <Link isExternal href="https://blddb.net/">
+          this database of algorithms
+        </Link>
+        ,{" "}
+        <Link href="https://bestsiteever.ru/tables/" isExternal>
+          this compilation of algorithm lists
+        </Link>
+        , and{" "}
+        <Link
+          href="https://docs.google.com/spreadsheets/d/1Fi4xgUz5b23UXMlHq7Tt5C8Ak8-U3XdbeQ9Anw68BQc"
+          isExternal
+        >
+          this collection of letter pair images
+        </Link>
+        .
       </p>
     </Fragment>
   );
@@ -208,31 +235,37 @@ function Blindfolded() {
 
 function WeakSwap() {
   return (
-    <p>
-      Together with{" "}
-      <Link
-        href="https://www.worldcubeassociation.org/persons/2016SIGG01"
-        isExternal
-      >
-        Graham Siggins
-      </Link>{" "}
-      I developed a slight optimization for blindfolded solving called Weak
-      Swap. Graham pointed out a special case to me one day where he was able to
-      reduce his algorithm count by one. I played around and realized that it
-      could be generalized to apply to a large portion of scrambles, and
-      together we nailed down what turned out to be a relatively simple method
-      to incorporate it into every solve when applicable. Graham has a{" "}
-      <Link
-        href="https://www.youtube.com/watch?v=MyeQkcsAzUE&ab_channel=GrahamSiggins"
-        isExternal
-      >
-        sequence of videos
-      </Link>{" "}
-      on the topic, and the calculations I did can be found on{" "}
-      <Link href="https://github.com/kr-matthews/weak-swap" isExternal>
-        GitHub
-      </Link>
-      . I intend to eventually write a blog post about it.
-    </p>
+    <Fragment>
+      <p>
+        Together with{" "}
+        <Link
+          href="https://www.worldcubeassociation.org/persons/2016SIGG01"
+          isExternal
+        >
+          Graham Siggins
+        </Link>{" "}
+        I developed a slight optimization for multiple-blindfolded solving
+        called Weak Swap. It is a generalization of 'the swap', a common method
+        to handle parity efficiently in regular blindfolded solving.
+      </p>
+      <p>
+        Graham pointed out a special case to me one day where he was able to
+        reduce his algorithm count by one. I played around and realized that it
+        could be generalized to apply to a large portion of scrambles, and
+        together we nailed down what turned out to be a relatively simple method
+        to incorporate it into every cube in an attempt. Graham has a{" "}
+        <Link
+          href="https://www.youtube.com/watch?v=MyeQkcsAzUE&ab_channel=GrahamSiggins"
+          isExternal
+        >
+          sequence of videos
+        </Link>{" "}
+        on the topic, and the calculations I did can be found on{" "}
+        <Link href="https://github.com/kr-matthews/weak-swap" isExternal>
+          GitHub
+        </Link>
+        . I intend to eventually write a blog post about it.
+      </p>
+    </Fragment>
   );
 }
