@@ -1,11 +1,22 @@
+import { Fragment } from "react";
 import Link from "../common/Link";
 import { NarrowContent } from "../common/Page";
+import Tabs from "../common/Tabs";
+import { ListItem, UnorderedList } from "@chakra-ui/react";
+
+const tabData = [
+  { name: "Competitions", content: <Competitions /> },
+  { name: "Software", content: <Software /> },
+  { name: "Reconstructions", content: <Reconstructions /> },
+  { name: "Blindfolded", content: <Blindfolded /> },
+  { name: "Weak Swap", content: <WeakSwap /> },
+];
 
 export default function Cubing() {
   return (
     <NarrowContent>
       <h1>Cubing</h1>
-      <p>
+      <p style={{ marginBottom: "2em" }}>
         I know how to solve a Rubik's Cube (blindfolded), and since 2010{" "}
         <Link
           href="https://www.worldcubeassociation.org/persons/2010MATT02"
@@ -22,68 +33,45 @@ export default function Cubing() {
         Canadian records in the multiple-blindfolded event and the fewest moves
         event.
       </p>
+
+      <Tabs data={tabData} />
+    </NarrowContent>
+  );
+}
+
+function Competitions() {
+  return (
+    <Fragment>
       <p>
-        I've been a volunteer member of the World Cube Association's{" "}
-        <Link href="https://github.com/thewca" isExternal>
-          software team
+        The{" "}
+        <Link href="https://www.worldcubeassociation.org/" isExternal>
+          World Cube Association
         </Link>{" "}
-        for over a year now, where my focus is on transitioning the front-end of
-        the website from Rails to React. If you can code, consider volunteering,
-        as they always need more help. The website is run mainly with Ruby on
-        Rails and React.
+        (WCA) is the governing body of Rubik's Cube competitions.{" "}
+        <Link href="https://www.speedcubingcanada.org/" isExternal>
+          Speedcubing Canada
+        </Link>{" "}
+        (SCC) is Canada's regional organization which is recognized by the WCA.
+        Both are not-for-profits run by volunteers.
       </p>
       <p>
-        Reconstructions of some of my notable solves can be found{" "}
-        <Link
-          href="https://docs.google.com/spreadsheets/d/1PJ1k_EXqv_mafcMDRbrD5OAyBHie2z5PH5OkHLs8BtE/edit#gid=1878622909"
-          isExternal
-        >
-          here
-        </Link>
-        , including both regular and blindfolded solving for several different
-        events. Note that you can apply existing filters to filter by event. For
-        my fewest moves solves, see{" "}
-        <Link
-          href="https://csclub.uwaterloo.ca/~krmatthe/FMC/old-index"
-          isExternal
-        >
-          here
-        </Link>
-        , but note that this is not currently up-to-date and I have plans for
-        creating a more comprehensive spreadsheet in the future (which I may or
-        may not ever finish).
-      </p>
-
-      <h3>Competitions, World Cube Association, and Speedcubing Canada</h3>
-
-      <p>
-        If you're interested in attending a competition,{" "}
+        If you're interested in attending a competition, you can{" "}
         <Link
           href="https://www.worldcubeassociation.org/competitions"
           isExternal
         >
           find one near you
         </Link>{" "}
-        on the{" "}
-        <Link href="https://www.worldcubeassociation.org/" isExternal>
-          World Cube Association
-        </Link>{" "}
-        (WCA) -- or, if you're in Canada, sign up for{" "}
-        <Link href="https://www.speedcubingcanada.org/" isExternal>
-          Speedcubing Canada
-        </Link>
-        's (SCC){" "}
+        on the WCA. Alternatively, if you're in Canada, sign up for SCC's{" "}
         <Link
           href="https://share.hsforms.com/1eWkfr6anSF-HKTZJVrElZQcrqzz"
           isExternal
         >
           mailing list
         </Link>{" "}
-        to be notified of new competitions. The WCA is the governing body of
-        Rubik's Cube competitions and SCC is Canada's regional organization
-        which is recognized by the WCA. Both are not-for-profits run purely by
-        volunteers. Note that you don't need to be competitive/fast to attend a
-        competition; everyone is welcome.
+        to be notified of new competitions in your province. Note that you don't
+        need to be competitive or fast to attend a competition; everyone is
+        welcome.
       </p>
       <p>
         If you're interested in organizing a competition, I have a{" "}
@@ -98,24 +86,110 @@ export default function Cubing() {
         thoroughly reading through the template to make sure the expectations
         and workload are clear.
       </p>
+    </Fragment>
+  );
+}
 
-      <h3>Software and Tools</h3>
-
+function Software() {
+  return (
+    <Fragment>
       <p>
-        {" "}
+        I've been a volunteer member of the World Cube Association's{" "}
+        <Link href="https://github.com/thewca" isExternal>
+          software team
+        </Link>{" "}
+        since 2021, where my focus is on transitioning the front-end of the
+        website from Rails to React. If you can code, consider volunteering, as
+        we always need more help. The website is run mainly with Ruby on Rails
+        and React.
+      </p>
+      <p>
         I have several <Link to="/projects">web apps</Link> based on cubes,
         primarily designed to help with learning and practising blindfolded
         solving -- and I intend to create more in the future. If you've recently
         learned to solve a cube blindfolded, or struggle with mistakes while
-        practising, you'll find them helpful.
+        practising, then you'll find them helpful.
       </p>
       <p>
-        There are plenty of other tools out there, made by other people. I don't
-        have a comprehensive list handy, but you can search for them.
+        There are plenty of other tools out there made by other people. I don't
+        have a comprehensive list handy, but here are a few notable sites:
       </p>
+      <UnorderedList>
+        <ListItem>
+          <Link isExternal href="https://github.com/cubing/cubing.js/">
+            cubing.js
+          </Link>
+          : a collection of javascript libraries
+        </ListItem>
+        <ListItem>
+          <Link isExternal href="https://alg.cubing.net/">
+            alg.cubing
+          </Link>
+          : a 3-D cube simulator
+        </ListItem>
+        <ListItem>
+          <Link isExternal href="https://cstimer.net/">
+            csTimer
+          </Link>
+          : a timer for timing solves
+        </ListItem>
+      </UnorderedList>
+    </Fragment>
+  );
+}
 
-      <h3>Personal Blindfolded-Solving System</h3>
+function Reconstructions() {
+  return (
+    <Fragment>
+      <p>
+        Reconstructions of some of my notable solves can be found{" "}
+        <Link
+          href="https://docs.google.com/spreadsheets/d/1PJ1k_EXqv_mafcMDRbrD5OAyBHie2z5PH5OkHLs8BtE/edit#gid=1878622909"
+          isExternal
+        >
+          here
+        </Link>
+        , including both regular and blindfolded solving for several different
+        events. Note that you can apply existing filters to filter by event.
+      </p>
+      <p>
+        Reconstructions of all my fewest moves attempts can be found here{" "}
+        <Link
+          href="https://docs.google.com/spreadsheets/d/1Ecdjl4S4IZD6x60x3U5rHXlfV8HIDMEbk2SEaiZruaE"
+          isExternal
+        >
+          here
+        </Link>
+        , but note that this is spreadsheet is a work-in-progress and not all my
+        solves have been added yet. There are numerous pages of statistics.
+      </p>
+      <p>
+        For more interesting reconstructions, of fast cubers, see{" "}
+        <Link href="https://cubesolv.es" isExternal>
+          cubesolv.es
+        </Link>
+        .
+      </p>
+      <p>
+        To make your own reconstructions, use{" "}
+        <Link isExternal href="https://alg.cubing.net/">
+          alg.cubing
+        </Link>
+        .
+      </p>
+    </Fragment>
+  );
+}
 
+function Blindfolded() {
+  return (
+    <Fragment>
+      <p>
+        I have <Link to="/blog">an article</Link> explaining the core concepts
+        behind blindfolded solving. Essentially, you memorize a sequence of
+        letters where each letter is an instruction for what to do next, and you
+        convert these letters to images/sentences/stories to remember them.
+      </p>
       <p>
         I have{" "}
         <Link
@@ -124,33 +198,44 @@ export default function Cubing() {
         >
           a spreadsheet
         </Link>{" "}
-        which lists the images I use for memorizing cubes and the move sequences
-        (also known as algorithms in the community) which I use to solve each
-        pair of pieces. (I also use the images for memory sports, including
-        memorizing numbers and playing cards.) There are many online resources
-        for these in general, including{" "}
-        <Link href="https://bestsiteever.ru/tables/" isExternal>
-          this list of algorithm lists
-        </Link>{" "}
-        and{" "}
-        <Link
-          href="https://docs.google.com/spreadsheets/d/1Fi4xgUz5b23UXMlHq7Tt5C8Ak8-U3XdbeQ9Anw68BQc/edit#gid=0"
-          isExternal
-        >
-          this collection of letter pair images
-        </Link>
-        .
+        which lists the images I use for this, and the move sequences (also
+        known as algorithms in the community) which I use to solve each pair of
+        pieces. (I also use the images for memory sports, including memorizing
+        numbers and playing cards.)
       </p>
       <p>
         My system is relatively unique in the blindfolded solving community in
         that it is based on phonemes and pronunciation rather than letters and
         spelling. Memory sports athletes usually use phonemes, as far as I
         understand, though I came up with the idea independently. It took
-        literally years of experimenting to get it to where it is today.
+        literally years of experimenting to get my system to where it is today.
       </p>
+      <p>
+        There are many online resources for blindfolded solving in general,
+        including{" "}
+        <Link isExternal href="https://blddb.net/">
+          this database of algorithms
+        </Link>
+        ,{" "}
+        <Link href="https://bestsiteever.ru/tables/" isExternal>
+          this compilation of algorithm lists
+        </Link>
+        , and{" "}
+        <Link
+          href="https://docs.google.com/spreadsheets/d/1Fi4xgUz5b23UXMlHq7Tt5C8Ak8-U3XdbeQ9Anw68BQc"
+          isExternal
+        >
+          this collection of letter pair images
+        </Link>
+        .
+      </p>
+    </Fragment>
+  );
+}
 
-      <h3>Method Development: Weak Swap</h3>
-
+function WeakSwap() {
+  return (
+    <Fragment>
       <p>
         Together with{" "}
         <Link
@@ -159,12 +244,16 @@ export default function Cubing() {
         >
           Graham Siggins
         </Link>{" "}
-        I developed a slight optimization for blindfolded solving called Weak
-        Swap. Graham pointed out a special case to me one day where he was able
-        to reduce his algorithm count by one. I played around and realized that
-        it could be generalized to apply to a large portion of scrambles, and
+        I developed a slight optimization for multiple-blindfolded solving
+        called Weak Swap. It is a generalization of 'the swap', a common method
+        to handle parity efficiently in regular blindfolded solving.
+      </p>
+      <p>
+        Graham pointed out a special case to me one day where he was able to
+        reduce his algorithm count by one. I played around and realized that it
+        could be generalized to apply to a large portion of scrambles, and
         together we nailed down what turned out to be a relatively simple method
-        to incorporate it into every solve when applicable. Graham has a{" "}
+        to incorporate it into every cube in an attempt. Graham has a{" "}
         <Link
           href="https://www.youtube.com/watch?v=MyeQkcsAzUE&ab_channel=GrahamSiggins"
           isExternal
@@ -177,6 +266,6 @@ export default function Cubing() {
         </Link>
         . I intend to eventually write a blog post about it.
       </p>
-    </NarrowContent>
+    </Fragment>
   );
 }
