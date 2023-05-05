@@ -10,6 +10,7 @@ import blindfoldedSystemImage from "./assets/blindfolded-system.png";
 import threeStyleCornerAlgGeneratorImage from "./assets/three-style-corner-alg-generator.png";
 import cornerTwistAlgGeneratorImage from "./assets/corner-twist-alg-generator.png";
 import personalWebsiteImage from "./assets/website.png";
+import personalWebsiteRefactoredImage from "./assets/website-refactor-2.png";
 import ticTacToeImage from "./assets/tic-tac-toe.png";
 import minesweeperImage from "./assets/minesweeper.png";
 import connectFourImage from "./assets/connect-four.png";
@@ -273,7 +274,7 @@ export const projects = [
   {
     id: 16,
     title: "Personal Website Refactor",
-    image: "", // !!!
+    image: personalWebsiteRefactoredImage,
     type: "Personal",
     icon: personalWebsiteIcon,
     url: "https://kr-matthews.github.io/",
