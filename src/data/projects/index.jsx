@@ -1,5 +1,6 @@
 //// project images
 
+import noImageAvailable from "./assets/no-image-available.png";
 import bldMemoToolImage from "./assets/bld-memo-tool.png";
 import bldMemoToolsImage from "./assets/bld-memo-tools.png";
 import weakSwapImage from "./assets/weak-swap.png";
@@ -9,6 +10,7 @@ import blindfoldedSystemImage from "./assets/blindfolded-system.png";
 import threeStyleCornerAlgGeneratorImage from "./assets/three-style-corner-alg-generator.png";
 import cornerTwistAlgGeneratorImage from "./assets/corner-twist-alg-generator.png";
 import personalWebsiteImage from "./assets/website.png";
+import personalWebsiteRefactoredImage from "./assets/website-refactor-2.png";
 import ticTacToeImage from "./assets/tic-tac-toe.png";
 import minesweeperImage from "./assets/minesweeper.png";
 import connectFourImage from "./assets/connect-four.png";
@@ -16,6 +18,8 @@ import cribbageImage from "./assets/cribbage.png";
 import competitionGroupsDisplayImage from "./assets/competition-groups-display.png";
 import activitiesOnThisDayImage from "./assets/activities-on-this-day.png";
 import heavyFooterWithLinksImage from "./assets/heavy-footer-with-links.png";
+import incidentsLogImage from "./assets/incidents-log.png";
+import rivianImage from "./assets/rivian-app.png";
 
 //// project icons
 
@@ -27,6 +31,7 @@ import minesweeperIcon from "./assets/minesweeper-flag-icon.png";
 import connectFourIcon from "./assets/connect-four-icon.png";
 import cribbageIcon from "./assets/cribbage-pegs-icon.jpeg";
 import activitiesOnThisDayIcon from "./assets/calendar-activity-icon.svg";
+import incidentsLogIcon from "./assets/incidents-log-icon.png";
 
 //// project list
 
@@ -217,7 +222,7 @@ export const projects = [
     tags: ["Web App", "Game", "Cards"],
     languages: ["React"],
     year: 2022,
-    yearOrder: 0,
+    yearOrder: 1,
     description:
       "A game of Cribbage for 2 or 3 players, with remote play. Includes score board, match log, sounds effects, automatic scoring, computer players, and more.",
   },
@@ -232,7 +237,7 @@ export const projects = [
     tags: ["Web App", "Rubik's Cubes"],
     languages: ["React"],
     year: 2022,
-    yearOrder: 1,
+    yearOrder: 2,
     description:
       "A quick and simple web app to project in the main room at the North American Championships 2022 Rubik's Cube competition.",
   },
@@ -248,7 +253,7 @@ export const projects = [
     tags: ["Web App", "Strava", "API"],
     languages: ["React"],
     year: 2022,
-    yearOrder: 2,
+    yearOrder: 4,
     description:
       "An app to display all your Strava activities from this day in history, using Netlify 'serverless functions' and the Strava API.",
   },
@@ -269,7 +274,7 @@ export const projects = [
   {
     id: 16,
     title: "Personal Website Refactor",
-    image: "", // !!
+    image: personalWebsiteRefactoredImage,
     type: "Personal",
     icon: personalWebsiteIcon,
     url: "https://kr-matthews.github.io/",
@@ -278,9 +283,57 @@ export const projects = [
     tags: ["Web App", "Website"],
     languages: ["React"],
     year: 2023,
-    yearOrder: 1,
+    yearOrder: 2,
     description:
       "Update to React 18 and React Router 6. Add Chakra UI and replace all styling. Improve project structure and best practices, including separation of concerns and reusability.",
+  },
+  {
+    id: 17,
+    title: "WCA Incidents Log Transition",
+    image: incidentsLogImage,
+    type: "Volunteer",
+    icon: incidentsLogIcon,
+    url: "https://www.worldcubeassociation.org/incidents",
+    codeHost: "GitHub",
+    codeUrl: "https://github.com/thewca/worldcubeassociation.org/pull/6971",
+    tags: ["Rubik's Cubes", "API"],
+    languages: ["React", "Ruby"],
+    year: 2022,
+    yearOrder: 3,
+    description:
+      "As part of the WCA Software Team's initiative to transition the front-end of the WCA website from Rails to React. Involved working with Ruby controllers and models, and retrieving data from an API.",
+  },
+  {
+    id: 18,
+    title: "Rivian Android App",
+    image: rivianImage,
+    type: "Professional",
+    // icon: "",
+    url: "https://play.google.com/store/apps/details?id=com.rivian.android.consumer",
+    // codeHost: "GitHub",
+    // codeUrl: "https://github.com/kr-matthews/...",
+    tags: ["Android"],
+    languages: ["Kotlin"],
+    year: 2022,
+    yearOrder: 0,
+    description:
+      "As part of the connected products team, one of the Rivian teams responsible for maintaining and expanding the Android App (in parallel with the iOS app).",
+  },
+  {
+    id: 19,
+    title: "Configuration-like Website",
+    image: noImageAvailable,
+    type: "Professional",
+    // icon: "",
+    // url: "https://kr-matthews.github.io/...",
+    // codeHost: "GitHub",
+    // codeUrl: "https://github.com/kr-matthews/...",
+    tags: ["Web App", "API", "Website"],
+    languages: ["React"],
+    year: 2023,
+    yearOrder: 1,
+    description:
+      "Work project at Ensemble Systems for which I was the lead front-end developer. Working with GraphQL, TanStack react-query, Chakra UI, react-router, user authentication, and much more.",
   },
   /*
   {
