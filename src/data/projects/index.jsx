@@ -1,5 +1,6 @@
 //// project images
 
+import noImageAvailable from "./assets/no-image-available.svg";
 import bldMemoToolImage from "./assets/bld-memo-tool.png";
 import bldMemoToolsImage from "./assets/bld-memo-tools.png";
 import weakSwapImage from "./assets/weak-swap.png";
