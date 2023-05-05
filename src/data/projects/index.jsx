@@ -16,6 +16,8 @@ import cribbageImage from "./assets/cribbage.png";
 import competitionGroupsDisplayImage from "./assets/competition-groups-display.png";
 import activitiesOnThisDayImage from "./assets/activities-on-this-day.png";
 import heavyFooterWithLinksImage from "./assets/heavy-footer-with-links.png";
+import incidentsLogImage from "./assets/incidents-log.png";
+import incidentsLogIcon from "./assets/incidents-log-icon.png";
 
 //// project icons
 
@@ -248,7 +250,7 @@ export const projects = [
     tags: ["Web App", "Strava", "API"],
     languages: ["React"],
     year: 2022,
-    yearOrder: 2,
+    yearOrder: 3,
     description:
       "An app to display all your Strava activities from this day in history, using Netlify 'serverless functions' and the Strava API.",
   },
@@ -281,6 +283,22 @@ export const projects = [
     yearOrder: 1,
     description:
       "Update to React 18 and React Router 6. Add Chakra UI and replace all styling. Improve project structure and best practices, including separation of concerns and reusability.",
+  },
+  {
+    id: 17,
+    title: "WCA Incidents Log Transition",
+    image: incidentsLogImage,
+    type: "Volunteer",
+    icon: incidentsLogIcon,
+    url: "https://www.worldcubeassociation.org/incidents",
+    codeHost: "GitHub",
+    codeUrl: "https://github.com/thewca/worldcubeassociation.org/pull/6971",
+    tags: ["Rubik's Cubes", "API"],
+    languages: ["React", "Ruby"],
+    year: 2022,
+    yearOrder: 2,
+    description:
+      "As part of the WCA Software Team's initiative to transition the front-end of the WCA website from Rails to React. Involved working with Ruby controllers and models, and retrieving data from an API.",
   },
   /*
   {
