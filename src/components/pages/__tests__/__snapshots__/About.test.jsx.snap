@@ -1,0 +1,210 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components/pages/About matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="css-rzly3e"
+  >
+    <div
+      class="css-jydvbh"
+    >
+      <h1>
+        About
+      </h1>
+      <p
+        style="margin-bottom: 2em;"
+      >
+        I'm Kevin Matthews, a mathematician by training and a self-taught programmer. Generally, I'm interested in most kinds of problem solving related to mathematics and programming. Among other things, I like systems design -- how software applications are structured, how cities function, how organizations setup their workflows, and such.
+      </p>
+      <div
+        class="chakra-tabs css-0"
+      >
+        <div
+          aria-orientation="horizontal"
+          class="chakra-tabs__tablist css-k008qs"
+          role="tablist"
+        >
+          <button
+            aria-controls="tabs-:r0:--tabpanel-0"
+            aria-selected="true"
+            class="chakra-tabs__tab css-5wl5ud"
+            data-index="0"
+            id="tabs-:r0:--tab-0"
+            role="tab"
+            tabindex="0"
+            type="button"
+          >
+            Education & Work
+          </button>
+          <button
+            aria-controls="tabs-:r0:--tabpanel-1"
+            aria-selected="false"
+            class="chakra-tabs__tab css-5wl5ud"
+            data-index="1"
+            id="tabs-:r0:--tab-1"
+            role="tab"
+            tabindex="-1"
+            type="button"
+          >
+            Projects & Hobbies
+          </button>
+          <button
+            aria-controls="tabs-:r0:--tabpanel-2"
+            aria-selected="false"
+            class="chakra-tabs__tab css-5wl5ud"
+            data-index="2"
+            id="tabs-:r0:--tab-2"
+            role="tab"
+            tabindex="-1"
+            type="button"
+          >
+            Contact
+          </button>
+        </div>
+        <div
+          class="chakra-tabs__tab-panels css-8atqhb"
+        >
+          <div
+            aria-labelledby="tabs-:r0:--tab-0"
+            class="chakra-tabs__tab-panel css-sjt5nk"
+            id="tabs-:r0:--tabpanel-0"
+            role="tabpanel"
+            tabindex="0"
+          >
+            <p>
+              I have a Bachelor of Mathematics from the 
+              <a
+                class="chakra-link css-1108m31"
+                href="https://uwaterloo.ca/math/"
+                rel="noopener"
+                target="_blank"
+                to=""
+              >
+                University of Waterloo
+              </a>
+              , where I studied Pure Math, Applied Math, Combinatorics & Optimization, and Computational Math. I also have a Master of Arts from the 
+              <a
+                class="chakra-link css-1108m31"
+                href="https://ww3.math.ucla.edu/"
+                rel="noopener"
+                target="_blank"
+                to=""
+              >
+                University of California, Los Angeles
+              </a>
+              , where I studied Mathematical Logic.
+            </p>
+            <p>
+              In 2022 I joined 
+              <a
+                class="chakra-link css-1108m31"
+                href="https://ensemble.com/"
+                rel="noopener"
+                target="_blank"
+                to=""
+              >
+                Ensemble Systems
+              </a>
+               as a Software Developer, where I have primarily been leading the front-end development of a web project using React.
+            </p>
+            <p>
+              Before that, I worked as a Software Engineer in Android development at 
+              <a
+                class="chakra-link css-1108m31"
+                href="https://rivian.com/"
+                rel="noopener"
+                target="_blank"
+                to=""
+              >
+                Rivian
+              </a>
+              , an electric vehicle company. My main focus was on setup/pairing flows for devices via Bluetooth low energy, but I also assisted other teams as needed, and was part of several app-wide initiatives to improve reusability and consistency.
+            </p>
+            <p>
+              Beyond that, I have some experience working in financial management/planning, and was a teaching assistant (or instructional support assistant) for various computer science and math courses at UW and UCLA.
+            </p>
+          </div>
+          <div
+            aria-labelledby="tabs-:r0:--tab-1"
+            class="chakra-tabs__tab-panel css-sjt5nk"
+            hidden=""
+            id="tabs-:r0:--tabpanel-1"
+            role="tabpanel"
+            tabindex="0"
+          >
+            <p>
+              Since 2021, I've been consistently working on numerous personal 
+              <a
+                class="chakra-link css-1108m31"
+                href="/projects"
+              >
+                projects
+              </a>
+               to improve my skills while learning new languages and techniques. Most are simple games, but there are also some more useful things like a reusable footer component for use across said games and an integration with the Strava API. I also have ideas for other types of projects in the future.
+            </p>
+            <p>
+              I've been solving 
+              <a
+                class="chakra-link css-1108m31"
+                href="/cubing"
+              >
+                Rubik's Cubes
+              </a>
+               for over a decade, and have helped organize and run numerous competitions as a volunteer, achieving a few Canadian records along the way. Most of my pre-2021 programming 
+              <a
+                class="chakra-link css-1108m31"
+                href="/projects"
+              >
+                projects
+              </a>
+               were cube-based tools, designed to help with learning how to solve the cube blindfolded and to help practice what you know. I'm also on the World Cube Association's 
+              <a
+                class="chakra-link css-1108m31"
+                href="https://github.com/thewca"
+                rel="noopener"
+                target="_blank"
+                to=""
+              >
+                software team
+              </a>
+               as a volunteer, where my main focus is assisting on transitioning our website's front-end from Rails to React.
+            </p>
+            <p>
+              I also like playing 
+              <a
+                class="chakra-link css-1108m31"
+                href="/vancouver"
+              >
+                GeoGuessr
+              </a>
+               restricted to Vancouver (or subsets of Metro Vancouver) with the 'no move' rule.
+            </p>
+            <p>
+              Other hobbies include reading, cycling, running, soccer, table tennis, and more.
+            </p>
+          </div>
+          <div
+            aria-labelledby="tabs-:r0:--tab-2"
+            class="chakra-tabs__tab-panel css-sjt5nk"
+            hidden=""
+            id="tabs-:r0:--tabpanel-2"
+            role="tabpanel"
+            tabindex="0"
+          >
+            <p>
+              I'm currently in 
+              <a
+                class="chakra-link css-1108m31"
+                href="/vancouver"
+              >
+                Vancouver
+              </a>
+              , BC, Canada. I can be contacted at my email, which is 'kvn' then 'r' followed by my last name, at Google's mail platform.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
