@@ -1,0 +1,163 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components/pages/Vancouver matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="css-rzly3e"
+  >
+    <div
+      class="css-jydvbh"
+    >
+      <h1>
+        Vancouver
+      </h1>
+      <p
+        style="margin-bottom: 2em;"
+      >
+        I live in Vancouver, BC, Canada.
+      </p>
+      <div
+        class="chakra-tabs css-0"
+      >
+        <div
+          aria-orientation="horizontal"
+          class="chakra-tabs__tablist css-k008qs"
+          role="tablist"
+        >
+          <button
+            aria-controls="tabs-:r0:--tabpanel-0"
+            aria-selected="true"
+            class="chakra-tabs__tab css-5wl5ud"
+            data-index="0"
+            id="tabs-:r0:--tab-0"
+            role="tab"
+            tabindex="0"
+            type="button"
+          >
+            Streets & Facts
+          </button>
+          <button
+            aria-controls="tabs-:r0:--tabpanel-1"
+            aria-selected="false"
+            class="chakra-tabs__tab css-5wl5ud"
+            data-index="1"
+            id="tabs-:r0:--tab-1"
+            role="tab"
+            tabindex="-1"
+            type="button"
+          >
+            GeoGuessr
+          </button>
+        </div>
+        <div
+          class="chakra-tabs__tab-panels css-8atqhb"
+        >
+          <div
+            aria-labelledby="tabs-:r0:--tab-0"
+            class="chakra-tabs__tab-panel css-sjt5nk"
+            id="tabs-:r0:--tabpanel-0"
+            role="tabpanel"
+            tabindex="0"
+          >
+            <p>
+              There are many odd/interesting facts about streets, parks, etc. in 
+              <a
+                class="chakra-link css-1108m31"
+                href="https://en.wikipedia.org/wiki/Metro_Vancouver_Regional_District"
+                rel="noopener"
+                target="_blank"
+                to=""
+              >
+                Metro Vancouver
+              </a>
+              . I've highlight many of them in the map below. Vancouver has also been expanding and improving bike infrastructure over the past few decades, which I've highlighted too. I'll be adding to this map as I find more things.
+            </p>
+            <figure
+              style="margin-bottom: 1em;"
+            >
+              <iframe
+                height="550"
+                src="https://www.google.com/maps/d/u/0/embed?mid=1VjjBQZ-70CWIjFpoo8BHS_bLgm3xpQQ3"
+                title="vancouverMap"
+                width="750"
+              />
+              <figcaption
+                style="font-size: .8em;"
+              >
+                Click on icons for pictures and information, or open the left panel to filter by category.
+              </figcaption>
+            </figure>
+            Here are some links with more information:
+            <ul
+              class="css-tu0njr"
+              role="list"
+            >
+              <li
+                class="css-0"
+              >
+                a 
+                <a
+                  class="chakra-link css-1108m31"
+                  href="https://geographic.org/streetview/canada/bc/vancouver.html"
+                  rel="noopener"
+                  target="_blank"
+                  to=""
+                >
+                  list
+                </a>
+                 of all Vancouver streets
+              </li>
+              <li
+                class="css-0"
+              >
+                an 
+                <a
+                  class="chakra-link css-1108m31"
+                  href="https://newsinteractives.cbc.ca/longform/streets"
+                  rel="noopener"
+                  target="_blank"
+                  to=""
+                >
+                  article
+                </a>
+                 from the CBC examining the origins of all Vancouver street names
+              </li>
+            </ul>
+          </div>
+          <div
+            aria-labelledby="tabs-:r0:--tab-1"
+            class="chakra-tabs__tab-panel css-sjt5nk"
+            hidden=""
+            id="tabs-:r0:--tabpanel-1"
+            role="tabpanel"
+            tabindex="0"
+          >
+            <p>
+              <a
+                class="chakra-link css-1108m31"
+                href="https://www.geoguessr.com/maps/6180d71598cffd00011e1e91"
+                rel="noopener"
+                target="_blank"
+                to=""
+              >
+                GeoGuessr
+              </a>
+               is an online game which drops you somewhere in google maps street view, and you need to figure out where it is on the map. The world map is the most popular, but you can restrict the range to regions of the world -- I prefer to play 
+              <a
+                class="chakra-link css-1108m31"
+                href="https://www.geoguessr.com/maps/6180d71598cffd00011e1e91"
+                rel="noopener"
+                target="_blank"
+                to=""
+              >
+                just Vancouver
+              </a>
+              , or sometimes larger portions of Metro Vancouver (including Richmond, Burnaby, North/West Vancouver).
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
