@@ -335,6 +335,22 @@ export const projects = [
     description:
       "Work project at Ensemble Systems for which I was the lead front-end developer. Working with GraphQL, TanStack react-query, Chakra UI, react-router, user authentication, and much more.",
   },
+  {
+    id: 20,
+    title: "Bike Route Map",
+    image: "",
+    type: "Personal",
+    icon: "",
+    url: "https://kr-matthews.github.io/bike-route-map",
+    codeHost: "GitHub",
+    codeUrl: "https://github.com/kr-matthews/bike-route-map",
+    tags: ["Web App", "Cycling", "Maps"],
+    languages: ["React"],
+    year: 2023,
+    yearOrder: 3,
+    description:
+      "An interactive map of bike routes in (Metro) Vancouver, with videos showcasing routes.",
+  },
   /*
   {
     id: ,
