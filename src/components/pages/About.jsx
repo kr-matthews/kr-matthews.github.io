@@ -47,8 +47,9 @@ function EducationAndWork() {
         <Link href="https://ensemble.com/" isExternal>
           Ensemble Systems
         </Link>{" "}
-        as a Software Developer, where I have primarily been leading the
-        front-end development of a web project using React.
+        as a Software Developer. Currently I'm working on an Android project,
+        and before that I was leading the front-end development of a React web
+        project .
       </p>
       <p>
         Before that, I worked as a Software Engineer in Android development at{" "}
@@ -92,8 +93,9 @@ function ProjectsAndHobbies() {
         <Link href="https://github.com/thewca" isExternal>
           software team
         </Link>{" "}
-        as a volunteer, where my main focus is assisting on transitioning our
-        website's front-end from Rails to React.
+        as a volunteer, where my main focuses include assisting on transitioning
+        our website's front-end from Rails to React, and building out a new
+        separate registration system.
       </p>
       <p>
         I also like playing <Link to="/vancouver">GeoGuessr</Link> restricted to
