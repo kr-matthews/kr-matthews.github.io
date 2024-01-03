@@ -20,6 +20,7 @@ import activitiesOnThisDayImage from "./assets/activities-on-this-day.png";
 import heavyFooterWithLinksImage from "./assets/heavy-footer-with-links.png";
 import incidentsLogImage from "./assets/incidents-log.png";
 import rivianImage from "./assets/rivian-app.png";
+import bikeRouteMapImage from "./assets/bike-route-map.png";
 
 //// project icons
 
@@ -32,6 +33,7 @@ import connectFourIcon from "./assets/connect-four-icon.png";
 import cribbageIcon from "./assets/cribbage-pegs-icon.jpeg";
 import activitiesOnThisDayIcon from "./assets/calendar-activity-icon.svg";
 import incidentsLogIcon from "./assets/incidents-log-icon.png";
+import bikeRouteMapIcon from "./assets/bike-route-map-icon.svg";
 
 //// project list
 
@@ -338,9 +340,9 @@ export const projects = [
   {
     id: 20,
     title: "Bike Route Map",
-    image: "",
+    image: bikeRouteMapImage,
     type: "Personal",
-    icon: "",
+    icon: bikeRouteMapIcon,
     url: "https://kr-matthews.github.io/bike-route-map",
     codeHost: "GitHub",
     codeUrl: "https://github.com/kr-matthews/bike-route-map",
