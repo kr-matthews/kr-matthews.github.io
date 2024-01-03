@@ -1,7 +1,8 @@
 {
   "files": {
     "main.css": "/static/css/main.07a328db.css",
-    "main.js": "/static/js/main.cca81d0a.js",
+    "main.js": "/static/js/main.aec32b64.js",
+    "static/media/bike-route-map.png": "/static/media/bike-route-map.20eea733d11201d43a4b.png",
     "static/media/Ace.svg": "/static/media/Ace.2bd3783dbed892b5608690da414b3059.svg",
     "static/media/Three.svg": "/static/media/Three.bfa0e11af3898c90a18daf74c9a8507d.svg",
     "static/media/Five.svg": "/static/media/Five.e1ab060c32664b826282b4f593fa27d4.svg",
@@ -26,6 +27,7 @@
     "static/media/cribbage.png": "/static/media/cribbage.abfe12d8f3fd5cdeb3f8.png",
     "static/media/hearts-console.png": "/static/media/hearts-console.1ae491cff1402b64711a.png",
     "static/media/java.png": "/static/media/java.86407ffa56ebe1f70b6a.png",
+    "static/media/wca-registration.png": "/static/media/wca-registration.4108a87835a5180df68b.png",
     "static/media/connect-four.png": "/static/media/connect-four.e35d0cd4e75533d5aff9.png",
     "static/media/competition-groups-display.png": "/static/media/competition-groups-display.669e8d8ee579ea626893.png",
     "static/media/three-style-corner-alg-generator.png": "/static/media/three-style-corner-alg-generator.3051cb6f4a2986616e4b.png",
@@ -46,12 +48,14 @@
     "static/media/seq-2-virtual.png": "/static/media/seq-2-virtual.bf25b295a3dcf1c4ff89.png",
     "static/media/seq-3-virtual.png": "/static/media/seq-3-virtual.889c04078a5bf9cffed1.png",
     "static/media/react.png": "/static/media/react.09df55c21bdb35711dd0.png",
+    "static/media/jetpack-compose.png": "/static/media/jetpack-compose.3ef8d1755096bbc66c60.png",
     "static/media/bld-memo-tool.png": "/static/media/bld-memo-tool.28ed7720e356bb2c3721.png",
     "static/media/no-image-available.png": "/static/media/no-image-available.25a81cd92082ab65467d.png",
     "static/media/corner-twist-alg-generator.png": "/static/media/corner-twist-alg-generator.4b43024b95fd435be601.png",
     "static/media/react-logo.png": "/static/media/react-logo.2fad5f467c7c76cdfa4f.png",
     "static/media/tic-tac-toe.png": "/static/media/tic-tac-toe.45b5d83c54d49447fb7b.png",
     "static/media/wip.svg": "/static/media/wip.ba68457c8ab7f2db85ab1cf09984c5d0.svg",
+    "static/media/bike-route-map-icon.svg": "/static/media/bike-route-map-icon.97c3120ce1a9476e66d7d4bd6c6d1de5.svg",
     "static/media/calendar-activity-icon.svg": "/static/media/calendar-activity-icon.c44ddad96c192b7a9c201f23238432d4.svg",
     "static/media/link-white.svg": "/static/media/link-white.be84aca1c7f67842abfa95ef2f516ecf.svg",
     "static/media/link.svg": "/static/media/link.c88b148baaa570266517d4bbf57a043d.svg",
@@ -66,11 +70,12 @@
     "static/media/code-white.svg": "/static/media/code-white.cfa8998cc12ebb30e6216397d3b0c74e.svg",
     "static/media/code.svg": "/static/media/code.dcc1eba9d99b4ca1a36262b94ed8a2c3.svg",
     "index.html": "/index.html",
+    "static/media/wca-registration-icon.svg": "/static/media/wca-registration-icon.7758ff3eae8369e54802ba308c539c2f.svg",
     "main.07a328db.css.map": "/static/css/main.07a328db.css.map",
-    "main.cca81d0a.js.map": "/static/js/main.cca81d0a.js.map"
+    "main.aec32b64.js.map": "/static/js/main.aec32b64.js.map"
   },
   "entrypoints": [
     "static/css/main.07a328db.css",
-    "static/js/main.cca81d0a.js"
+    "static/js/main.aec32b64.js"
   ]
 }
