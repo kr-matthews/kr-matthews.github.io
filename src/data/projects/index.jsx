@@ -21,6 +21,7 @@ import heavyFooterWithLinksImage from "./assets/heavy-footer-with-links.png";
 import incidentsLogImage from "./assets/incidents-log.png";
 import rivianImage from "./assets/rivian-app.png";
 import bikeRouteMapImage from "./assets/bike-route-map.png";
+import wcaRegistrationImage from "./assets/wca-registration.png";
 
 //// project icons
 
@@ -34,6 +35,7 @@ import cribbageIcon from "./assets/cribbage-pegs-icon.jpeg";
 import activitiesOnThisDayIcon from "./assets/calendar-activity-icon.svg";
 import incidentsLogIcon from "./assets/incidents-log-icon.png";
 import bikeRouteMapIcon from "./assets/bike-route-map-icon.svg";
+import wcaRegistrationIcon from "./assets/wca-registration-icon.svg";
 
 //// project list
 
@@ -323,7 +325,7 @@ export const projects = [
   },
   {
     id: 19,
-    title: "Configuration-like Website",
+    title: "Config-Updating Website",
     image: noImageAvailable,
     type: "Professional",
     // icon: "",
@@ -352,6 +354,40 @@ export const projects = [
     yearOrder: 3,
     description:
       "An interactive map of bike routes in (Metro) Vancouver, with videos showcasing routes.",
+  },
+  {
+    id: 21,
+    title: "Data-Displaying App",
+    image: noImageAvailable,
+    type: "Professional",
+    // icon: "",
+    // url: "https://kr-matthews.github.io/...",
+    // codeHost: "GitHub",
+    // codeUrl: "https://github.com/kr-matthews/...",
+    tags: ["Android", "API"],
+    languages: ["Kotlin", "Compose"],
+    year: 2024,
+    yearOrder: 0,
+    description:
+      "Work project as part of Ensemble Systems. One of 4 android developers, working with product, design, iOS, etc. teams. Main focus on introducing Jetpack Compose to the existing codebase.",
+  },
+  {
+    id: 22,
+    title: "WCA Registration",
+    image: wcaRegistrationImage,
+    type: "Volunteer",
+    icon: wcaRegistrationIcon,
+    // !! will probably need updating
+    url: "https://staging.worldcubeassociation.org/competitions/v2/UBCBigBlind2023/schedule",
+    codeHost: "GitHub",
+    codeUrl:
+      "https://github.com/thewca/wca-registration/pulls?q=is%3Apr+author%3Akr-matthews+",
+    tags: ["Web App", "Rubik's Cubes"],
+    languages: ["React"],
+    year: 2024,
+    yearOrder: 1,
+    description:
+      "Part of the WCA Software Team working on creating a new registration system, separate from the existing website monolith. Focusing on front-end bugs/features/refinements.",
   },
   /*
   {
