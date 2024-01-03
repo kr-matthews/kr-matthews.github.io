@@ -76,7 +76,14 @@ export default function ProjectPreview({
               w="100%"
               h="100%"
             >
-              <Image src={icon || altLinkIcon} maxH="100%" w="100%" />
+              {icon && url ? (
+                <HStack spacing={1} align="start">
+                  <Image src={icon} maxH="80%" w="80%" />
+                  <Image src={altLinkIcon} maxH="30%" w="30%" />{" "}
+                </HStack>
+              ) : (
+                <Image src={icon || altLinkIcon} maxH="100%" w="100%" />
+              )}
             </Link>
           )}
         </Center>
@@ -94,7 +101,10 @@ export default function ProjectPreview({
               w="100%"
               h="100%"
             >
-              <Image src={codeIcon ?? altCodeIcon} maxH="100%" w="100%" />
+              <HStack spacing={1} align="start">
+                <Image src={codeIcon ?? altCodeIcon} maxH="80%" w="80%" />
+                <Image src={altLinkIcon} maxH="30%" w="30%" />
+              </HStack>
             </Link>
           )}
         </Center>
