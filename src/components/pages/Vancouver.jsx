@@ -5,6 +5,7 @@ import Tabs from "../common/Tabs";
 import { ListItem, UnorderedList } from "@chakra-ui/react";
 
 const tabData = [
+  { name: "Bike Route Map", content: <BikeRouteMap /> },
   { name: "Streets & Facts", content: <StreetsAndFacts /> },
   { name: "GeoGuessr", content: <GeoGuessr /> },
 ];
@@ -17,6 +18,30 @@ export default function Vancouver() {
 
       <Tabs data={tabData} />
     </NarrowContent>
+  );
+}
+
+function BikeRouteMap() {
+  return (
+    <Fragment>
+      <p>
+        One of my <Link to="/projects">projects</Link>,{" "}
+        <Link isExternal href="https://kr-matthews.github.io/bike-route-map/">
+          Bike Route Map
+        </Link>{" "}
+        maps out bike routes/infrastructure in Vancouver and nearby regions. I
+        attach videos to the routes, filmed from a camera on my helmet.
+      </p>
+      <p>
+        I made this because official city resources are often ambiguous or
+        imprecise -- for example, you can't zoom in sufficiently on complicated
+        areas, or distinguish between roads and paths. When combined with the
+        often poor (or completely lacking) signage on routes, it can be very
+        hard to navigate. Google maps street view can help, but it's
+        surprisingly often not clear where you're meant to be (the road? the
+        sidewalk?).
+      </p>
+    </Fragment>
   );
 }
 
@@ -94,9 +119,17 @@ function GeoGuessr() {
           isExternal
         >
           just Vancouver
+        </Link>{" "}
+        and{" "}
+        <Link
+          href="https://www.geoguessr.com/maps/652343aecd435d7e5b5f55e3"
+          isExternal
+        >
+          Vancouver, Burnaby, & Richmond
         </Link>
-        , or sometimes larger portions of Metro Vancouver (including Richmond,
-        Burnaby, North/West Vancouver).
+        . Sometimes larger subsets of Metro Vancouver. I usually do 10s NMPZ (10
+        seconds per location, with no moving, panning, or zooming -- just a
+        fixed image).
       </p>
     </Fragment>
   );

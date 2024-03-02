@@ -24,7 +24,7 @@ export default function Cubing() {
         >
           I've competed
         </Link>{" "}
-        in over 100 competitions across North America, many of which I helped
+        in over 125 competitions across North America, many of which I helped
         organize and run as a volunteer -- including the{" "}
         <Link href="https://nac2022.speedcubingcanada.org/en" isExternal>
           inaugural North American Championship

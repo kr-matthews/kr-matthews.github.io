@@ -34,7 +34,7 @@ exports[`components/pages/Vancouver matches snapshot 1`] = `
             tabindex="0"
             type="button"
           >
-            Streets & Facts
+            Bike Route Map
           </button>
           <button
             aria-controls="tabs-:r0:--tabpanel-1"
@@ -42,6 +42,18 @@ exports[`components/pages/Vancouver matches snapshot 1`] = `
             class="chakra-tabs__tab css-5wl5ud"
             data-index="1"
             id="tabs-:r0:--tab-1"
+            role="tab"
+            tabindex="-1"
+            type="button"
+          >
+            Streets & Facts
+          </button>
+          <button
+            aria-controls="tabs-:r0:--tabpanel-2"
+            aria-selected="false"
+            class="chakra-tabs__tab css-5wl5ud"
+            data-index="2"
+            id="tabs-:r0:--tab-2"
             role="tab"
             tabindex="-1"
             type="button"
@@ -56,6 +68,38 @@ exports[`components/pages/Vancouver matches snapshot 1`] = `
             aria-labelledby="tabs-:r0:--tab-0"
             class="chakra-tabs__tab-panel css-sjt5nk"
             id="tabs-:r0:--tabpanel-0"
+            role="tabpanel"
+            tabindex="0"
+          >
+            <p>
+              One of my 
+              <a
+                class="chakra-link css-1108m31"
+                href="/projects"
+              >
+                projects
+              </a>
+              , 
+              <a
+                class="chakra-link css-1108m31"
+                href="https://kr-matthews.github.io/bike-route-map/"
+                rel="noopener"
+                target="_blank"
+                to=""
+              >
+                Bike Route Map
+              </a>
+               maps out bike routes/infrastructure in Vancouver and nearby regions. I attach videos to the routes, filmed from a camera on my helmet.
+            </p>
+            <p>
+              I made this because official city resources are often ambiguous or imprecise -- for example, you can't zoom in sufficiently on complicated areas, or distinguish between roads and paths. When combined with the often poor (or completely lacking) signage on routes, it can be very hard to navigate. Google maps street view can help, but it's surprisingly often not clear where you're meant to be (the road? the sidewalk?).
+            </p>
+          </div>
+          <div
+            aria-labelledby="tabs-:r0:--tab-1"
+            class="chakra-tabs__tab-panel css-sjt5nk"
+            hidden=""
+            id="tabs-:r0:--tabpanel-1"
             role="tabpanel"
             tabindex="0"
           >
@@ -125,10 +169,10 @@ exports[`components/pages/Vancouver matches snapshot 1`] = `
             </ul>
           </div>
           <div
-            aria-labelledby="tabs-:r0:--tab-1"
+            aria-labelledby="tabs-:r0:--tab-2"
             class="chakra-tabs__tab-panel css-sjt5nk"
             hidden=""
-            id="tabs-:r0:--tabpanel-1"
+            id="tabs-:r0:--tabpanel-2"
             role="tabpanel"
             tabindex="0"
           >
@@ -152,7 +196,17 @@ exports[`components/pages/Vancouver matches snapshot 1`] = `
               >
                 just Vancouver
               </a>
-              , or sometimes larger portions of Metro Vancouver (including Richmond, Burnaby, North/West Vancouver).
+               and 
+              <a
+                class="chakra-link css-1108m31"
+                href="https://www.geoguessr.com/maps/652343aecd435d7e5b5f55e3"
+                rel="noopener"
+                target="_blank"
+                to=""
+              >
+                Vancouver, Burnaby, & Richmond
+              </a>
+              . Sometimes larger subsets of Metro Vancouver. I usually do 10s NMPZ (10 seconds per location, with no moving, panning, or zooming -- just a fixed image).
             </p>
           </div>
         </div>
