@@ -105,7 +105,7 @@ exports[`components/pages/About matches snapshot 1`] = `
               >
                 Ensemble Systems
               </a>
-               as a Software Developer, where I have primarily been leading the front-end development of a web project using React.
+               as a Software Developer. Currently I'm working on an Android project, and before that I was leading the front-end development of a React web project .
             </p>
             <p>
               Before that, I worked as a Software Engineer in Android development at 
@@ -140,7 +140,7 @@ exports[`components/pages/About matches snapshot 1`] = `
               >
                 projects
               </a>
-               to improve my skills while learning new languages and techniques. Most are simple games, but there are also some more useful things like a reusable footer component for use across said games and an integration with the Strava API. I also have ideas for other types of projects in the future.
+               to improve my skills while learning new languages and techniques. Most are simple games, but there are also some more useful things, such as an integration with the Strava API, a bike route map of Metro Vancouver, and a reusable footer component for use across my various projects. I also have ideas for other types of projects in the future.
             </p>
             <p>
               I've been solving 
@@ -167,7 +167,7 @@ exports[`components/pages/About matches snapshot 1`] = `
               >
                 software team
               </a>
-               as a volunteer, where my main focus is assisting on transitioning our website's front-end from Rails to React.
+               as a volunteer, where my main focuses include assisting on transitioning our website's front-end from Rails to React, and building out a new separate registration system.
             </p>
             <p>
               I also like playing 
@@ -177,10 +177,10 @@ exports[`components/pages/About matches snapshot 1`] = `
               >
                 GeoGuessr
               </a>
-               restricted to Vancouver (or subsets of Metro Vancouver) with the 'no move' rule.
+               restricted to Vancouver (or subsets of Metro Vancouver) with 10s NMPZ (no moving, panning, or zooming).
             </p>
             <p>
-              Other hobbies include reading, cycling, running, soccer, table tennis, and more.
+              Other hobbies include reading, cycling, running, soccer, table tennis, tetris attack (this isn't tetris), and more.
             </p>
           </div>
           <div

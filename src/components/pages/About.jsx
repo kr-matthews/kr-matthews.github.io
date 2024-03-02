@@ -78,9 +78,10 @@ function ProjectsAndHobbies() {
         Since 2021, I've been consistently working on numerous personal{" "}
         <Link to="/projects">projects</Link> to improve my skills while learning
         new languages and techniques. Most are simple games, but there are also
-        some more useful things like a reusable footer component for use across
-        said games and an integration with the Strava API. I also have ideas for
-        other types of projects in the future.
+        some more useful things, such as an integration with the Strava API, a
+        bike route map of Metro Vancouver, and a reusable footer component for
+        use across my various projects. I also have ideas for other types of
+        projects in the future.
       </p>
       <p>
         I've been solving <Link to="/cubing">Rubik's Cubes</Link> for over a
@@ -99,11 +100,12 @@ function ProjectsAndHobbies() {
       </p>
       <p>
         I also like playing <Link to="/vancouver">GeoGuessr</Link> restricted to
-        Vancouver (or subsets of Metro Vancouver) with the 'no move' rule.
+        Vancouver (or subsets of Metro Vancouver) with 10s NMPZ (no moving,
+        panning, or zooming).
       </p>
       <p>
         Other hobbies include reading, cycling, running, soccer, table tennis,
-        and more.
+        tetris attack (this isn't tetris), and more.
       </p>
     </Fragment>
   );
