@@ -22,6 +22,7 @@ import incidentsLogImage from "./assets/incidents-log.png";
 import rivianImage from "./assets/rivian-app.png";
 import bikeRouteMapImage from "./assets/bike-route-map.png";
 import wcaRegistrationImage from "./assets/wca-registration.png";
+import spaceTimeTaggerImage from "./assets/space-time-tagger.jpg";
 
 //// project icons
 
@@ -388,6 +389,22 @@ export const projects = [
     yearOrder: 1,
     description:
       "Part of the WCA Software Team working on creating a new registration system, separate from the existing website monolith. Focusing on front-end bugs/features/refinements.",
+  },
+  {
+    id: 23,
+    title: "Space-Time Tagger",
+    image: spaceTimeTaggerImage,
+    type: "Personal",
+    // icon: "", to add later
+    // url: "https://kr-matthews.github.io/...", // n/a, unless added to app store later
+    codeHost: "GitHub",
+    codeUrl: "https://github.com/kr-matthews/space-time-tagger",
+    tags: ["Android", "API"],
+    languages: ["Kotlin", "Compose"],
+    year: 2024,
+    yearOrder: 2,
+    description:
+      "A simple Android app to store lists of time & location pairs, automatically populated on tap.",
   },
   /*
   {
