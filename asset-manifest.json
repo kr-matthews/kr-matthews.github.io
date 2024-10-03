@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.07a328db.css",
-    "main.js": "/static/js/main.1c1c35ff.js",
+    "main.js": "/static/js/main.55a82099.js",
     "static/media/bike-route-map.png": "/static/media/bike-route-map.20eea733d11201d43a4b.png",
     "static/media/Ace.svg": "/static/media/Ace.2bd3783dbed892b5608690da414b3059.svg",
     "static/media/Three.svg": "/static/media/Three.bfa0e11af3898c90a18daf74c9a8507d.svg",
@@ -51,6 +51,7 @@
     "static/media/jetpack-compose.png": "/static/media/jetpack-compose.3ef8d1755096bbc66c60.png",
     "static/media/bld-memo-tool.png": "/static/media/bld-memo-tool.28ed7720e356bb2c3721.png",
     "static/media/no-image-available.png": "/static/media/no-image-available.25a81cd92082ab65467d.png",
+    "static/media/space-time-tagger.jpg": "/static/media/space-time-tagger.497a1df7a82575ad07c1.jpg",
     "static/media/corner-twist-alg-generator.png": "/static/media/corner-twist-alg-generator.4b43024b95fd435be601.png",
     "static/media/react-logo.png": "/static/media/react-logo.2fad5f467c7c76cdfa4f.png",
     "static/media/tic-tac-toe.png": "/static/media/tic-tac-toe.45b5d83c54d49447fb7b.png",
@@ -72,10 +73,10 @@
     "index.html": "/index.html",
     "static/media/wca-registration-icon.svg": "/static/media/wca-registration-icon.7758ff3eae8369e54802ba308c539c2f.svg",
     "main.07a328db.css.map": "/static/css/main.07a328db.css.map",
-    "main.1c1c35ff.js.map": "/static/js/main.1c1c35ff.js.map"
+    "main.55a82099.js.map": "/static/js/main.55a82099.js.map"
   },
   "entrypoints": [
     "static/css/main.07a328db.css",
-    "static/js/main.1c1c35ff.js"
+    "static/js/main.55a82099.js"
   ]
 }
