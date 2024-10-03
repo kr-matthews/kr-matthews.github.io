@@ -378,7 +378,7 @@ export const projects = [
     type: "Volunteer",
     icon: wcaRegistrationIcon,
     // !! will probably need updating
-    url: "https://staging.worldcubeassociation.org/competitions/v2/UBCBigBlind2023/schedule",
+    url: "https://staging.worldcubeassociation.org/competitions/UBCBigBlind2023/#competition-schedule",
     codeHost: "GitHub",
     codeUrl:
       "https://github.com/thewca/wca-registration/pulls?q=is%3Apr+author%3Akr-matthews+",
