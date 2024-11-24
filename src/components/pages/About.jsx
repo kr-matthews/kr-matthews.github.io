@@ -49,7 +49,7 @@ function EducationAndWork() {
         </Link>{" "}
         as a Software Developer. Currently I'm working on an Android project,
         and before that I was leading the front-end development of a React web
-        project .
+        project.
       </p>
       <p>
         Before that, I worked as a Software Engineer in Android development at{" "}

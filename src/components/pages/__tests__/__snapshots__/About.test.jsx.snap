@@ -105,7 +105,7 @@ exports[`components/pages/About matches snapshot 1`] = `
               >
                 Ensemble Systems
               </a>
-               as a Software Developer. Currently I'm working on an Android project, and before that I was leading the front-end development of a React web project .
+               as a Software Developer. Currently I'm working on an Android project, and before that I was leading the front-end development of a React web project.
             </p>
             <p>
               Before that, I worked as a Software Engineer in Android development at 
