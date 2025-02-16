@@ -47,9 +47,9 @@ function EducationAndWork() {
         <Link href="https://ensemble.com/" isExternal>
           Ensemble Systems
         </Link>{" "}
-        as a Software Developer. Currently I'm working on an Android project,
-        and before that I was leading the front-end development of a React web
-        project.
+        as a Software Developer. Currently I'm working with smart TVs using
+        Preact. Previously, I was on an Android project using Kotlin, and before
+        that I was leading the front-end development of a React web project.
       </p>
       <p>
         Before that, I worked as a Software Engineer in Android development at{" "}
