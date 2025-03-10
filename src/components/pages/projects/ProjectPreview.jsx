@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Link from "../../common/Link";
+import IconButton from "../../common/IconButton";
 import wipImage from "../../../assets/wip.svg";
 import altLinkLightIcon from "../../../assets/link.svg";
 import altLinkDarkIcon from "../../../assets/link-white.svg";
@@ -67,24 +67,13 @@ export default function ProjectPreview({
       <HStack spacing="2em">
         <Center h="2.5em" w="2.5em">
           {(icon || url) && (
-            <Link
+            <IconButton
+              icon={icon || altLinkIcon}
               href={url}
-              isExternal
-              isDisabled={!url}
               title="View Project"
               disabledTitle="Not Hosted Anywhere"
-              w="100%"
-              h="100%"
-            >
-              {icon && url ? (
-                <HStack spacing={1} align="start">
-                  <Image src={icon} maxH="80%" w="80%" />
-                  <Image src={altLinkIcon} maxH="30%" w="30%" />{" "}
-                </HStack>
-              ) : (
-                <Image src={icon || altLinkIcon} maxH="100%" w="100%" />
-              )}
-            </Link>
+              isDisabled={!url}
+            />
           )}
         </Center>
         <VStack spacing={0}>
@@ -93,19 +82,11 @@ export default function ProjectPreview({
         </VStack>
         <Center h="2.5em" w="2.5em">
           {codeUrl && (
-            <Link
+            <IconButton
+              icon={codeIcon ?? altCodeIcon}
               href={codeUrl}
-              isExternal
-              // isDisabled={!codeUrl}
               title="View Source Code"
-              w="100%"
-              h="100%"
-            >
-              <HStack spacing={1} align="start">
-                <Image src={codeIcon ?? altCodeIcon} maxH="80%" w="80%" />
-                <Image src={altLinkIcon} maxH="30%" w="30%" />
-              </HStack>
-            </Link>
+            />
           )}
         </Center>
       </HStack>
