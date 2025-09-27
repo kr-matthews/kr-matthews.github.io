@@ -48,8 +48,9 @@ function EducationAndWork() {
           Ensemble Systems
         </Link>{" "}
         as a Software Developer. Currently I'm working with smart TVs using
-        Preact. Previously, I was on an Android project using Kotlin, and before
-        that I was leading the front-end development of a React web project.
+        React (and briefly, using Preact). Previously, I was on an Android
+        project using Kotlin, and before that I was leading the front-end
+        development of a React web project.
       </p>
       <p>
         Before that, I worked as a Software Engineer in Android development at{" "}
