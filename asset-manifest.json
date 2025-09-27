@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.07a328db.css",
-    "main.js": "/static/js/main.6a30d658.js",
+    "main.js": "/static/js/main.8e3e3f05.js",
     "static/media/bike-route-map.png": "/static/media/bike-route-map.76f61c1fd2fe8cd11fd4.png",
     "static/media/Ace.svg": "/static/media/Ace.2bd3783dbed892b5608690da414b3059.svg",
     "static/media/Three.svg": "/static/media/Three.bfa0e11af3898c90a18daf74c9a8507d.svg",
@@ -73,10 +73,10 @@
     "index.html": "/index.html",
     "static/media/wca-registration-icon.svg": "/static/media/wca-registration-icon.7758ff3eae8369e54802ba308c539c2f.svg",
     "main.07a328db.css.map": "/static/css/main.07a328db.css.map",
-    "main.6a30d658.js.map": "/static/js/main.6a30d658.js.map"
+    "main.8e3e3f05.js.map": "/static/js/main.8e3e3f05.js.map"
   },
   "entrypoints": [
     "static/css/main.07a328db.css",
-    "static/js/main.6a30d658.js"
+    "static/js/main.8e3e3f05.js"
   ]
 }
