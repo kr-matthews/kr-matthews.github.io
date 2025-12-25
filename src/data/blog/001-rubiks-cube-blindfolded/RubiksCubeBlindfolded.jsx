@@ -103,14 +103,14 @@ export default function RubiksCubeBlindfolded() {
       </p>
       <h2>A simpler case study: Six playing cards</h2>
       <p>
-        Suppose we have the ace through six of spades laid out in a row in front
-        of us. I strongly recommend going and getting some cards (or any 6
+        Suppose we have the ace through six of diamonds laid out in a row in
+        front of us. I strongly recommend going and getting some cards (or any 6
         numbered objects, really) and following along with everything we go
         through below.
       </p>
       <CardSeq
         indices={[1, 2, 3, 4, 5, 6]}
-        caption="Ace through six of spades, laid out in a row."
+        caption="Ace through six of diamonds, laid out in a row."
       />
       <p>
         In this simple 'game' that I'm making up, the cards are placed in a row
