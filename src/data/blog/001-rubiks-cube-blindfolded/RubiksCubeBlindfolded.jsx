@@ -266,7 +266,7 @@ export default function RubiksCubeBlindfolded() {
         incorrectly placed, we will pick any card which is incorrectly placed
         and swap the ace with that card. This seems a bit unproductive, since
         this swap hasn't put any cards in the correct place. (In fact, the ace
-        is leaving it's spot, so we have less correctly placed cards now!).
+        is leaving it's spot, so we have fewer correctly placed cards now!).
         However, the ace's spot now contains an incorrectly placed card, and we
         can continue with the original strategy of dealing with whatever card is
         in the ace's spot. Once we eventually get the ace back into place,
