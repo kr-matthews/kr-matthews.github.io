@@ -19,7 +19,7 @@ export default function Link({
   return (
     <ChakraLink
       as={isExternal ? "a" : ReactRouterLink}
-      to={isDisabled ? "" : to ?? ""}
+      to={isDisabled ? "" : (to ?? "")}
       href={isExternal && !isDisabled ? href : undefined}
       onClick={isDisabled ? onClick : undefined}
       isExternal={isExternal}
