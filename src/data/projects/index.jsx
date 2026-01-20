@@ -406,6 +406,22 @@ export const projects = [
     description:
       "A simple Android app to store lists of time & location pairs, automatically populated on tap.",
   },
+  {
+    id: 24,
+    title: "Smart TV App",
+    image: noImageAvailable,
+    type: "Professional",
+    // icon: "",
+    // url: "https://kr-matthews.github.io/...",
+    // codeHost: "GitHub",
+    // codeUrl: "https://github.com/kr-matthews/...",
+    tags: ["Smart TV", "API"],
+    languages: ["React"],
+    year: 2025,
+    yearOrder: 0,
+    description:
+      "Work project as part of Ensemble Systems. One of several developers. Main focus on improving efficiency on older TV models via reducing renders.",
+  },
   /*
   {
     id: ,
