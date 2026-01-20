@@ -399,7 +399,7 @@ export const projects = [
     // url: "https://kr-matthews.github.io/...", // n/a, unless added to app store later
     codeHost: "GitHub",
     codeUrl: "https://github.com/kr-matthews/space-time-tagger",
-    tags: ["Android", "API"],
+    tags: ["Android"],
     languages: ["Kotlin", "Compose"],
     year: 2024,
     yearOrder: 2,
