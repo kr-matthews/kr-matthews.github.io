@@ -1,5 +1,7 @@
 import "./rubiks-cube-blindfolded.css";
 
+import Link from "../../../components/common/Link";
+
 // import images
 
 import sA from "./assets/Ace.svg";
@@ -768,11 +770,10 @@ export default function RubiksCubeBlindfolded() {
       </p>
       <p>
         Next article in this series:{" "}
-        {/*
-        <a href="TOD" target="_blank" rel="noopener noreferrer">
-          title TBD, link TBD
-        </a> */}
-        TBD.
+        <Link to="../parity-in-blindfolded-solving">
+          How to Deal with Parity in Blindfolded Solving
+        </Link>
+        .
       </p>
       <h2>Acknowledgements</h2>
       <p>

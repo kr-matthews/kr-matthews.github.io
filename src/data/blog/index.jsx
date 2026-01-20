@@ -24,7 +24,7 @@ export const articles = [
     shortName: "rubiks-cube-blindfolded",
     startDate: new Date("2021-07-31"),
     publishDate: new Date("2021-08-19"),
-    // editDate: new Date(""),
+    editDate: new Date("2026-01-19"),
     image: rubiksCubeBlindfoldedImage,
     tags: ["Rubik's Cubes"],
     preview:
