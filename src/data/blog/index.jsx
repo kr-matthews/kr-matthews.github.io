@@ -37,7 +37,7 @@ export const articles = [
     shortName: "react-state-management",
     startDate: new Date("2021-10-09"),
     publishDate: new Date("2021-10-24"),
-    editDate: new Date("2021-11-08"),
+    editDate: new Date("2026-01-19"),
     image: reactStateManagementImage,
     tags: ["Programming", "React"],
     preview:

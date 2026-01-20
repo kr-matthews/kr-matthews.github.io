@@ -1277,6 +1277,15 @@ export default function ReactStateManagement() {
         </Link>{" "}
         for more details.
       </p>
+
+      <h2>Update 2</h2>
+
+      <p>
+        It is years later, and I happened to reread this last section. Do not
+        use an effect if you can get away without one. It tends to make the code
+        harder to understand/reason about, and uses extra renders where state
+        may be inconsistent before the final render.
+      </p>
     </>
   );
 }
