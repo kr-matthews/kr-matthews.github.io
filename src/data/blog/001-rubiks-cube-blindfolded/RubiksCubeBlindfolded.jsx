@@ -401,13 +401,9 @@ export default function RubiksCubeBlindfolded() {
         — and a Rubik's Cube seems infinitely more complicated than that. So how
         can the concepts above possibly transfer over? (You don't need a cube
         for this next part, but it wouldn't hurt to have one on hand. Or use a{" "}
-        <a
-          href="https://alg.cubing.net/?view=fullscreen"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <Link isExternal href="https://alg.cubing.net/?view=fullscreen">
           virtual cube
-        </a>
+        </Link>
         .)
       </p>
       <div className="image-row">
@@ -500,13 +496,12 @@ export default function RubiksCubeBlindfolded() {
       <p>
         So suppose now that we have a scrambled cube. (I strongly recommending
         visiting{" "}
-        <a
+        <Link
+          isExternal
           href="https://alg.cubing.net/?setup=D_L2_U_F2_R2_D2_L2_D_L2_U_B-_R-_D_L-_U-_R-_D2_U_B_L-_R2_B-_U2_L-_B-_D-&view=fullscreen"
-          target="_blank"
-          rel="noopener noreferrer"
         >
           this virtual cube
-        </a>{" "}
+        </Link>{" "}
         to see the scramble, as it allows you to drag it around and see all the
         sides.) Since the center pieces cannot move relative to each other,
         let's find the white and green centers. The spot between them is our
@@ -777,33 +772,27 @@ export default function RubiksCubeBlindfolded() {
       </p>
       <h2>Acknowledgements</h2>
       <p>
-        <a
+        <Link
+          isExternal
           href="https://www.worldcubeassociation.org/persons/2006GARR01"
-          target="_blank"
-          rel="noopener noreferrer"
         >
           Lucas Garron
-        </a>{" "}
+        </Link>{" "}
         created the virtual cube linked to in this article.
       </p>
       <p>
         I almost certainly got the idea for using playing cards as a teaching
         tool from{" "}
-        <a
+        <Link
+          isExternal
           href="https://www.worldcubeassociation.org/persons/2012ARTH01?event=333bf"
-          target="_blank"
-          rel="noopener noreferrer"
         >
           Noah Arthurs
-        </a>
+        </Link>
         '{" "}
-        <a
-          href="https://youtu.be/JJWl-FDetWE"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <Link isExternal href="https://youtu.be/JJWl-FDetWE">
           video
-        </a>{" "}
+        </Link>{" "}
         in which he does the same thing. When writing this article, I hadn't
         watched this video since it originally came out, as far as remember.
         Note that this video is part two in a series of five videos.

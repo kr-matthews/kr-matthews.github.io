@@ -1,3 +1,5 @@
+import Link from "../../../components/common/Link";
+
 export default function ReactStateManagement() {
   return (
     <>
@@ -1213,13 +1215,9 @@ export default function ReactStateManagement() {
       <p>
         If you're curious, the code (including the full commit history) is on my
         GitHub{" "}
-        <a
-          href="https://github.com/kr-matthews/connect-4"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <Link isExternal href="https://github.com/kr-matthews/connect-4">
           here
-        </a>
+        </Link>
         .
       </p>
 
@@ -1271,13 +1269,12 @@ export default function ReactStateManagement() {
       </p>
       <p>
         That was a pretty quick explanation. See the{" "}
-        <a
+        <Link
+          isExternal
           href="https://stackoverflow.com/questions/69732411/react-useeffect-runs-too-often"
-          target="_blank"
-          rel="noopener noreferrer"
         >
           stack overflow question I asked
-        </a>{" "}
+        </Link>{" "}
         for more details.
       </p>
     </>

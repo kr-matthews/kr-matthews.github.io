@@ -155,13 +155,12 @@ export default function ParityInBlindfoldedSolving() {
         edges on the top beside it (white-blue and white-orange). Let's take a
         concrete example and see exactly what goes wrong when we have parity if
         we just ignore it. Consider{" "}
-        <a
+        <Link
+          isExternal
           href="https://alg.cubing.net/?type=reconstruction&setup=R2_F2_U_R2_D2_U_L2_U2_L2_B2_R2_U2_F-_L-_U-_L_B2_D-_U2&view=fullscreen"
-          target="_blank"
-          rel="noopener noreferrer"
         >
           this scramble
-        </a>
+        </Link>
         , which has parity (it's the same picture from slightly different
         angles).
       </p>
@@ -611,21 +610,19 @@ export default function ParityInBlindfoldedSolving() {
       </p>
       <h2>Acknowledgements</h2>
       <p>
-        <a
+        <Link
+          isExternal
           href="https://www.worldcubeassociation.org/persons/2006GARR01"
-          target="_blank"
-          rel="noopener noreferrer"
         >
           Lucas Garron
-        </a>{" "}
+        </Link>{" "}
         created the{" "}
-        <a
+        <Link
+          isExternal
           href="https://alg.cubing.net/?type=reconstruction&view=fullscreen"
-          target="_blank"
-          rel="noopener noreferrer"
         >
           virtual cube
-        </a>{" "}
+        </Link>{" "}
         linked to in this article.
       </p>
     </>

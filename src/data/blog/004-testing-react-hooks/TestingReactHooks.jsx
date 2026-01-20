@@ -1,3 +1,5 @@
+import Link from "../../../components/common/Link";
+
 export default function TestingReactHooks() {
   return (
     <>
@@ -513,13 +515,12 @@ export default function TestingReactHooks() {
         The tic-tac-toe game and scoring example that we've been working with
         aren't a great example (maybe I should have planned ahead better). Let's
         suppose instead that it was a card game (maybe{" "}
-        <a
+        <Link
+          isExternal
           href="https://en.wikipedia.org/wiki/Hearts_(card_game)"
-          target="_blank"
-          rel="noopener noreferrer"
         >
           Hearts
-        </a>
+        </Link>
         ), and one of the parameters for the game was a deck of cards which is
         implemented as another custom hook. So we're calling a custom hook{" "}
         <code>useDeck</code> which returns some data and actions -- in this
@@ -608,13 +609,9 @@ export default function TestingReactHooks() {
         the same value every time it is called (until we tell it to do
         otherwise), or give it a temporary (simplified) implementation, and much
         more -- see the{" "}
-        <a
-          href="https://jestjs.io/docs/mock-function-api"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <Link isExternal href="https://jestjs.io/docs/mock-function-api">
           documentation
-        </a>{" "}
+        </Link>{" "}
         for a full list. In the game of hearts, if somebody was dealing one card
         at a time (which maybe isn't how it would work in practice, but just to
         keep things simple here) we could tell the draw function specifically

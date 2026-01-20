@@ -1,3 +1,5 @@
+import Link from "../../../components/common/Link";
+
 export default function TerminalCustomCommands() {
   return (
     <>
@@ -44,13 +46,12 @@ export default function TerminalCustomCommands() {
         way to create a shortcut or alias or text-expander or something along
         those lines to eliminate this friction. A quick search brought me to
         this{" "}
-        <a
+        <Link
+          isExternal
           href="https://medium.com/devnetwork/how-to-create-your-own-custom-terminal-commands-c5008782a78e"
-          target="_blank"
-          rel="noopener noreferrer"
         >
           article
-        </a>{" "}
+        </Link>{" "}
         which goes through how to set up custom commands to use in your
         terminal. I took it a few steps further, so I won't reference it
         directly, but that article is what got me set up initially. In fact, it
