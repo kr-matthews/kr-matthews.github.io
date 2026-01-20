@@ -4,6 +4,7 @@ import RubiksCubeBlindfolded from "./001-rubiks-cube-blindfolded/RubiksCubeBlind
 import ReactStateManagement from "./002-react-state-management/ReactStateManagement";
 import TerminalCustomCommands from "./003-terminal-custom-commands/TerminalCustomCommands";
 import TestingReactHooks from "./004-testing-react-hooks/TestingReactHooks";
+import ParityInBlindfoldedSolving from "./005-parity-in-blindfolded-solving/ParityInBlindfoldedSolving";
 
 //// article images
 
@@ -11,6 +12,7 @@ import rubiksCubeBlindfoldedImage from "./assets/real-solved-cube.jpg";
 import reactStateManagementImage from "./assets/react-logo.png";
 import terminalCustomCommandsImage from "./assets/code-icon.png";
 // currently using default image for TestingReactHooks
+import parityInBlindfoldedSolvingImage from "./assets/virtual-parity-cube.png";
 
 //// list of articles
 
@@ -67,6 +69,19 @@ export const articles = [
     preview:
       "The basics of testing in React, and solutions to various problems I encountered while trying to test my own custom hooks.",
     content: <TestingReactHooks />,
+  },
+  {
+    id: 4,
+    title: "How to Deal with Parity in Blindfolded Solving",
+    shortName: "parity-in-blindfolded-solving",
+    startDate: new Date("2023-01-27"),
+    publishDate: new Date("2026-01-19"),
+    // editDate: new Date(""),
+    image: parityInBlindfoldedSolvingImage,
+    tags: ["Rubik's Cubes"],
+    preview:
+      "This is the second in a series of articles about solving Rubik's Cubes blindfolded. Besides the first article, there are no prerequisites — you don't need to know how to solve a Rubik's Cube, or anything about them really.",
+    content: <ParityInBlindfoldedSolving />,
   },
   /*
   {
